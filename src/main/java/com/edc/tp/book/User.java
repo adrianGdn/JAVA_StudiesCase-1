@@ -1,5 +1,11 @@
 package com.edc.tp.book;
 
+/**
+ * Class User, pour la gestion des utilisateurs
+ * @author Adrian Gandon
+ * @author Alexis Dubus 
+ *
+ */
 public class User {
 	private String name; 
 	private String surname;
@@ -42,7 +48,7 @@ public class User {
 		return this.ID;
 	}
 	public void setID(String iD) {
-		ID = iD;
+		this.ID = iD;
 	} 
 	
 	

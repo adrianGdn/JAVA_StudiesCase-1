@@ -33,7 +33,7 @@ public class testSimple {
 	
 	@Test
 	public void testGetFromListe() {
-		Book b = new Book("778-0671875162");
+		Book b = new Book("007", "007", "007");
 		Optional<Book> optionnalB = Optional.of(b);
 		Optional<Book> optionnalB2 = Optional.of(b);
 		assertEquals(optionnalB, optionnalB2);

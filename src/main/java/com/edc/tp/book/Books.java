@@ -8,6 +8,11 @@ import com.edc.tp.book.BookNotFoundException;
 import com.edc.tp.book.AllBooksAlreadyReturnedException;
 import com.edc.tp.book.UnavailableBookException;
 
+/**
+ * 
+ * @author Alexis Dubus 
+ * @author Adrian Gandon
+ */
 public class Books implements Booker  {
 	
 	List<Book> listBook = new ArrayList<Book>();
@@ -19,12 +24,9 @@ public class Books implements Booker  {
 	
 	public void initListe()
 	{
-		Book fahrenheit451 = new Book("978-0671870362", "Ray Bradbury", "Fahrenheit 451");
-		Book a = new Book("978-0671870362", "Benoît Cavrois", "Les bugs et moi");
-		Book b = new Book("778-0671875162");
-		listBook.add(fahrenheit451);
-		listBook.add(a);
-		listBook.add(b);
+		listBook.add(new Book("978-0671870362", "Ray Bradbury", "Fahrenheit 451"));
+		listBook.add(new Book("978-0671870362", "Benoît Cavrois", "Les bugs et moi"));
+		listBook.add(new Book("007", "007", "007"));
 	}
 
 	public Optional<Book> getBook(String id) {
@@ -38,8 +40,7 @@ public class Books implements Booker  {
 				return a;
 			}
 		}
-		Book b = new Book();
-		Optional<Book> a = Optional.of(b);
+		Optional<Book> a = Optional.of(new Book());
 		  
 		return a;
 	}
@@ -57,4 +58,8 @@ public class Books implements Booker  {
 	public void returnBook(String id, String username) {
 		
 	}
+	
+	/*List<Book>	getBooks(){
+		return listBook;
+	} */
 }

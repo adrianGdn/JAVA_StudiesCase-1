@@ -1,5 +1,11 @@
 package com.edc.tp.book;
 
+/**
+ * Class Book, pour la gestion des livres
+ * @author Adrian Gandon
+ * @author Alexis Dubus
+ *
+ */
 public class Book {
 	
 	private String auteur;
