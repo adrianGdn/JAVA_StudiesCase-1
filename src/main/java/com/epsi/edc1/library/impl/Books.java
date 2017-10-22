@@ -1,20 +1,22 @@
-package com.edc.tp.book;
+package com.epsi.edc1.library.impl;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import com.edc.tp.book.Book;
-import com.edc.tp.book.User;
-import com.edc.tp.book.BookNotFoundException;
-import com.edc.tp.book.AllBooksAlreadyReturnedException;
-import com.edc.tp.book.UnavailableBookException;
+
+import com.epsi.edc1.library.Library;
+import com.epsi.edc1.library.impl.AllBooksAlreadyReturnedException;
+import com.epsi.edc1.library.impl.Book;
+import com.epsi.edc1.library.impl.BookNotFoundException;
+import com.epsi.edc1.library.impl.UnavailableBookException;
+import com.epsi.edc1.library.impl.User;
 
 /**
  * 
  * @author Alexis Dubus 
  * @author Adrian Gandon
  */
-public class Books implements InterfaceBibliotheque  {
+public class Books implements Library  {
 	
 	private List<Book> listBook = new ArrayList<Book>();
 	private List<Book> listBookTotal = new ArrayList<Book>();
@@ -153,8 +155,13 @@ public class Books implements InterfaceBibliotheque  {
 	
 	
 	
-	public List<Book>	getBooks(){
+	public List<Book> getBooks(){
 		return listBook;
+	}
+
+	public List<Book> searchBooks(String searchTerm) {
+		// TODO Auto-generated method stub
+		return null;
 	} 
 	
 }

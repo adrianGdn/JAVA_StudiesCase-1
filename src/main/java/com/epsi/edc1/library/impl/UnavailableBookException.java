@@ -1,4 +1,4 @@
-package com.edc.tp.book;
+package com.epsi.edc1.library.impl;
 
 public class UnavailableBookException extends Exception {
 

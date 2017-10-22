@@ -3,12 +3,10 @@ package com.edc.tp.book;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.junit.Assert.*;
 import static org.junit.Assert.assertThat;
-
 import java.util.Optional;
-
-import com.edc.tp.book.Books;
-
 import org.junit.Test;
+import com.epsi.edc1.library.impl.Book;
+import com.epsi.edc1.library.impl.Books;
 
 public class testSimple {
 	Book milleNeufCentQuatreVingtQuatre = new Book();
@@ -17,18 +15,14 @@ public class testSimple {
 	@Test
 	public void testVideEtPlein() {
 		//assertThat(("0"), equalTo("0"));
-		assertThat(milleNeufCentQuatreVingtQuatre.getAuteur(), equalTo(null));
+		assertThat(milleNeufCentQuatreVingtQuatre.getAuthor(), equalTo(null));
 		assertThat(milleNeufCentQuatreVingtQuatre.getISBN(), equalTo(null));
-		assertThat(milleNeufCentQuatreVingtQuatre.getTitre(), equalTo(null));
+		assertThat(milleNeufCentQuatreVingtQuatre.getTitle(), equalTo(null));
 
-		assertThat(fahrenheit451.getAuteur(), equalTo("Ray Bradbury"));
+		assertThat(fahrenheit451.getAuthor(), equalTo("Ray Bradbury"));
 		assertThat(fahrenheit451.getISBN(), equalTo("978-0671870362"));
-		assertThat(fahrenheit451.getTitre(), equalTo("Fahrenheit 451"));
+		assertThat(fahrenheit451.getTitle(), equalTo("Fahrenheit 451"));
 		assertThat(fahrenheit451.toString(), equalTo("Ce livre à pour titre : Fahrenheit 451, son code ISBN est : 978-0671870362, son auteur est : Ray Bradbury"));
-		fahrenheit451.setAuteur("ray bradbury");
-
-		assertThat(fahrenheit451.getAuteur(), equalTo("ray bradbury"));
-		assertThat(fahrenheit451.toString(), equalTo("Ce livre à pour titre : Fahrenheit 451, son code ISBN est : 978-0671870362, son auteur est : ray bradbury"));
 	}
 	
 	@Test
