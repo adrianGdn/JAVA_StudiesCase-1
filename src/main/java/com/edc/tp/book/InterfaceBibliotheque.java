@@ -9,7 +9,7 @@ import java.util.Optional;
  * @author Alexis
  * @author Adrian
  */
-public interface Booker {
+public interface InterfaceBibliotheque {
 	/**
 	 * Get a book from its id
 	 * 
@@ -61,15 +61,13 @@ public interface Booker {
 	 * 
 	 * @return the books
 	 **/
-	//List<Book>	getBooks();
+	List<Book>	getBooks();
 	
 	/**
 	 * * Return all books with an author, a title or an ISBN matching the search
 	 * term * * @param searchTerm the searched term * @return the books matching the
 	 * search term
 	 */
-	//List<Book> searchBooks(String searchTerm);
-	
-	//List<Books> searchBooks(String searchTerm);
+	 //List<Books> searchBooks(String searchTerm);
 
 }
