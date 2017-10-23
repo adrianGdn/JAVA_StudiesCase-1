@@ -33,7 +33,7 @@ public class Books implements Library  {
 	{
 		listBook.add(new Book("978-0671870362", "Ray Bradbury", "Fahrenheit 451", true));
 		listBook.add(new Book("12345", "Benoît Cavrois", "Les bugs et moi", true));
-		listBook.add(new Book("007", "007", "007", true));
+		listBook.add(new Book("007", "James Bond", "Agent 007", true));
 	}
 	private void initListeBookTotal()
 	{

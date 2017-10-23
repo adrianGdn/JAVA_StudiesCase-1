@@ -1,7 +1,7 @@
 package com.epsi.edc1.library.impl;
 
 public class BookNotFoundException extends Exception {
-	private String message  = "Livre Non trouvé !";
+	private String message  = "Book not found.";
 	
 	public BookNotFoundException()
 	{

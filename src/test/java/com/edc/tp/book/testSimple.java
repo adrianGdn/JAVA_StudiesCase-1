@@ -22,23 +22,22 @@ public class testSimple {
 		assertThat(fahrenheit451.getAuthor(), equalTo("Ray Bradbury"));
 		assertThat(fahrenheit451.getISBN(), equalTo("978-0671870362"));
 		assertThat(fahrenheit451.getTitle(), equalTo("Fahrenheit 451"));
-		assertThat(fahrenheit451.toString(), equalTo("Ce livre à pour titre : Fahrenheit 451, son code ISBN est : 978-0671870362, son auteur est : Ray Bradbury"));
 	}
 	
 	@Test
 	public void testGetFromListeBiblio() {
-		Book book = new Book("007", "007", "007", true);
+		Book book = new Book("007", "James Bond", "Agent 007", true);
 		Book benoitBook = new Book("12345", "Benoît Cavrois", "Les bugs et moi", true);
 		Optional<Book> optionnalB = Optional.of(book);
-		String messageErreur = "pb sur la récupération d'un livre de la bibliothéque";
+		String messageErreur = "An error has occur when trying to get a book from the library.";
 		/*
 		 * Java est assez agacant sur les égalités entre les objets, donc ce que fait la ligne de code suivante : 
-		 * On a donc un optional<Book> du livre que l'on veut tester. On compare son toString() au toString() du livre de la bibliothéque que l'on a demander. 
+		 * On a donc un optional<Book> du livre que l'on veut tester. On compare son getISBN() au getISBN() du livre de la bibliothéque que l'on a demander. 
 		 */
-		assertEquals(messageErreur, optionnalB.get().toString(), listeGBooks.getBook(book.getISBN()).get().toString());
-		assertEquals(messageErreur, book.toString(), listeGBooks.getBook(book.getISBN()).get().toString());
-		assertEquals(messageErreur, benoitBook.toString(), listeGBooks.getBook(benoitBook.getISBN()).get().toString());
-		assertNotEquals(messageErreur, book.toString(), listeGBooks.getBook(benoitBook.getISBN()).get().toString());
+		assertEquals(messageErreur, optionnalB.get().getISBN(), listeGBooks.getBook(book.getISBN()).get().getISBN());
+		assertEquals(messageErreur, book.getISBN(), listeGBooks.getBook(book.getISBN()).get().getISBN());
+		assertEquals(messageErreur, benoitBook.getISBN(), listeGBooks.getBook(benoitBook.getISBN()).get().getISBN());
+		assertEquals(messageErreur, "007", listeGBooks.getBook(book.getISBN()).get().getISBN());
 	}
 
 }
