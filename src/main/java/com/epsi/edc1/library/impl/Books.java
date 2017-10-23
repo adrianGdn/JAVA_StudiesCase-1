@@ -46,10 +46,10 @@ public class Books implements Library  {
 	
 	private void initListeUser()
 	{
-		listUser.add( new User("Benoît", "Cavrois", 42, "42", "bCavrois"));
-		listUser.add( new User("Adrian", "Gandon", 23, "23", "aGandon"));
-		listUser.add( new User("Alexis", "Dubus", 42, "91", "aDubus"));
-		listUser.add( new User("Julien", "Petit", 20, "20", "jPetit"));
+		listUser.add( new User("Benoît", "Cavrois", 42, "bCavrois"));
+		listUser.add( new User("Adrian", "Gandon", 23, "aGandon"));
+		listUser.add( new User("Alexis", "Dubus", 42, "aDubus"));
+		listUser.add( new User("Julien", "Petit", 20, "jPetit"));
 	}
 
 	public Optional<Book> getBook(String id) {

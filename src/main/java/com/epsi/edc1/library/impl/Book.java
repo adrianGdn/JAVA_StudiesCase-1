@@ -14,22 +14,14 @@ public class Book {
 	private String theISBN;
 	private String title;
 	private boolean isPresent; 
-	
-	/////////////////////////////////////// Did we really need all that constructors ?
+
+
+	/**
+	 * Allow to create a book class object with all attributes set as null.
+	 */
 	public Book()
 	{
-		/////////////////////////////////// Is really useful ?
-	}
-	
-	public Book(String theISBN)
-	{
-		this.theISBN = theISBN;
-	}
-	
-	public Book(String theISBN, String author)
-	{
-		this.theISBN = theISBN;
-		this.author = author;
+		
 	}
 	
 	/**
@@ -83,9 +75,4 @@ public class Book {
 	public boolean isPresent() {
 		return isPresent;
 	}
-
-	public boolean equals(Book obj) {
-		//////////////////////////////////////////////////////// What's that ?
-        return super.equals(obj);
-    }
 }

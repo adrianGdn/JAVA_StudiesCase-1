@@ -13,14 +13,16 @@ import com.epsi.edc1.library.impl.Book;
 public class User {
 	private String name; 
 	private String surname;
-	private String username; ////////////////////// In reality, in which case did it would be useful ?
+	private String username; // Is used like an id.
 	private int age; 
-	private String userID;
 	private Book bookBorrow; // A user can borrow only one bookBorrow once a time.
 	
+	/**
+	 * Allow to create a user class object with all attributes set as null.
+	 */
 	public User()
 	{
-		///////////////// Is it really an useful constructor ?
+		
 	}
 	
 	/**
@@ -29,15 +31,13 @@ public class User {
 	 * @param name The name of that user. This is a string.
 	 * @param surname The surname of that user. This is a string.
 	 * @param age The age of that user. This is an integer.
-	 * @param id The current ID of that user. This is a string.
 	 * @param username The username (like a pseudo) of that user. This is a string.
 	 */
-	public User(String name, String surname, int age, String id, String username)
+	public User(String name, String surname, int age, String username)
 	{
 		this.name = name;
 		this.surname = surname;
 		this.age = age;
-		this.userID = id;
 		this.username = username;
 		// On the creation, the user hasn't any bookBorrow set.
 		this.bookBorrow = null;
@@ -68,15 +68,6 @@ public class User {
 	 */
 	public int getAge() {
 		return this.age;
-	}
-	
-	/**
-	 * Allow you to recover the ID of that user.
-	 * 
-	 * @return The current ID of that user. This is a string.
-	 */
-	public String getUserID() {
-		return this.userID;
 	}
 	
 	/**

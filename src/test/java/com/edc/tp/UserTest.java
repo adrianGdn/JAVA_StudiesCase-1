@@ -9,14 +9,13 @@ import com.epsi.edc1.library.impl.User;
 
 public class UserTest {
 	
-	User benoit = new User("Benoît", "Cavrois", 42, "42", "bCavrois");
+	User benoit = new User("Benoît", "Cavrois", 42, "bCavrois");
 
 	@Test
 	public void testUser() {
 		assertThat(benoit.getName(), equalTo("Benoît"));
 		assertThat(benoit.getSurname(), equalTo("Cavrois"));
 		assertThat(benoit.getAge(), equalTo(42));
-		assertThat(benoit.getUserID(), equalTo("42"));
 		assertThat(benoit.getUsername(), equalTo("bCavrois"));
 	}
 
