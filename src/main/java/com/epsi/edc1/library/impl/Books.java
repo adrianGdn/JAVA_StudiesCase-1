@@ -71,8 +71,7 @@ public class Books implements Library  {
 			Book book = listBook.get(i);
 			if(id.equals(book.getId()))
 			{
-				Optional<Book> a = Optional.of(book);
-				return a;
+				return Optional.of(book);
 			}
 		}
 		return  Optional.of(new Book()); //by default, send an empty Optional<Book>
@@ -91,7 +90,7 @@ public class Books implements Library  {
 		return  Optional.of(""); //by default, return a Optionnal of an empty string
 	}
 	
-	public void borrowBook(String id, String username) throws UnavailableBookException, UnavailableBookException {
+	public void borrowBook(String id, String username) throws UnavailableBookException, BookNotFoundException {
 		boolean bookNotFound = true;
 		int countNumberUnavalaibleBook = 0; 
 		int countNumberOkIsbnBook = 0;
@@ -104,13 +103,15 @@ public class Books implements Library  {
 			for(int i = 0; i < listBook.size(); i++)
 			{
 				Book book = listBook.get(i);
-				if(id.equals(book.getId()))//if the isbn is equals, it's the good book
+				if(id.equals(book.getId()))//if the id is equals, it's the good book
 				{
 					countNumberOkIsbnBook++;
 					if(book.isPresent())
 					{
 						User theUser = getUserInList(username);
-						if(theUser.getBook().equals(null)) { //in case the user have already another book
+						if(theUser.getBook().getId().equals(null)) { //in case the user have already another book
+							book.setIsPresent(false); 
+							listBook.get(i).setIsPresent(false);//the book is now unavailable in the library
 							theUser.setBook(book); 
 							return;
 						}
@@ -122,13 +123,13 @@ public class Books implements Library  {
 				}
 			}
 		}
-		if(countNumberOkIsbnBook == countNumberUnavalaibleBook) //if all book with the given id have been returned
+		if(countNumberOkIsbnBook == countNumberUnavalaibleBook) //if all book with the given id aren't present
 		{
 			throw new UnavailableBookException();
 		}
 		if(bookNotFound)
 		{
-			throw new UnavailableBookException();
+			throw new BookNotFoundException();
 		}
 	}
 	
@@ -139,7 +140,7 @@ public class Books implements Library  {
 	 */
 	private boolean userExistInList(String username)
 	{
-		boolean exist = false;
+		boolean exist = false;//the user doesn't exist in the list by default
 		for(int i = 0; i < listUser.size(); i++)
 		{
 			User user = listUser.get(i);
@@ -183,8 +184,16 @@ public class Books implements Library  {
 	}
 
 	public List<Book> searchBooks(String searchTerm) {
-		// TODO Auto-generated method stub
-		return null;
+		List<Book>  list = new ArrayList<Book>(); //init the list<Book>
+		for(int i = 0; i < listBook.size(); i++)
+		{
+			Book book = listBook.get(i);
+			if(book.getAuthor().contains(searchTerm) || book.getTitle().contains(searchTerm) || book.getISBN().contains(searchTerm)) //all test are done here
+			{
+				list.add(book);
+			}
+		}
+		return list;
 	} 
 	
 }

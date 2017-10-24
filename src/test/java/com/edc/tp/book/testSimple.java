@@ -3,6 +3,9 @@ package com.edc.tp.book;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.junit.Assert.*;
 import static org.junit.Assert.assertThat;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 import org.junit.Test;
 import com.epsi.edc1.library.impl.Book;
@@ -29,15 +32,35 @@ public class testSimple {
 		Book book = new Book("007", "James Bond", "Agent 007", true, "7");
 		Book benoitBook = new Book("12345", "Benoît Cavrois", "Les bugs et moi", true, "42");
 		Optional<Book> optionnalB = Optional.of(book);
-		String messageErreur = "An error has occur when trying to get a book from the library.";
-		/*
-		 * Java est assez agacant sur les égalités entre les objets, donc ce que fait la ligne de code suivante : 
-		 * On a donc un optional<Book> du livre que l'on veut tester. On compare son getISBN() au getISBN() du livre de la bibliothéque que l'on a demander. 
-		 */
+		String messageErreur = "An error has occured when trying to get a book from the library.";
 		assertEquals(messageErreur, optionnalB.get().getISBN(), listeGBooks.getBook(book.getId()).get().getISBN());
 		assertEquals(messageErreur, book.getISBN(), listeGBooks.getBook(book.getId()).get().getISBN());
 		assertEquals(messageErreur, benoitBook.getISBN(), listeGBooks.getBook(benoitBook.getId()).get().getISBN());
 		assertEquals(messageErreur, "007", listeGBooks.getBook(book.getId()).get().getISBN());
+	}
+	
+	
+	@Test
+	public void testSearch() {
+		Book benoitBook = new Book("12345", "Benoît Cavrois", "Les bugs et moi", true, "42");
+		String messageErreur = "An error has occured when trying to search a book from the library.";
+		List<Book>  listBenoit = new ArrayList<Book>();
+		listBenoit.add(benoitBook);
+		List<Book>  listOutput = listeGBooks.searchBooks("2345"); 
+		assertEquals(messageErreur, listBenoit.get(0).getISBN(), listOutput.get(0).getISBN());
+		assertEquals(messageErreur, listBenoit.get(0).getAuthor(), listOutput.get(0).getAuthor());
+		assertEquals(messageErreur, listBenoit.get(0).getId(), listOutput.get(0).getId());
+		assertEquals(messageErreur, listBenoit.get(0).getTitle(), listOutput.get(0).getTitle());
+		assertEquals(messageErreur, listBenoit.size(), listOutput.size());
+		List<Book>  listOutput2 = listeGBooks.searchBooks(" bugs "); 
+		assertEquals(messageErreur, listBenoit.get(0).getISBN(), listOutput2.get(0).getISBN());
+		assertEquals(messageErreur, listBenoit.get(0).getAuthor(), listOutput2.get(0).getAuthor());
+		assertEquals(messageErreur, listBenoit.get(0).getId(), listOutput2.get(0).getId());
+		assertEquals(messageErreur, listBenoit.get(0).getTitle(), listOutput2.get(0).getTitle());
+		assertEquals(messageErreur, listBenoit.size(), listOutput2.size());
+		
+		List<Book>  listOutputEmpty = listeGBooks.searchBooks(" uyhosdunhoeu zpxdcièeuygxikuzytexgikr g eiy rzeiuycgbifhebxghno_zeby girecgh binuk "); 
+		assertEquals(messageErreur, 0, listOutputEmpty.size());//the search result is empty
 	}
 
 }

@@ -76,6 +76,14 @@ public class Book {
 	public boolean isPresent() {
 		return this.isPresent;
 	}
+	/**
+	 * Allow to set the isPresent statut of the book
+	 * @param present
+	 */
+	public void setIsPresent(boolean present)
+	{
+		this.isPresent = present;
+	}
 
 	/**
 	 * Allow you to recover the id of that book.
