@@ -8,8 +8,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import org.junit.Test;
+
+import com.epsi.edc1.library.impl.AllBooksAlreadyReturnedException;
 import com.epsi.edc1.library.impl.Book;
+import com.epsi.edc1.library.impl.BookNotFoundException;
 import com.epsi.edc1.library.impl.Books;
+import com.epsi.edc1.library.impl.UnavailableBookException;
+import com.epsi.edc1.library.impl.User;
 
 public class testSimple {
 	Book milleNeufCentQuatreVingtQuatre = new Book();
@@ -61,6 +66,37 @@ public class testSimple {
 		
 		List<Book>  listOutputEmpty = listeGBooks.searchBooks(" uyhosdunhoeu zpxdcièeuygxikuzytexgikr g eiy rzeiuycgbifhebxghno_zeby girecgh binuk "); 
 		assertEquals(messageErreur, 0, listOutputEmpty.size());//the search result is empty
+	}
+	
+	@Test
+	public void testReturnedBook() throws BookNotFoundException, AllBooksAlreadyReturnedException, UnavailableBookException {
+		// Preparation
+		Book aNewBook = new Book("23232", "I am an author", "I am a title", true, "2323001");
+		User aNewUser = new User("I am the user", "I am the surname", 23, "I am the username");
+		List<Book>  aNewListOfBooks = new ArrayList<Book>();
+		aNewListOfBooks.add(aNewBook);
+		List<User>  aNewListOfUsers = new ArrayList<User>();
+		aNewListOfUsers.add(aNewUser);
+		String errorMessage = "An error has occur when trying to returned the book.";
+		
+		// Execution
+			// Preparation test
+		assertEquals(errorMessage, true, aNewListOfBooks.get(0).isPresent());
+		assertEquals(errorMessage, null, aNewListOfUsers.get(0).getBook());
+		aNewListOfUsers.get(0).setBook(aNewListOfBooks.get(0));
+		aNewListOfBooks.get(0).setIsPresent(false);
+		assertEquals(errorMessage, false, aNewListOfBooks.get(0).isPresent());
+		assertEquals(errorMessage, aNewBook, aNewListOfUsers.get(0).getBook());
+			// Real test
+		Books aBooks = new Books();
+				// Check for "borrowBook" function
+		aBooks.borrowBook(aNewBook.getId(), aNewUser.getUsername());
+		assertEquals(errorMessage, false, aBooks.getBook(aNewBook.getId()).isPresent()); // Doesn't work
+		assertEquals(errorMessage, aBooks.getBook(aNewBook.getId()), aBooks.getUserInList(aNewUser.getUsername()).getBook());
+				// Check for "returnBook" function
+		aBooks.returnBook(aNewBook.getId(), aNewUser.getUsername());
+		assertEquals(errorMessage, true, aBooks.getBook(aNewBook.getId()).isPresent());
+		assertEquals(errorMessage, null, aBooks.getUserInList(aNewUser.getUsername()).getBook());
 	}
 
 }

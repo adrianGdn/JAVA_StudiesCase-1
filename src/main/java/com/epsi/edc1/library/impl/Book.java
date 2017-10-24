@@ -76,9 +76,11 @@ public class Book {
 	public boolean isPresent() {
 		return this.isPresent;
 	}
+	
 	/**
-	 * Allow to set the isPresent statut of the book
-	 * @param present
+	 * Allow to set the isPresent status of the book.
+	 * 
+	 * @param True if this book is present in the library, false in other case. This is a boolean.
 	 */
 	public void setIsPresent(boolean present)
 	{

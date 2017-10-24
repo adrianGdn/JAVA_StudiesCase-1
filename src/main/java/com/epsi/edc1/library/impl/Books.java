@@ -12,7 +12,7 @@ import com.epsi.edc1.library.impl.UnavailableBookException;
 import com.epsi.edc1.library.impl.User;
 
 /**
- * Libray implementation
+ * Library implementation
  * @author Alexis Dubus 
  * @author Adrian Gandon
  */
@@ -40,6 +40,7 @@ public class Books implements Library  {
 		listBook.add(new Book("978-0671870362", "Ray Bradbury", "Fahrenheit 451", true, "1"));
 		listBook.add(new Book("12345", "Benoît Cavrois", "Les bugs et moi", true, "42"));
 		listBook.add(new Book("007", "James Bond", "Agent 007", true, "7"));
+		listBook.add(new Book("23232", "I am an author", "I am a title", true, "2323001"));
 	}
 	
 	/**
@@ -59,10 +60,11 @@ public class Books implements Library  {
 	 */
 	private void initListeUser()
 	{
-		listUser.add( new User("Benoît", "Cavrois", 42, "bCavrois"));
-		listUser.add( new User("Adrian", "Gandon", 23, "aGandon"));
-		listUser.add( new User("Alexis", "Dubus", 42, "aDubus"));
-		listUser.add( new User("Julien", "Petit", 20, "jPetit"));
+		listUser.add(new User("Benoît", "Cavrois", 42, "bCavrois"));
+		listUser.add(new User("Adrian", "Gandon", 23, "aGandon"));
+		listUser.add(new User("Alexis", "Dubus", 42, "aDubus"));
+		listUser.add(new User("Julien", "Petit", 20, "jPetit"));
+		listUser.add(new User("I am the user", "I am the surname", 23, "I am the username"));
 	}
 
 	public Optional<Book> getBook(String id) {
@@ -96,7 +98,7 @@ public class Books implements Library  {
 		int countNumberOkIsbnBook = 0;
 		if(userExistInList(username))
 		{
-			return; //if the user isn't in the library book, he hasn't the access right
+			return; //if the user isn't in the library book, he hasn't the right access
 		}
 		else
 		{
@@ -157,7 +159,7 @@ public class Books implements Library  {
 	 * @param username
 	 * @return User
 	 */
-	private User getUserInList(String username)
+	public User getUserInList(String username)
 	{
 		User userStd = new User();
 		if(userExistInList(username)) {	
@@ -173,8 +175,46 @@ public class Books implements Library  {
 		return userStd; //by default, an empty user is returned
 	}
 
-	public void returnBook(String id, String username) {
+	public void returnBook(String id, String username) throws BookNotFoundException, AllBooksAlreadyReturnedException {
+		///////////// Part search of the book /////////////
+		Book returnedBook = null;
+		int counterBook = 0;
+		boolean bookFind = false;
 		
+		// We search the returned book
+		while (counterBook <= listBook.size() && bookFind == false) {
+			returnedBook = listBook.get(counterBook);
+			if (returnedBook.getId() == id) {
+				bookFind = true;
+			}
+			counterBook++;
+		}
+		// If we haven't find the book, we throw an exception
+		if (counterBook <= listBook.size() && bookFind == false) {
+			throw new BookNotFoundException();
+		}
+		
+		
+		///////////// Part search of the user /////////////
+		int counterUser = 0;
+		boolean userFind = false;
+		User userWhoReturnBook = null;
+		// We search the user who has returned the book
+		while (counterUser <= listUser.size() && userFind == false) {
+			userWhoReturnBook = listUser.get(counterUser);
+			if (userWhoReturnBook.getUsername() == username) {
+				userFind = true;
+			}
+			counterUser++;
+		}
+		// If we haven't find the book, we throw an exception
+		if (counterUser <= listUser.size() && userFind == false) {
+			throw new AllBooksAlreadyReturnedException();
+		}
+		
+		///////////// Part return the book /////////////
+		listUser.get(counterUser).returnBorrowBook();
+		listBook.get(counterBook).isPresent();
 	}
 	
 	
