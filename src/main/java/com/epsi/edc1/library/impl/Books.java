@@ -12,16 +12,19 @@ import com.epsi.edc1.library.impl.UnavailableBookException;
 import com.epsi.edc1.library.impl.User;
 
 /**
- * 
+ * Libray implementation
  * @author Alexis Dubus 
  * @author Adrian Gandon
  */
 public class Books implements Library  {
 	
-	private List<Book> listBook = new ArrayList<Book>();
-	private List<Book> listBookTotal = new ArrayList<Book>();
-	private List<User> listUser = new ArrayList<User>();
+	private List<Book> listBook = new ArrayList<Book>(); //the library list of book
+	private List<Book> listBookTotal = new ArrayList<Book>(); //the global list of book
+	private List<User> listUser = new ArrayList<User>(); //the user list of book
 	
+	/**
+	 * constructor, where the init method are used
+	 */
 	public Books()
 	{
 		initListeBook();
@@ -29,21 +32,31 @@ public class Books implements Library  {
 		initListeBookTotal();
 	}
 	
+	/**
+	 * init the library list book
+	 */
 	private void initListeBook()
 	{
-		listBook.add(new Book("978-0671870362", "Ray Bradbury", "Fahrenheit 451", true));
-		listBook.add(new Book("12345", "Benoît Cavrois", "Les bugs et moi", true));
-		listBook.add(new Book("007", "James Bond", "Agent 007", true));
-	}
-	private void initListeBookTotal()
-	{
-		listBookTotal.add(new Book("978-0671870362", "Ray Bradbury", "Fahrenheit 451", true));
-		listBookTotal.add(new Book("12345", "Benoît Cavrois", "Les bugs et moi", true));
-		listBookTotal.add(new Book("123456", "Julien Petit", "Les licornes et moi", false));
-		listBookTotal.add(new Book("858585", "Julien Petit", "La VR de demain", false));
-		listBookTotal.add(new Book("007", "007", "007", true));
+		listBook.add(new Book("978-0671870362", "Ray Bradbury", "Fahrenheit 451", true, "1"));
+		listBook.add(new Book("12345", "Benoît Cavrois", "Les bugs et moi", true, "42"));
+		listBook.add(new Book("007", "James Bond", "Agent 007", true, "7"));
 	}
 	
+	/**
+	 * init the global list of book
+	 */
+	private void initListeBookTotal()
+	{
+		listBookTotal.add(new Book("978-0671870362", "Ray Bradbury", "Fahrenheit 451", true, "1"));
+		listBookTotal.add(new Book("12345", "Benoît Cavrois", "Les bugs et moi", true, "42"));
+		listBookTotal.add(new Book("123456", "Julien Petit", "Les licornes et moi", false, "2"));
+		listBookTotal.add(new Book("858585", "Julien Petit", "La VR de demain", false, "3"));
+		listBookTotal.add(new Book("007", "007", "007", true, "7"));
+	}
+	
+	/**
+	 * init the user library user list
+	 */
 	private void initListeUser()
 	{
 		listUser.add( new User("Benoît", "Cavrois", 42, "bCavrois"));
@@ -56,52 +69,62 @@ public class Books implements Library  {
 		for(int i = 0; i < listBook.size(); i++)
 		{
 			Book book = listBook.get(i);
-			if(id.equals(book.getISBN()))
+			if(id.equals(book.getId()))
 			{
 				Optional<Book> a = Optional.of(book);
 				return a;
 			}
 		}
-		return  Optional.of(new Book()); //par défaut, return un livre vide
+		return  Optional.of(new Book()); //by default, send an empty Optional<Book>
 	}
 
 	public Optional<String> addBook(String isbn) {
 		for(int i = 0; i < listBookTotal.size(); i++)
 		{
-			Book book = listBook.get(i);
+			Book book = listBookTotal.get(i);
 			if(isbn.equals(book.getISBN()))
 			{
 				listBook.add(book);
 				return  Optional.of(book.getISBN());
 			}
 		}
-		return  Optional.of(""); //par défaut, on return un optional d'une chaine de caractére vide
+		return  Optional.of(""); //by default, return a Optionnal of an empty string
 	}
 	
 	public void borrowBook(String id, String username) throws UnavailableBookException, UnavailableBookException {
 		boolean bookNotFound = true;
-		if(userExisteInListe(username))
+		int countNumberUnavalaibleBook = 0; 
+		int countNumberOkIsbnBook = 0;
+		if(userExistInList(username))
 		{
-			return; //si l'utilisateur n'est pas dans la liste des utilisateur de la bibliothéque, il n'a rien a faire ici !
+			return; //if the user isn't in the library book, he hasn't the access right
 		}
 		else
 		{
 			for(int i = 0; i < listBook.size(); i++)
 			{
 				Book book = listBook.get(i);
-				if(id.equals(book.getISBN()))
+				if(id.equals(book.getId()))//if the isbn is equals, it's the good book
 				{
+					countNumberOkIsbnBook++;
 					if(book.isPresent())
 					{
-						getUserInListe(username).setBook(book); //@toDo géré le cas ou un utilisateur a déja un livre
-						return;
+						User theUser = getUserInList(username);
+						if(theUser.getBook().equals(null)) { //in case the user have already another book
+							theUser.setBook(book); 
+							return;
+						}
 					}
 					else
 					{
-						throw new UnavailableBookException();
+						countNumberUnavalaibleBook++;
 					}
 				}
 			}
+		}
+		if(countNumberOkIsbnBook == countNumberUnavalaibleBook) //if all book with the given id have been returned
+		{
+			throw new UnavailableBookException();
 		}
 		if(bookNotFound)
 		{
@@ -110,13 +133,13 @@ public class Books implements Library  {
 	}
 	
 	/**
-	 * vérifie si l'utilisateur est bien présent dans la liste
+	 * check if a user is in the list
 	 * @param username
 	 * @return boolean
 	 */
-	private boolean userExisteInListe(String username)
+	private boolean userExistInList(String username)
 	{
-		boolean existe = false;
+		boolean exist = false;
 		for(int i = 0; i < listUser.size(); i++)
 		{
 			User user = listUser.get(i);
@@ -125,18 +148,18 @@ public class Books implements Library  {
 				return true;
 			}
 		}
-		return existe;
+		return exist;
 	}
 	
 	/**
-	 * récupére un utilisateur unique dans la liste
+	 * get a unique user in the list
 	 * @param username
 	 * @return User
 	 */
-	private User getUserInListe(String username)
+	private User getUserInList(String username)
 	{
 		User userStd = new User();
-		if(userExisteInListe(username)) {	
+		if(userExistInList(username)) {	
 			for(int i = 0; i < listUser.size(); i++)
 			{
 				User user = listUser.get(i);
@@ -146,7 +169,7 @@ public class Books implements Library  {
 				}
 			}	
 		}
-		return userStd;
+		return userStd; //by default, an empty user is returned
 	}
 
 	public void returnBook(String id, String username) {

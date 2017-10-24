@@ -14,7 +14,7 @@ public class Book {
 	private String theISBN;
 	private String title;
 	private boolean isPresent; 
-
+	private String id;
 
 	/**
 	 * Allow to create a book class object with all attributes set as null.
@@ -32,12 +32,13 @@ public class Book {
 	 * @param title The title of that book. This is a string.
 	 * @param isPresent True if this book is present in the library, false in other case. This is a boolean.
 	 */
-	public Book(String theISBN, String author, String title, boolean isPresent)
+	public Book(String theISBN, String author, String title, boolean isPresent, String id)
 	{
 		this.theISBN = theISBN;
 		this.author = author;
 		this.title = title;
 		this.isPresent = isPresent;
+		this.id = id;
 	}
 	
 	/**
@@ -73,6 +74,16 @@ public class Book {
 	 * @return True if this book is present in the library, false in other case. This is a boolean.
 	 */
 	public boolean isPresent() {
-		return isPresent;
+		return this.isPresent;
 	}
+
+	/**
+	 * Allow you to recover the id of that book.
+	 * 
+	 * @return The id of that book. This is a string.
+	 */
+	public String getId() {
+		return this.id;
+	}
+
 }

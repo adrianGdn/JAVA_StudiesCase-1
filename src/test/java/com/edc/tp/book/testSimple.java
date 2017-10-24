@@ -10,7 +10,7 @@ import com.epsi.edc1.library.impl.Books;
 
 public class testSimple {
 	Book milleNeufCentQuatreVingtQuatre = new Book();
-	Book fahrenheit451 = new Book("978-0671870362", "Ray Bradbury", "Fahrenheit 451", true);
+	Book fahrenheit451 = new Book("978-0671870362", "Ray Bradbury", "Fahrenheit 451", true, "1");
 	Books listeGBooks = new Books();
 	@Test
 	public void testVideEtPlein() {
@@ -26,18 +26,18 @@ public class testSimple {
 	
 	@Test
 	public void testGetFromListeBiblio() {
-		Book book = new Book("007", "James Bond", "Agent 007", true);
-		Book benoitBook = new Book("12345", "Benoît Cavrois", "Les bugs et moi", true);
+		Book book = new Book("007", "James Bond", "Agent 007", true, "7");
+		Book benoitBook = new Book("12345", "Benoît Cavrois", "Les bugs et moi", true, "42");
 		Optional<Book> optionnalB = Optional.of(book);
 		String messageErreur = "An error has occur when trying to get a book from the library.";
 		/*
 		 * Java est assez agacant sur les égalités entre les objets, donc ce que fait la ligne de code suivante : 
 		 * On a donc un optional<Book> du livre que l'on veut tester. On compare son getISBN() au getISBN() du livre de la bibliothéque que l'on a demander. 
 		 */
-		assertEquals(messageErreur, optionnalB.get().getISBN(), listeGBooks.getBook(book.getISBN()).get().getISBN());
-		assertEquals(messageErreur, book.getISBN(), listeGBooks.getBook(book.getISBN()).get().getISBN());
-		assertEquals(messageErreur, benoitBook.getISBN(), listeGBooks.getBook(benoitBook.getISBN()).get().getISBN());
-		assertEquals(messageErreur, "007", listeGBooks.getBook(book.getISBN()).get().getISBN());
+		assertEquals(messageErreur, optionnalB.get().getISBN(), listeGBooks.getBook(book.getId()).get().getISBN());
+		assertEquals(messageErreur, book.getISBN(), listeGBooks.getBook(book.getId()).get().getISBN());
+		assertEquals(messageErreur, benoitBook.getISBN(), listeGBooks.getBook(benoitBook.getId()).get().getISBN());
+		assertEquals(messageErreur, "007", listeGBooks.getBook(book.getId()).get().getISBN());
 	}
 
 }
