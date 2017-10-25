@@ -113,7 +113,7 @@ public class Books implements Library  {
 					if(book.isPresent())//check if the book is present in the library in case someone already borrow it
 					{
 						User theUser = getUserInList(username);
-						if(theUser.getBook().equals(null)) { //in case the user have already another book
+						if(theUser.getBook() == null) { //in case the user have already another book
 							book.setIsPresent(false); 
 							listBook.get(i).setIsPresent(false);//the book is now unavailable in the library
 							theUser.setBook(book); //the user now get his book
