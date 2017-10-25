@@ -18,9 +18,9 @@ import com.epsi.edc1.library.impl.User;
  */
 public class Books implements Library  {
 	
-	private List<Book> listBook = new ArrayList<Book>(); //the library list of book
-	private List<Book> listBookTotal = new ArrayList<Book>(); //the global list of book
-	private List<User> listUser = new ArrayList<User>(); //the user list of book
+	private List<Book> listBook = new ArrayList<Book>(); //the library list of book. Some book can have the same title or ISBN, but the ID must differ. 
+	private List<Book> listBookGlobal = new ArrayList<Book>(); //the global list of book. The book in this list can be add to the listBook
+	private List<User> listUser = new ArrayList<User>(); //the user list of the library. They have access to the library book
 	
 	/**
 	 * constructor, where the init method are used
@@ -37,7 +37,8 @@ public class Books implements Library  {
 	 */
 	private void initListeBook()
 	{
-		listBook.add(new Book("978-0671870362", "Ray Bradbury", "Fahrenheit 451", true, "1"));
+		listBook.add(new Book("978-0671870362", "Ray Bradbury", "Fahrenheit 451", true, "978"));//first book of Ray Bradbury in the library
+		listBook.add(new Book("978-0671870362", "Ray Bradbury", "Fahrenheit 451", true, "1"));//second book of Ray Bradbury in the library
 		listBook.add(new Book("12345", "Benoît Cavrois", "Les bugs et moi", true, "42"));
 		listBook.add(new Book("007", "James Bond", "Agent 007", true, "7"));
 		listBook.add(new Book("23232", "I am an author", "I am a title", true, "2323001"));
@@ -45,18 +46,19 @@ public class Books implements Library  {
 	
 	/**
 	 * init the global list of book
+	 * They can be add to listBook with addBook
 	 */
 	private void initListeBookTotal()
 	{
-		listBookTotal.add(new Book("978-0671870362", "Ray Bradbury", "Fahrenheit 451", true, "1"));
-		listBookTotal.add(new Book("12345", "Benoît Cavrois", "Les bugs et moi", true, "42"));
-		listBookTotal.add(new Book("123456", "Julien Petit", "Les licornes et moi", false, "2"));
-		listBookTotal.add(new Book("858585", "Julien Petit", "La VR de demain", false, "3"));
-		listBookTotal.add(new Book("007", "007", "007", true, "7"));
+		listBookGlobal.add(new Book("978-0671870362", "Ray Bradbury", "Fahrenheit 451", true, "4"));
+		listBookGlobal.add(new Book("12345", "Benoît Cavrois", "Les bugs et moi", true, "43"));
+		listBookGlobal.add(new Book("123456", "Julien Petit", "Les licornes et moi", true, "6"));
+		listBookGlobal.add(new Book("858585", "Julien Petit", "La VR de demain", true, "10"));
+		listBookGlobal.add(new Book("007", "007", "007", true, "21"));
 	}
 	
 	/**
-	 * init the user library user list
+	 * init the library user list
 	 */
 	private void initListeUser()
 	{
@@ -68,7 +70,7 @@ public class Books implements Library  {
 	}
 
 	public Optional<Book> getBook(String id) {
-		for(int i = 0; i < listBook.size(); i++)
+		for(int i = 0; i < listBook.size(); i++)//search trough listBook
 		{
 			Book book = listBook.get(i);
 			if(id.equals(book.getId()))
@@ -80,9 +82,9 @@ public class Books implements Library  {
 	}
 
 	public Optional<String> addBook(String isbn) {
-		for(int i = 0; i < listBookTotal.size(); i++)
+		for(int i = 0; i < listBookGlobal.size(); i++)//search trough listBookGlobal
 		{
-			Book book = listBookTotal.get(i);
+			Book book = listBookGlobal.get(i);
 			if(isbn.equals(book.getISBN()))
 			{
 				listBook.add(book);
@@ -108,13 +110,13 @@ public class Books implements Library  {
 				if(id.equals(book.getId()))//if the id is equals, it's the good book
 				{
 					countNumberOkIsbnBook++;
-					if(book.isPresent())
+					if(book.isPresent())//check if the book is present in the library in case someone already borrow it
 					{
 						User theUser = getUserInList(username);
-						if(theUser.getBook().getId().equals(null)) { //in case the user have already another book
+						if(theUser.getBook().equals(null)) { //in case the user have already another book
 							book.setIsPresent(false); 
 							listBook.get(i).setIsPresent(false);//the book is now unavailable in the library
-							theUser.setBook(book); 
+							theUser.setBook(book); //the user now get his book
 							return;
 						}
 					}
@@ -125,13 +127,14 @@ public class Books implements Library  {
 				}
 			}
 		}
+		//part with the Exception
 		if(countNumberOkIsbnBook == countNumberUnavalaibleBook) //if all book with the given id aren't present
 		{
-			throw new UnavailableBookException();
+			throw new UnavailableBookException();//the is unavailable in the library
 		}
 		if(bookNotFound)
 		{
-			throw new BookNotFoundException();
+			throw new BookNotFoundException();//the book wasn't found
 		}
 	}
 	
@@ -146,7 +149,7 @@ public class Books implements Library  {
 		for(int i = 0; i < listUser.size(); i++)
 		{
 			User user = listUser.get(i);
-			if(username.equals(user.getUsername()))
+			if(username.equals(user.getUsername()))//identification is done with the username
 			{
 				return true;
 			}
@@ -166,7 +169,7 @@ public class Books implements Library  {
 			for(int i = 0; i < listUser.size(); i++)
 			{
 				User user = listUser.get(i);
-				if(username.equals(user.getUsername()))
+				if(username.equals(user.getUsername()))//identification is done with the username
 				{
 					return user;
 				}
@@ -184,7 +187,7 @@ public class Books implements Library  {
 		// We search the returned book
 		while (counterBook <= listBook.size() && bookFind == false) {
 			returnedBook = listBook.get(counterBook);
-			if (returnedBook.getId() == id) {
+			if (returnedBook.getId().equals(id)) {
 				bookFind = true;
 			}
 			counterBook++;
@@ -202,7 +205,7 @@ public class Books implements Library  {
 		// We search the user who has returned the book
 		while (counterUser <= listUser.size() && userFind == false) {
 			userWhoReturnBook = listUser.get(counterUser);
-			if (userWhoReturnBook.getUsername() == username) {
+			if (username. contains(userWhoReturnBook.getUsername())) {
 				userFind = true;
 			}
 			counterUser++;

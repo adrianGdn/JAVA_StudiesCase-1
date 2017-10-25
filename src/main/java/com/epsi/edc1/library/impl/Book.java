@@ -31,6 +31,7 @@ public class Book {
 	 * @param author The author of that book. This is a string.
 	 * @param title The title of that book. This is a string.
 	 * @param isPresent True if this book is present in the library, false in other case. This is a boolean.
+	 * @param id The ID of the book. The ID must be unique, it will be used to identify the book
 	 */
 	public Book(String theISBN, String author, String title, boolean isPresent, String id)
 	{
