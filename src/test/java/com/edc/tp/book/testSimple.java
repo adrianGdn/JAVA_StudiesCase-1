@@ -91,9 +91,8 @@ public class testSimple {
 		Books aBooks = new Books();
 				// Check for "borrowBook" function
 		aBooks.borrowBook(aNewBook.getId(), aNewUser.getUsername());
-		System.out.println(aBooks.getBook(aNewBook.getId()).get().isPresent());
-		assertEquals(errorMessage, false, aBooks.getBook(aNewBook.getId()).get().isPresent()); // Doesn't work
-		assertEquals(errorMessage, aBooks.getBook(aNewBook.getId()), aBooks.getUserInList(aNewUser.getUsername()).getBook());
+		assertEquals(errorMessage, false, aBooks.getBook(aNewBook.getId()).get().isPresent());
+		assertEquals(errorMessage, aBooks.getBook(aNewBook.getId()).get(), aBooks.getUserInList(aNewUser.getUsername()).getBook());
 				// Check for "returnBook" function
 		aBooks.returnBook(aNewBook.getId(), aNewUser.getUsername());
 		assertEquals(errorMessage, true, aBooks.getBook(aNewBook.getId()).isPresent());

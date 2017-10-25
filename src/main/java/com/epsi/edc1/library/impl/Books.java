@@ -165,15 +165,15 @@ public class Books implements Library  {
 	public User getUserInList(String username)
 	{
 		User userStd = new User();
-		if(userExistInList(username)) {	
+		if(userExistInList(username)) {
 			for(int i = 0; i < listUser.size(); i++)
 			{
 				User user = listUser.get(i);
-				if(username.equals(user.getUsername()))//identification is done with the username
+				if(username.equals(user.getUsername())) //identification is done with the username
 				{
 					return user;
 				}
-			}	
+			}
 		}
 		return userStd; //by default, an empty user is returned
 	}
@@ -205,7 +205,7 @@ public class Books implements Library  {
 		// We search the user who has returned the book
 		while (counterUser <= listUser.size() && userFind == false) {
 			userWhoReturnBook = listUser.get(counterUser);
-			if (username. contains(userWhoReturnBook.getUsername())) {
+			if (username.contains(userWhoReturnBook.getUsername())) {
 				userFind = true;
 			}
 			counterUser++;
@@ -216,8 +216,9 @@ public class Books implements Library  {
 		}
 		
 		///////////// Part return the book /////////////
-		listUser.get(counterUser).returnBorrowBook();
-		listBook.get(counterBook).isPresent();
+		// Because we our counter variable is equals to the longer of the list and the list begin at 0, we need to subtract 1 to the counter variable 
+		listUser.get(counterUser-1).returnBorrowBook();
+		listBook.get(counterBook-1).isPresent();
 	}
 	
 	
