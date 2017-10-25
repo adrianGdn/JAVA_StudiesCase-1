@@ -98,7 +98,7 @@ public class Books implements Library  {
 		boolean bookNotFound = true;
 		int countNumberUnavalaibleBook = 0; 
 		int countNumberOkIsbnBook = 0;
-		if(userExistInList(username))
+		if(!userExistInList(username))
 		{
 			return; //if the user isn't in the library book, he hasn't the right access
 		}
