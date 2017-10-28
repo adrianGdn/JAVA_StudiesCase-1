@@ -5,14 +5,15 @@ import java.util.List;
 import java.util.Optional;
 
 import com.epsi.edc1.library.Library;
-import com.epsi.edc1.library.impl.AllBooksAlreadyReturnedException;
 import com.epsi.edc1.library.impl.Book;
-import com.epsi.edc1.library.impl.BookNotFoundException;
-import com.epsi.edc1.library.impl.UnavailableBookException;
 import com.epsi.edc1.library.impl.User;
+import com.epsi.edc1.library.impl.exception.AllBooksAlreadyReturnedException;
+import com.epsi.edc1.library.impl.exception.BookNotFoundException;
+import com.epsi.edc1.library.impl.exception.UnavailableBookException;
 
 /**
- * Library implementation
+ * This class allow us to use the implemented methods of the Library interface.
+ * 
  * @author Alexis Dubus 
  * @author Adrian Gandon
  */
@@ -23,7 +24,7 @@ public class Books implements Library  {
 	private List<User> listUser = new ArrayList<User>(); //the user list of the library. They have access to the library book
 	
 	/**
-	 * constructor, where the init method are used
+	 * The constructor of that class, is here that the initialization methods are used.
 	 */
 	public Books()
 	{
@@ -33,36 +34,37 @@ public class Books implements Library  {
 	}
 	
 	/**
-	 * init the library list book
+	 * Methods that allow us to give some "Book" to our library by an initialization of a list.
 	 */
 	private void initListeBook()
 	{
 		listBook.add(new Book("978-0671870362", "Ray Bradbury", "Fahrenheit 451", true, "978"));//first book of Ray Bradbury in the library
 		listBook.add(new Book("978-0671870362", "Ray Bradbury", "Fahrenheit 451", true, "1"));//second book of Ray Bradbury in the library
-		listBook.add(new Book("12345", "Benoît Cavrois", "Les bugs et moi", true, "42"));
+		listBook.add(new Book("12345", "Benoît Cavrois", "Life is potatoes", true, "42"));
 		listBook.add(new Book("007", "James Bond", "Agent 007", true, "7"));
 		listBook.add(new Book("23232", "I am an author", "I am a title", true, "2323001"));
 	}
 	
 	/**
-	 * init the global list of book
-	 * They can be add to listBook with addBook
+	 * Methods that allow us to give some "Book" to the book which "exist in the world" by an initialization of a list.
+	 * We can add book to this list by using the "addBook" method.
 	 */
 	private void initListeBookTotal()
 	{
 		listBookGlobal.add(new Book("978-0671870362", "Ray Bradbury", "Fahrenheit 451", true, "4"));
-		listBookGlobal.add(new Book("12345", "Benoît Cavrois", "Les bugs et moi", true, "43"));
-		listBookGlobal.add(new Book("123456", "Julien Petit", "Les licornes et moi", true, "6"));
+		listBookGlobal.add(new Book("12345", "Benoît Cavrois", "Life is potatoes", true, "43"));
+		listBookGlobal.add(new Book("123456", "Julien Petit", "Le Havre : Le port du monde ?", true, "6"));
 		listBookGlobal.add(new Book("858585", "Julien Petit", "La VR de demain", true, "10"));
-		listBookGlobal.add(new Book("007", "007", "007", true, "21"));
+		listBookGlobal.add(new Book("007", "James Bond", "Agent 007", true, "7"));
+		listBookGlobal.add(new Book("23232", "I am an author", "I am a title", true, "2323001"));
 	}
 	
 	/**
-	 * init the library user list
+	 * Methods that allow us to give some "User" to our library by an initialization of a list.
 	 */
 	private void initListeUser()
 	{
-		listUser.add(new User("Benoît", "Cavrois", 42, "bCavrois"));
+		listUser.add(new User("Benoît", "Cavrois", 9, "bCavrois"));
 		listUser.add(new User("Adrian", "Gandon", 23, "aGandon"));
 		listUser.add(new User("Alexis", "Dubus", 42, "aDubus"));
 		listUser.add(new User("Julien", "Petit", 20, "jPetit"));
@@ -139,9 +141,9 @@ public class Books implements Library  {
 	}
 	
 	/**
-	 * check if a user is in the list
-	 * @param username
-	 * @return boolean
+	 * This method allow us to check if a user exist in the list of user.
+	 * @param username The username (like a pseudo) of that user. This is a string.
+	 * @return boolean Return true if the user pass in parameter (by it's username) exist in our user list.
 	 */
 	private boolean userExistInList(String username)
 	{
@@ -158,9 +160,9 @@ public class Books implements Library  {
 	}
 	
 	/**
-	 * get a unique user in the list
-	 * @param username
-	 * @return User
+	 * This method allow us to get a user who exist in the list of our user.
+	 * @param username The username (like a pseudo) of that user. This is a string.
+	 * @return User If the user
 	 */
 	public User getUserInList(String username)
 	{
@@ -221,8 +223,6 @@ public class Books implements Library  {
 		listBook.get(counterBook-1).isPresent();
 	}
 	
-	
-	
 	public List<Book> getBooks(){
 		return listBook;
 	}
@@ -239,5 +239,4 @@ public class Books implements Library  {
 		}
 		return list;
 	} 
-	
 }

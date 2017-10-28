@@ -2,10 +2,11 @@ package com.epsi.edc1.library;
 
 import java.util.List;
 import java.util.Optional;
-import com.epsi.edc1.library.impl.AllBooksAlreadyReturnedException;
+
 import com.epsi.edc1.library.impl.Book;
-import com.epsi.edc1.library.impl.BookNotFoundException;
-import com.epsi.edc1.library.impl.UnavailableBookException;
+import com.epsi.edc1.library.impl.exception.AllBooksAlreadyReturnedException;
+import com.epsi.edc1.library.impl.exception.BookNotFoundException;
+import com.epsi.edc1.library.impl.exception.UnavailableBookException;
 
 /**
  * Library Interface

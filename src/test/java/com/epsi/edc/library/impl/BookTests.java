@@ -5,7 +5,13 @@ import static org.junit.Assert.assertThat;
 import org.junit.Test;
 import com.epsi.edc1.library.impl.Book;
 
+/**
+ * @author Adrian Gandon
+ */
 public class BookTests {
+	/**
+	 * A test which check the getters of the Book class with simple values.
+	 */
 	@Test
 	public void bookSimpleGettersTest() {
 		// Preparation
@@ -23,8 +29,11 @@ public class BookTests {
 		// End
 	}
 	
+	/**
+	 * A test which check the getters of the Book class with special character values.
+	 */
 	@Test
-	public void bookSpecialsCaractersGettersTest() {
+	public void bookSpecialsCharactersGettersTest() {
 		// Preparation
 		Book aTestBook = new Book("12345", "T€st-@uth0r", "Test_²&é/*-+.0123456789<>,;:!§/.?ù*$^¨£µ%¤~#{}[]|`^@°'(-è_çà)=Title", true, "2");
 		// Begin
@@ -40,6 +49,9 @@ public class BookTests {
 		// End
 	}
 	
+	/**
+	 * A test which check the getters of the Book class with long values.
+	 */
 	@Test
 	public void bookLongParametersGettersTest() {
 		// Preparation
@@ -57,6 +69,9 @@ public class BookTests {
 		// End
 	}
 	
+	/**
+	 * A test which check the getters of the Book class default constructor.
+	 */
 	@Test
 	public void bookDefaultConstructor() {
 		// Preparation

@@ -6,8 +6,13 @@ import org.junit.Test;
 import com.epsi.edc1.library.impl.Book;
 import com.epsi.edc1.library.impl.User;
 
+/**
+ * @author Adrian Gandon
+ */
 public class UserTests {
-
+	/**
+	 * A test which check the getters of the User class with simple values.
+	 */
 	@Test
 	public void userSimpleGettersTest() {
 		// Preparation
@@ -30,8 +35,11 @@ public class UserTests {
 		// End
 	}
 	
+	/**
+	 * A test which check the getters of the User class with special character values.
+	 */
 	@Test
-	public void userSpecialsCaractersGettersTest() {
+	public void userSpecialsCharactersGettersTest() {
 		// Preparation
 		User aUserTest = new User("f!rst_N@m€", "Sécond-Näme", 2, "Test*/*%:;,?.+-çé'&²~#{([])}|`-è_çUsernàme");
 		Book aTestBook = new Book("1234", "T€st-@uth0r", "Test_²&é/*-+.0123456789<>,;:!§/.?ù*$^¨£µ%¤~#{}[]|`^@°'(-è_çà)=Title", false, "1");
@@ -52,6 +60,9 @@ public class UserTests {
 		// End
 	}
 	
+	/**
+	 * A test which check the getters of the User class with long values.
+	 */
 	@Test
 	public void userLongParametersGettersTest() {
 		// Preparation
@@ -74,6 +85,9 @@ public class UserTests {
 		// End
 	}
 	
+	/**
+	 * A test which check the getters of the User class default constructor.
+	 */
 	@Test
 	public void userDefaultConstructor() {
 		// Preparation
