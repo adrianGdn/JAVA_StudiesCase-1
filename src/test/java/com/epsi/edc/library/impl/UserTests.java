@@ -2,6 +2,10 @@ package com.epsi.edc.library.impl;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.junit.Assert.*;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import org.junit.Test;
 import com.epsi.edc1.library.impl.Book;
 import com.epsi.edc1.library.impl.User;
@@ -25,13 +29,15 @@ public class UserTests {
 		assertThat(aUserTest.getAge(), equalTo(1));
 		assertThat(aUserTest.getUsername(), equalTo("TestUsername"));
 		// Methods tests
-		assertThat(aUserTest.getBook(), equalTo(null));
+		assertThat(aUserTest.getBooks().size(), equalTo(0));
 		// We set a book to the user
-		aUserTest.setBook(aTestBook);
-		assertThat(aUserTest.getBook(), equalTo(aTestBook));
+		aUserTest.addBook(aTestBook);
+		List<Book> aListTestBook = new ArrayList<Book>();
+		aListTestBook.add(aTestBook);
+		assertThat(aUserTest.getBooks(), equalTo(aListTestBook));
 		// We return the book of the user
-		aUserTest.returnBorrowBook();
-		assertThat(aUserTest.getBook(), equalTo(null));
+		aUserTest.returnBorrowBook(aTestBook);
+		assertThat(aUserTest.getBooks().size(), equalTo(0));
 		// End
 	}
 
@@ -52,13 +58,15 @@ public class UserTests {
 		assertThat(aUserTest.getAge(), equalTo(2));
 		assertThat(aUserTest.getUsername(), equalTo("Test*/*%:;,?.+-çé'&²~#{([])}|`-è_çUsernàme"));
 		// Methods tests
-		assertThat(aUserTest.getBook(), equalTo(null));
+		assertThat(aUserTest.getBooks().size(), equalTo(0));
 		// We set a book to the user
-		aUserTest.setBook(aTestBook);
-		assertThat(aUserTest.getBook(), equalTo(aTestBook));
+		aUserTest.addBook(aTestBook);
+		List<Book> aListTestBook = new ArrayList<Book>();
+		aListTestBook.add(aTestBook);
+		assertThat(aUserTest.getBooks(), equalTo(aListTestBook));
 		// We return the book of the user
-		aUserTest.returnBorrowBook();
-		assertThat(aUserTest.getBook(), equalTo(null));
+		aUserTest.returnBorrowBook(aTestBook);
+		assertThat(aUserTest.getBooks().size(), equalTo(0));
 		// End
 	}
 
@@ -87,13 +95,15 @@ public class UserTests {
 		assertThat(aUserTest.getUsername(),
 				equalTo("TestUsernameeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"));
 		// Methods tests
-		assertThat(aUserTest.getBook(), equalTo(null));
+		assertThat(aUserTest.getBooks().size(), equalTo(0));
 		// We set a book to the user
-		aUserTest.setBook(aTestBook);
-		assertThat(aUserTest.getBook(), equalTo(aTestBook));
+		aUserTest.addBook(aTestBook);
+		List<Book> aListTestBook = new ArrayList<Book>();
+		aListTestBook.add(aTestBook);
+		assertThat(aUserTest.getBooks(), equalTo(aListTestBook));
 		// We return the book of the user
-		aUserTest.returnBorrowBook();
-		assertThat(aUserTest.getBook(), equalTo(null));
+		aUserTest.returnBorrowBook(aTestBook);
+		assertThat(aUserTest.getBooks().size(), equalTo(0));
 		// End
 	}
 
@@ -112,22 +122,21 @@ public class UserTests {
 		assertThat(aUserTest.getAge(), equalTo(0));
 		assertThat(aUserTest.getUsername(), equalTo(null));
 		// Methods tests
-		assertThat(aUserTest.getBook(), equalTo(null));
+		assertThat(aUserTest.getBooks().size(), equalTo(0));
 		// We set a book to the user
 		// With a null value set
-		aUserTest.setBook(null);
-		assertThat(aUserTest.getBook(), equalTo(null));
+		aUserTest.addBook(null);
+		assertThat(aUserTest.getBooks().size(), equalTo(1));
 		// With a default constructor
-		aUserTest.setBook(new Book());
-		assertThat(aUserTest.getBook().getId(), equalTo(null));
-		// We test that aUserTest.getBook() isn't set as "null"
-		assertNotEquals(aUserTest.getBook(), equalTo(null));
+		aUserTest.addBook(new Book());
+		assertNotEquals(aUserTest.getBooks(), equalTo(null));
 		// With a real value set
-		aUserTest.setBook(aTestBook);
-		assertThat(aUserTest.getBook(), equalTo(aTestBook));
+		aUserTest.addBook(aTestBook);
+		
+		assertThat(aUserTest.getBooks().size(), equalTo(3));
 		// We return the book of the user
-		aUserTest.returnBorrowBook();
-		assertThat(aUserTest.getBook(), equalTo(null));
+		aUserTest.returnBorrowBook(aTestBook);
+		assertThat(aUserTest.getBooks().size(), equalTo(2));
 		// End
 	}
 }

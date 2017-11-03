@@ -37,22 +37,22 @@ public class LibraryTests {
 		// Execution
 		// Preparation test
 		assertEquals(errorMessage, true, aNewListOfBooks.get(0).isPresent());
-		assertEquals(errorMessage, null, aNewListOfUsers.get(0).getBook());
-		aNewListOfUsers.get(0).setBook(aNewListOfBooks.get(0));
+		assertEquals(errorMessage, 0, aNewListOfUsers.get(0).getBooks().size());
+		aNewListOfUsers.get(0).addBook(aNewListOfBooks.get(0));
 		aNewListOfBooks.get(0).setIsPresent(false);
 		assertEquals(errorMessage, false, aNewListOfBooks.get(0).isPresent());
-		assertEquals(errorMessage, aNewBook, aNewListOfUsers.get(0).getBook());
+		assertEquals(errorMessage, aNewBook, aNewListOfUsers.get(0).getBooks().get(0));
 		// Real test
 		LibraryImplements aBooks = new LibraryImplements();
 		// Check for "borrowBook" function
 		aBooks.borrowBook(aNewBook.getId(), aNewUser.getUsername());
 		assertEquals(errorMessage2, false, aBooks.getBook(aNewBook.getId()).get().isPresent());
 		assertEquals(errorMessage2, aBooks.getBook(aNewBook.getId()).get(),
-				aBooks.getUserInList(aNewUser.getUsername()).getBook());
+				aBooks.getUserInList(aNewUser.getUsername()).getBooks().get(0));
 		// Check for "returnBook" function
 		aBooks.returnBook(aNewBook.getId(), aNewUser.getUsername());
 		assertEquals(errorMessage, true, aBooks.getBook(aNewBook.getId()).isPresent());
-		assertEquals(errorMessage, null, aBooks.getUserInList(aNewUser.getUsername()).getBook());
+		assertEquals(errorMessage, 0, aBooks.getUserInList(aNewUser.getUsername()).getBooks().size());
 		// End
 	}
 

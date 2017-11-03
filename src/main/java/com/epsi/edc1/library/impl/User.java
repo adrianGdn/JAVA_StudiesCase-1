@@ -1,5 +1,8 @@
 package com.epsi.edc1.library.impl;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.epsi.edc1.library.impl.Book;
 
 /**
@@ -14,7 +17,7 @@ public class User {
 	private String surname;
 	private String username; // Is used like an id.
 	private int age;
-	private Book bookBorrow; // A user can borrow only one bookBorrow once a time.
+	private List<Book> booksBorrow  = new ArrayList<Book>(); // A user can borrow only one bookBorrow once a time.
 
 	/**
 	 * Allow to create a user class object with all attributes set as null.
@@ -35,13 +38,11 @@ public class User {
 	 * @param username
 	 *            The username (like a pseudo) of that user. This is a string.
 	 */
-	public User(String name, String surname, int age, String username) {
+	public User(final String name, final String surname, final int age, final String username) {
 		this.name = name;
 		this.surname = surname;
 		this.age = age;
 		this.username = username;
-		// On the creation, the user hasn't any bookBorrow set.
-		this.bookBorrow = null;
 	}
 
 	/**
@@ -84,10 +85,10 @@ public class User {
 	 * Allow to recover the bookBorrow borrow per that user.
 	 * 
 	 * @return The bookBorrow that has been borrow per that user. This is a
-	 *         bookBorrow object class.
+	 * List<Book> Object
 	 */
-	public Book getBook() {
-		return bookBorrow;
+	public List<Book> getBooks() {
+		return booksBorrow;
 	}
 
 	/**
@@ -97,15 +98,15 @@ public class User {
 	 *            The bookBorrow that has been borrow per that user. This is a
 	 *            bookBorrow object class.
 	 */
-	public void setBook(Book aBook) {
-		this.bookBorrow = aBook;
+	public void addBook(final Book aBook) {
+		this.booksBorrow.add(aBook);
 	}
 
 	/**
 	 * Allow you to reset the bookBorrow value. Can be useful if the user return a
 	 * borrow book but didn't take another one.
 	 */
-	public void returnBorrowBook() {
-		this.bookBorrow = null;
+	public void returnBorrowBook(final Book aBook) {
+		this.booksBorrow.remove(aBook);
 	}
 }

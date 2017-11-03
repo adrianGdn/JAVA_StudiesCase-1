@@ -121,10 +121,10 @@ public class LibraryImplements implements Library {
 											// it
 					{
 						User theUser = getUserInList(username);
-						if (theUser.getBook() == null) { // in case the user have already another book
+						if (!theUser.getBooks().contains(book)) { // in case the user have already another book
 							book.setIsPresent(false);
 							books.get(i).setIsPresent(false);// the book is now unavailable in the library
-							theUser.setBook(book); // the user now get his book
+							theUser.addBook(book); // the user now get his book
 							return;
 						}
 					} else {
@@ -222,7 +222,7 @@ public class LibraryImplements implements Library {
 		///////////// Part return the book /////////////
 		// Because our counter variable is equals to the longer of the list and the list
 		///////////// begin at 0, we need to subtract 1 to the counter variable
-		users.get(counterUser - 1).returnBorrowBook();
+		users.get(counterUser - 1).returnBorrowBook(returnedBook);
 		books.get(counterBook - 1).isPresent();
 	}
 
@@ -234,7 +234,7 @@ public class LibraryImplements implements Library {
 		List<Book> list = new ArrayList<Book>(); // init the list<Book>
 		for (final Book book : books) {
 			// all test are done here
-			String isbn = book.getISBN() + " " + book.getISBN_13();
+			String isbn = book.getISBN();
 			if (book.getAuthor().contains(searchTerm) || book.getTitle().contains(searchTerm)
 					|| isbn.contains(searchTerm)) {
 				list.add(book);
