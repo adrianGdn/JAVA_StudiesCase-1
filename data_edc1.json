@@ -1,0 +1,2016 @@
+{
+	"users": [
+		{
+			"_id": "59e88c0a18b55f2bf28df6c5",
+			"role": "reader",
+			"name": "Brooke Kennedy",
+			"email": "brookekennedy@yopmail.com",
+			"address": "539 Classon Avenue, Bridgetown, Palau"
+		},
+		{
+			"_id": "59e88c0ace8972ab90d47e8f",
+			"role": "reader",
+			"name": "Lelia Flowers",
+			"email": "leliaflowers@yopmail.com",
+			"address": "986 Nautilus Avenue, Witmer, Oklahoma"
+		},
+		{
+			"_id": "59e88c0a9007feef88b4469a",
+			"role": "reader",
+			"name": "Miller Acevedo",
+			"email": "milleracevedo@yopmail.com",
+			"address": "569 Pineapple Street, Greenfields, Guam"
+		},
+		{
+			"_id": "59e88c0a7e95a61a7dba582c",
+			"role": "reader",
+			"name": "Celina Drake",
+			"email": "celinadrake@yopmail.com",
+			"address": "945 Joval Court, Defiance, Colorado"
+		},
+		{
+			"_id": "59e88c0a655055ecd4edd27c",
+			"role": "reader",
+			"name": "Rachelle Mueller",
+			"email": "rachellemueller@yopmail.com",
+			"address": "158 Colin Place, Austinburg, Vermont"
+		},
+		{
+			"_id": "59e88c0a912445106448836a",
+			"role": "reader",
+			"name": "Ashlee Wilder",
+			"email": "ashleewilder@yopmail.com",
+			"address": "781 Lyme Avenue, Greenock, Kansas"
+		},
+		{
+			"_id": "59e88c0aaa56e63c5abc12ac",
+			"role": "reader",
+			"name": "Jefferson Perry",
+			"email": "jeffersonperry@yopmail.com",
+			"address": "162 Ebony Court, Moraida, Minnesota"
+		},
+		{
+			"_id": "59e88c0aa68d2e434d4ea579",
+			"role": "reader",
+			"name": "Monroe Mack",
+			"email": "monroemack@yopmail.com",
+			"address": "886 Voorhies Avenue, Soudan, Illinois"
+		},
+		{
+			"_id": "59e88c0a629db976c789e09b",
+			"role": "reader",
+			"name": "Deanna Osborne",
+			"email": "deannaosborne@yopmail.com",
+			"address": "175 Butler Street, Bethany, Federated States Of Micronesia"
+		},
+		{
+			"_id": "59e88c0a29cf9c29b559dfc1",
+			"role": "reader",
+			"name": "Leola Deleon",
+			"email": "leoladeleon@yopmail.com",
+			"address": "659 Verona Place, Derwood, Pennsylvania"
+		},
+		{
+			"_id": "59e88c0aea816b78e0fddf37",
+			"role": "reader",
+			"name": "Kirsten Summers",
+			"email": "kirstensummers@yopmail.com",
+			"address": "460 Garland Court, Chemung, New Jersey"
+		},
+		{
+			"_id": "59e88c0ad89d06f37ae69a5d",
+			"role": "reader",
+			"name": "Soto Ferguson",
+			"email": "sotoferguson@yopmail.com",
+			"address": "902 Nevins Street, Nelson, Northern Mariana Islands"
+		},
+		{
+			"_id": "59e88c0a0ad7c40627a01e26",
+			"role": "administrator",
+			"name": "Isabella Nixon",
+			"email": "isabellanixon@yopmail.com",
+			"address": "549 Nassau Street, Riverton, Iowa"
+		},
+		{
+			"_id": "59e88c0a27f97d0aeda2ca35",
+			"role": "administrator",
+			"name": "Mcleod Lowery",
+			"email": "mcleodlowery@yopmail.com",
+			"address": "736 Oxford Street, Escondida, Massachusetts"
+		},
+		{
+			"_id": "59e88c0a86cfd317c194f497",
+			"role": "administrator",
+			"name": "Sharon Kane",
+			"email": "sharonkane@yopmail.com",
+			"address": "566 Lloyd Street, Martinsville, Maine"
+		},
+		{
+			"_id": "59e88c0a47b37d8973a4e56d",
+			"role": "administrator",
+			"name": "Brewer Lowe",
+			"email": "brewerlowe@yopmail.com",
+			"address": "475 Pacific Street, Beaverdale, Delaware"
+		},
+		{
+			"_id": "59e88c0af7e86512740507ad",
+			"role": "reader",
+			"name": "Juanita Knowles",
+			"email": "juanitaknowles@yopmail.com",
+			"address": "751 Bergen Place, Mooresburg, Texas"
+		},
+		{
+			"_id": "59e88c0a892dee4df1555968",
+			"role": "reader",
+			"name": "Lauren Norman",
+			"email": "laurennorman@yopmail.com",
+			"address": "929 Wogan Terrace, Mahtowa, South Carolina"
+		},
+		{
+			"_id": "59e88c0ae6614e66d8e7347c",
+			"role": "administrator",
+			"name": "Rios Rojas",
+			"email": "riosrojas@yopmail.com",
+			"address": "244 Jackson Court, Crown, Wyoming"
+		},
+		{
+			"_id": "59e88c0ab0673b6ad0bb3bb2",
+			"role": "reader",
+			"name": "Dotson Grant",
+			"email": "dotsongrant@yopmail.com",
+			"address": "479 Barbey Street, Macdona, North Dakota"
+		}
+	],
+	"books": [
+		{
+			"kind": "books#volume",
+			"id": "hjEFCAAAQBAJ",
+			"quantity": 1,
+			"etag": "a36qmK8BmOQ",
+			"selfLink": "https://www.googleapis.com/books/v1/volumes/hjEFCAAAQBAJ",
+			"volumeInfo": {
+				"title": "Clean Code",
+				"subtitle": "A Handbook of Agile Software Craftsmanship",
+				"authors": [
+					"Robert C. Martin"
+				],
+				"publisher": "Pearson Education",
+				"publishedDate": "2009",
+				"description": "An extremely pragmatic method for writing better code from the start, and ultimately producing more robust applications.",
+				"industryIdentifiers": [
+					{
+						"type": "ISBN_13",
+						"identifier": "9780132350884"
+					},
+					{
+						"type": "ISBN_10",
+						"identifier": "0132350882"
+					}
+				],
+				"readingModes": {
+					"text": false,
+					"image": false
+				},
+				"pageCount": 431,
+				"printType": "BOOK",
+				"categories": [
+					"Computers"
+				],
+				"averageRating": 4.5,
+				"ratingsCount": 8,
+				"maturityRating": "NOT_MATURE",
+				"allowAnonLogging": false,
+				"contentVersion": "preview-1.0.0",
+				"imageLinks": {
+					"smallThumbnail": "http://books.google.com/books/content?id=hjEFCAAAQBAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+					"thumbnail": "http://books.google.com/books/content?id=hjEFCAAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+				},
+				"language": "en",
+				"previewLink": "http://books.google.fr/books?id=hjEFCAAAQBAJ&dq=code+isbn:0132350882&hl=&cd=1&source=gbs_api",
+				"infoLink": "http://books.google.fr/books?id=hjEFCAAAQBAJ&dq=code+isbn:0132350882&hl=&source=gbs_api",
+				"canonicalVolumeLink": "https://books.google.com/books/about/Clean_Code.html?hl=&id=hjEFCAAAQBAJ"
+			},
+			"saleInfo": {
+				"country": "FR",
+				"saleability": "NOT_FOR_SALE",
+				"isEbook": false
+			},
+			"accessInfo": {
+				"country": "FR",
+				"viewability": "NO_PAGES",
+				"embeddable": false,
+				"publicDomain": false,
+				"textToSpeechPermission": "ALLOWED",
+				"epub": {
+					"isAvailable": false
+				},
+				"pdf": {
+					"isAvailable": false
+				},
+				"webReaderLink": "http://play.google.com/books/reader?id=hjEFCAAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+				"accessViewStatus": "NONE",
+				"quoteSharingAllowed": false
+			},
+			"searchInfo": {
+				"textSnippet": "Looks at the principles and clean code, includes case studies showcasing the practices of writing clean code, and contains a list of heuristics and &quot;smells&quot; accumulated from the process of writing clean code."
+			}
+		},
+		{
+			"kind": "books#volume",
+			"id": "IwywDY4P6gsC",
+			"quantity": 1,
+			"etag": "T8s6QichLGE",
+			"selfLink": "https://www.googleapis.com/books/v1/volumes/IwywDY4P6gsC",
+			"volumeInfo": {
+				"title": "Foundation",
+				"authors": [
+					"Isaac Asimov"
+				],
+				"publisher": "Spectra",
+				"publishedDate": "2004-06-01",
+				"description": "For twelve thousand years the Galactic Empire has ruled supreme. Now it is dying. But only Hari Sheldon, creator of the revolutionary science of psychohistory, can see into the future--to a dark age of ignorance, barbarism, and warfare that will last thirty thousand years. To preserve knowledge and save mankind, Seldon gathers the best minds in the Empire--both scientists and scholars--and brings them to a bleak planet at the edge of the Galaxy to serve as a beacon of hope for a fututre generations. He calls his sanctuary the Foundation. But soon the fledgling Foundation finds itself at the mercy of corrupt warlords rising in the wake of the receding Empire. Mankind's last best hope is faced with an agonizing choice: submit to the barbarians and be overrun--or fight them and be destroyed.",
+				"industryIdentifiers": [
+					{
+						"type": "ISBN_10",
+						"identifier": "055390034X"
+					},
+					{
+						"type": "ISBN_13",
+						"identifier": "9780553900347"
+					}
+				],
+				"readingModes": {
+					"text": true,
+					"image": false
+				},
+				"pageCount": 320,
+				"printType": "BOOK",
+				"categories": [
+					"Fiction"
+				],
+				"averageRating": 3.5,
+				"ratingsCount": 3521,
+				"maturityRating": "NOT_MATURE",
+				"allowAnonLogging": true,
+				"contentVersion": "2.7.4.0.preview.2",
+				"panelizationSummary": {
+					"containsEpubBubbles": false,
+					"containsImageBubbles": false
+				},
+				"imageLinks": {
+					"smallThumbnail": "http://books.google.com/books/content?id=IwywDY4P6gsC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+					"thumbnail": "http://books.google.com/books/content?id=IwywDY4P6gsC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+				},
+				"language": "en",
+				"previewLink": "http://books.google.fr/books?id=IwywDY4P6gsC&dq=foundation+asimov&hl=&cd=1&source=gbs_api",
+				"infoLink": "http://books.google.fr/books?id=IwywDY4P6gsC&dq=foundation+asimov&hl=&source=gbs_api",
+				"canonicalVolumeLink": "https://books.google.com/books/about/Foundation.html?hl=&id=IwywDY4P6gsC"
+			},
+			"saleInfo": {
+				"country": "FR",
+				"saleability": "NOT_FOR_SALE",
+				"isEbook": false
+			},
+			"accessInfo": {
+				"country": "FR",
+				"viewability": "NO_PAGES",
+				"embeddable": false,
+				"publicDomain": false,
+				"textToSpeechPermission": "ALLOWED",
+				"epub": {
+					"isAvailable": true
+				},
+				"pdf": {
+					"isAvailable": true
+				},
+				"webReaderLink": "http://play.google.com/books/reader?id=IwywDY4P6gsC&hl=&printsec=frontcover&source=gbs_api",
+				"accessViewStatus": "NONE",
+				"quoteSharingAllowed": false
+			},
+			"searchInfo": {
+				"textSnippet": "He calls his sanctuary the Foundation. But soon the fledgling Foundation finds itself at the mercy of corrupt warlords rising in the wake of the receding Empire."
+			}
+		},
+		{
+			"kind": "books#volume",
+			"id": "O1aLYcyIWjEC",
+			"etag": "zVi+zuIxma8",
+			"quantity": 1,
+			"selfLink": "https://www.googleapis.com/books/v1/volumes/O1aLYcyIWjEC",
+			"volumeInfo": {
+				"title": "Prelude to Foundation",
+				"authors": [
+					"Isaac Asimov"
+				],
+				"publisher": "Spectra",
+				"publishedDate": "2012-03-14",
+				"description": "It is the year 12,020 G.E. and Emperor Cleon I sits uneasily on the Imperial throne of Trantor. Here in the great multidomed capital of the Galactic Empire, forty billion people have created a civilization of unimaginable technological and cultural complexity. Yet Cleon knows there are those who would see him fall - those whom he would destroy if only he could read the future. Hari Seldon has come to Trantor to deliver his paper on psychohistory, his remarkable theory of prediction. Little does the young Outworld mathematician know that he has already sealed his fate and the fate of humanity. For Hari possesses the prophetic power that makes him the most wanted man in the Empire... the man who holds the key to the future - an apocalyptic power to be know forever after as the Foundation.",
+				"industryIdentifiers": [
+					{
+						"type": "ISBN_13",
+						"identifier": "9780553900958"
+					},
+					{
+						"type": "ISBN_10",
+						"identifier": "0553900951"
+					}
+				],
+				"readingModes": {
+					"text": true,
+					"image": false
+				},
+				"pageCount": 512,
+				"printType": "BOOK",
+				"categories": [
+					"Fiction"
+				],
+				"averageRating": 3.5,
+				"ratingsCount": 32,
+				"maturityRating": "NOT_MATURE",
+				"allowAnonLogging": true,
+				"contentVersion": "0.9.8.0.preview.2",
+				"panelizationSummary": {
+					"containsEpubBubbles": false,
+					"containsImageBubbles": false
+				},
+				"imageLinks": {
+					"smallThumbnail": "http://books.google.com/books/content?id=O1aLYcyIWjEC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+					"thumbnail": "http://books.google.com/books/content?id=O1aLYcyIWjEC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+				},
+				"language": "en",
+				"previewLink": "http://books.google.fr/books?id=O1aLYcyIWjEC&printsec=frontcover&dq=foundation+asimov&hl=&cd=2&source=gbs_api",
+				"infoLink": "https://play.google.com/store/books/details?id=O1aLYcyIWjEC&source=gbs_api",
+				"canonicalVolumeLink": "https://market.android.com/details?id=book-O1aLYcyIWjEC"
+			},
+			"saleInfo": {
+				"country": "FR",
+				"saleability": "FOR_SALE",
+				"isEbook": true,
+				"listPrice": {
+					"amount": 6.28,
+					"currencyCode": "EUR"
+				},
+				"retailPrice": {
+					"amount": 5.97,
+					"currencyCode": "EUR"
+				},
+				"buyLink": "https://play.google.com/store/books/details?id=O1aLYcyIWjEC&rdid=book-O1aLYcyIWjEC&rdot=1&source=gbs_api",
+				"offers": [
+					{
+						"finskyOfferType": 1,
+						"listPrice": {
+							"amountInMicros": 6280000,
+							"currencyCode": "EUR"
+						},
+						"retailPrice": {
+							"amountInMicros": 5970000,
+							"currencyCode": "EUR"
+						},
+						"giftable": true
+					}
+				]
+			},
+			"accessInfo": {
+				"country": "FR",
+				"viewability": "PARTIAL",
+				"embeddable": true,
+				"publicDomain": false,
+				"textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+				"epub": {
+					"isAvailable": true,
+					"acsTokenLink": "http://books.google.fr/books/download/Prelude_to_Foundation-sample-epub.acsm?id=O1aLYcyIWjEC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+				},
+				"pdf": {
+					"isAvailable": false
+				},
+				"webReaderLink": "http://play.google.com/books/reader?id=O1aLYcyIWjEC&hl=&printsec=frontcover&source=gbs_api",
+				"accessViewStatus": "SAMPLE",
+				"quoteSharingAllowed": false
+			},
+			"searchInfo": {
+				"textSnippet": "It is the year 12,020 G.E. and Emperor Cleon I sits uneasily on the Imperial throne of Trantor."
+			}
+		},
+		{
+			"kind": "books#volume",
+			"id": "MWSRNAEACAAJ",
+			"etag": "ZDnmgmvN7HQ",
+			"quantity": 1,
+			"selfLink": "https://www.googleapis.com/books/v1/volumes/MWSRNAEACAAJ",
+			"volumeInfo": {
+				"title": "Foundation and Empire",
+				"authors": [
+					"Isaac Asimov"
+				],
+				"publisher": "Voyager",
+				"publishedDate": "2016-04-21",
+				"description": "Foundation and Empire is the story of first contact between the two Foundations of Hari Seldon. The Seldon Plan guided the First Foundation safely through two centuries of chaos as the Galactic Empire disintegrated. Seldon's recorded holographic image appeared in the Council Chamber on Terminus at moments of crisis predicted by pshychohistory, and his voice was heard. Even war between the Foundation and the remains of the Empire was foreseen - and planned for - by the great scientist.But Seldon had no way of predicting the birth of the Mule, a mutant of uncanny power and unlimited ambition. The Mule's conquests are effortless and his subjects mind-controlled slaves.The Foundation is powerless against the supernormal force the Mule exerts. The Seldon Plan is in tatters. Two men and a woman from Terminus flee to the ruins of might Trantor in an effort to discover where the mysterious Second Foundation was established. Its help is needed desperately against the mental powers of the Mule. But the Mule, using those same astonishing powers, is also looking for the Second Foundation.",
+				"industryIdentifiers": [
+					{
+						"type": "ISBN_10",
+						"identifier": "0008117500"
+					},
+					{
+						"type": "ISBN_13",
+						"identifier": "9780008117504"
+					}
+				],
+				"readingModes": {
+					"text": false,
+					"image": false
+				},
+				"pageCount": 240,
+				"printType": "BOOK",
+				"averageRating": 3.5,
+				"ratingsCount": 44,
+				"maturityRating": "NOT_MATURE",
+				"allowAnonLogging": false,
+				"contentVersion": "preview-1.0.0",
+				"panelizationSummary": {
+					"containsEpubBubbles": false,
+					"containsImageBubbles": false
+				},
+				"imageLinks": {
+					"smallThumbnail": "http://books.google.com/books/content?id=MWSRNAEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+					"thumbnail": "http://books.google.com/books/content?id=MWSRNAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+				},
+				"language": "en",
+				"previewLink": "http://books.google.fr/books?id=MWSRNAEACAAJ&dq=foundation+asimov&hl=&cd=3&source=gbs_api",
+				"infoLink": "http://books.google.fr/books?id=MWSRNAEACAAJ&dq=foundation+asimov&hl=&source=gbs_api",
+				"canonicalVolumeLink": "https://books.google.com/books/about/Foundation_and_Empire.html?hl=&id=MWSRNAEACAAJ"
+			},
+			"saleInfo": {
+				"country": "FR",
+				"saleability": "NOT_FOR_SALE",
+				"isEbook": false
+			},
+			"accessInfo": {
+				"country": "FR",
+				"viewability": "NO_PAGES",
+				"embeddable": false,
+				"publicDomain": false,
+				"textToSpeechPermission": "ALLOWED",
+				"epub": {
+					"isAvailable": false
+				},
+				"pdf": {
+					"isAvailable": false
+				},
+				"webReaderLink": "http://play.google.com/books/reader?id=MWSRNAEACAAJ&hl=&printsec=frontcover&source=gbs_api",
+				"accessViewStatus": "NONE",
+				"quoteSharingAllowed": false
+			},
+			"searchInfo": {
+				"textSnippet": "Foundation and Empire is the story of first contact between the two Foundations of Hari Seldon."
+			}
+		},
+		{
+			"kind": "books#volume",
+			"id": "d8lp4Wth67IC",
+			"quantity": 1,
+			"etag": "fn/VOc5XpU4",
+			"selfLink": "https://www.googleapis.com/books/v1/volumes/d8lp4Wth67IC",
+			"volumeInfo": {
+				"title": "Second Foundation",
+				"authors": [
+					"Isaac Asimov"
+				],
+				"publisher": "Spectra",
+				"publishedDate": "2004-06-01",
+				"description": "Isaac Asimov's Foundation novels are one of the great masterworks of science fiction. As unsurpassed blend of nonstop action, daring ideas, and extensive world-building, they chronicle the struggle of a courageous group of men and women dedicated to preserving humanity's light in a galaxy plunged into a nightmare of ignorance and violence thirty thousand years long. After years of struggle, the Foundation lies in ruinsâ€”destroyed by the mutant mind power of the Mule. But it is rumored that there is a Second Foundation hidden somewhere at the end of the Galaxy, established to preserve the knowledge of mankind through the long centuries of barbarism. The Mule failed to find it the first timeâ€”but now he is certain he knows where it lies. The fate of the Foundation rests on young Arcadia Darell, only fourteen years old and burdened with a terrible secret. As its scientists gird for a final showdown with the Mule, the survivors of the First Foundation begin their desperate search. They too want the Second Foundation destroyedâ€¦before it destroys them. From the Paperback edition.",
+				"industryIdentifiers": [
+					{
+						"type": "ISBN_10",
+						"identifier": "0553900366"
+					},
+					{
+						"type": "ISBN_13",
+						"identifier": "9780553900361"
+					}
+				],
+				"readingModes": {
+					"text": true,
+					"image": false
+				},
+				"pageCount": 304,
+				"printType": "BOOK",
+				"categories": [
+					"Fiction"
+				],
+				"averageRating": 3.5,
+				"ratingsCount": 37,
+				"maturityRating": "NOT_MATURE",
+				"allowAnonLogging": true,
+				"contentVersion": "0.8.6.0.preview.2",
+				"panelizationSummary": {
+					"containsEpubBubbles": false,
+					"containsImageBubbles": false
+				},
+				"imageLinks": {
+					"smallThumbnail": "http://books.google.com/books/content?id=d8lp4Wth67IC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+					"thumbnail": "http://books.google.com/books/content?id=d8lp4Wth67IC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+				},
+				"language": "en",
+				"previewLink": "http://books.google.fr/books?id=d8lp4Wth67IC&printsec=frontcover&dq=foundation+asimov&hl=&cd=4&source=gbs_api",
+				"infoLink": "http://books.google.fr/books?id=d8lp4Wth67IC&dq=foundation+asimov&hl=&source=gbs_api",
+				"canonicalVolumeLink": "https://books.google.com/books/about/Second_Foundation.html?hl=&id=d8lp4Wth67IC"
+			},
+			"saleInfo": {
+				"country": "FR",
+				"saleability": "NOT_FOR_SALE",
+				"isEbook": false
+			},
+			"accessInfo": {
+				"country": "FR",
+				"viewability": "PARTIAL",
+				"embeddable": true,
+				"publicDomain": false,
+				"textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+				"epub": {
+					"isAvailable": true,
+					"acsTokenLink": "http://books.google.fr/books/download/Second_Foundation-sample-epub.acsm?id=d8lp4Wth67IC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+				},
+				"pdf": {
+					"isAvailable": false
+				},
+				"webReaderLink": "http://play.google.com/books/reader?id=d8lp4Wth67IC&hl=&printsec=frontcover&source=gbs_api",
+				"accessViewStatus": "SAMPLE",
+				"quoteSharingAllowed": false
+			},
+			"searchInfo": {
+				"textSnippet": "As its scientists gird for a final showdown with the Mule, the survivors of the First Foundation begin their desperate search. They too want the Second Foundation destroyedâ€¦before it destroys them. From the Paperback edition."
+			}
+		},
+		{
+			"kind": "books#volume",
+			"id": "QoI6QptJvrYC",
+			"quantity": 1,
+			"etag": "NQQL0V+LTUY",
+			"selfLink": "https://www.googleapis.com/books/v1/volumes/QoI6QptJvrYC",
+			"volumeInfo": {
+				"title": "Foundation and Earth",
+				"authors": [
+					"Isaac Asimov"
+				],
+				"publisher": "Spectra",
+				"publishedDate": "2012-02-22",
+				"description": "The fifth novel in Asimov's popular Foundation series opens with second thoughts. Councilman Golan Trevize is wondering if he was right to choose a collective mind as the best possible future for humanity over the anarchy of contentious individuals, nations and planets. To test his conclusion, he decides he must know the past and goes in search of legendary Earth, all references to which have been erased from galactic libraries. The societies encountered along the way become arguing points in a book-long colloquy about man's fate, conducted by Trevize and traveling companion Bliss, who is part of the first world/mind, Gaia. From the Paperback edition.",
+				"industryIdentifiers": [
+					{
+						"type": "ISBN_13",
+						"identifier": "9780553900941"
+					},
+					{
+						"type": "ISBN_10",
+						"identifier": "0553900943"
+					}
+				],
+				"readingModes": {
+					"text": true,
+					"image": false
+				},
+				"pageCount": 528,
+				"printType": "BOOK",
+				"categories": [
+					"Fiction"
+				],
+				"maturityRating": "NOT_MATURE",
+				"allowAnonLogging": true,
+				"contentVersion": "1.8.8.0.preview.2",
+				"panelizationSummary": {
+					"containsEpubBubbles": false,
+					"containsImageBubbles": false
+				},
+				"imageLinks": {
+					"smallThumbnail": "http://books.google.com/books/content?id=QoI6QptJvrYC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+					"thumbnail": "http://books.google.com/books/content?id=QoI6QptJvrYC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+				},
+				"language": "en",
+				"previewLink": "http://books.google.fr/books?id=QoI6QptJvrYC&printsec=frontcover&dq=foundation+asimov&hl=&cd=5&source=gbs_api",
+				"infoLink": "https://play.google.com/store/books/details?id=QoI6QptJvrYC&source=gbs_api",
+				"canonicalVolumeLink": "https://market.android.com/details?id=book-QoI6QptJvrYC"
+			},
+			"saleInfo": {
+				"country": "FR",
+				"saleability": "FOR_SALE",
+				"isEbook": true,
+				"listPrice": {
+					"amount": 6.28,
+					"currencyCode": "EUR"
+				},
+				"retailPrice": {
+					"amount": 5.97,
+					"currencyCode": "EUR"
+				},
+				"buyLink": "https://play.google.com/store/books/details?id=QoI6QptJvrYC&rdid=book-QoI6QptJvrYC&rdot=1&source=gbs_api",
+				"offers": [
+					{
+						"finskyOfferType": 1,
+						"listPrice": {
+							"amountInMicros": 6280000,
+							"currencyCode": "EUR"
+						},
+						"retailPrice": {
+							"amountInMicros": 5970000,
+							"currencyCode": "EUR"
+						},
+						"giftable": true
+					}
+				]
+			},
+			"accessInfo": {
+				"country": "FR",
+				"viewability": "PARTIAL",
+				"embeddable": true,
+				"publicDomain": false,
+				"textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+				"epub": {
+					"isAvailable": true,
+					"acsTokenLink": "http://books.google.fr/books/download/Foundation_and_Earth-sample-epub.acsm?id=QoI6QptJvrYC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+				},
+				"pdf": {
+					"isAvailable": false
+				},
+				"webReaderLink": "http://play.google.com/books/reader?id=QoI6QptJvrYC&hl=&printsec=frontcover&source=gbs_api",
+				"accessViewStatus": "SAMPLE",
+				"quoteSharingAllowed": false
+			},
+			"searchInfo": {
+				"textSnippet": "The fifth novel in Asimov&#39;s popular Foundation series opens with second thoughts."
+			}
+		},
+		{
+			"kind": "books#volume",
+			"id": "L_uuAAAACAAJ",
+			"quantity": 1,
+			"etag": "2Vg6nZ71ZQs",
+			"selfLink": "https://www.googleapis.com/books/v1/volumes/L_uuAAAACAAJ",
+			"volumeInfo": {
+				"title": "Asimov (Foundation) 12 Sw",
+				"authors": [
+					"Isaac Asimov"
+				],
+				"publishedDate": "1991-03",
+				"industryIdentifiers": [
+					{
+						"type": "ISBN_10",
+						"identifier": "0583191207"
+					},
+					{
+						"type": "ISBN_13",
+						"identifier": "9780583191203"
+					}
+				],
+				"readingModes": {
+					"text": false,
+					"image": false
+				},
+				"printType": "BOOK",
+				"maturityRating": "NOT_MATURE",
+				"allowAnonLogging": false,
+				"contentVersion": "preview-1.0.0",
+				"language": "en",
+				"previewLink": "http://books.google.fr/books?id=L_uuAAAACAAJ&dq=foundation+asimov&hl=&cd=6&source=gbs_api",
+				"infoLink": "http://books.google.fr/books?id=L_uuAAAACAAJ&dq=foundation+asimov&hl=&source=gbs_api",
+				"canonicalVolumeLink": "https://books.google.com/books/about/Asimov_Foundation_12_Sw.html?hl=&id=L_uuAAAACAAJ"
+			},
+			"saleInfo": {
+				"country": "FR",
+				"saleability": "NOT_FOR_SALE",
+				"isEbook": false
+			},
+			"accessInfo": {
+				"country": "FR",
+				"viewability": "NO_PAGES",
+				"embeddable": false,
+				"publicDomain": false,
+				"textToSpeechPermission": "ALLOWED",
+				"epub": {
+					"isAvailable": false
+				},
+				"pdf": {
+					"isAvailable": false
+				},
+				"webReaderLink": "http://play.google.com/books/reader?id=L_uuAAAACAAJ&hl=&printsec=frontcover&source=gbs_api",
+				"accessViewStatus": "NONE",
+				"quoteSharingAllowed": false
+			}
+		},
+		{
+			"kind": "books#volume",
+			"quantity": 1,
+			"id": "ooi85kj20vkC",
+			"etag": "ZeBP7yIC21o",
+			"selfLink": "https://www.googleapis.com/books/v1/volumes/ooi85kj20vkC",
+			"volumeInfo": {
+				"title": "Foundation's Edge",
+				"authors": [
+					"Isaac Asimov"
+				],
+				"publisher": "Spectra",
+				"publishedDate": "2012-02-22",
+				"description": "Now, 498 years after its founding, the Foundation seemed to be following the Seldon Plan perfectly. Too perfectly. Now an impossible planet -- with impossible powers -- threatens to upset the Seldon Plan for good unless two men, sworn enemies, can work together to save it! From the Paperback edition.",
+				"industryIdentifiers": [
+					{
+						"type": "ISBN_13",
+						"identifier": "9780553900934"
+					},
+					{
+						"type": "ISBN_10",
+						"identifier": "0553900935"
+					}
+				],
+				"readingModes": {
+					"text": true,
+					"image": false
+				},
+				"pageCount": 480,
+				"printType": "BOOK",
+				"categories": [
+					"Fiction"
+				],
+				"averageRating": 5,
+				"ratingsCount": 2,
+				"maturityRating": "NOT_MATURE",
+				"allowAnonLogging": true,
+				"contentVersion": "1.8.8.0.preview.2",
+				"panelizationSummary": {
+					"containsEpubBubbles": false,
+					"containsImageBubbles": false
+				},
+				"imageLinks": {
+					"smallThumbnail": "http://books.google.com/books/content?id=ooi85kj20vkC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+					"thumbnail": "http://books.google.com/books/content?id=ooi85kj20vkC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+				},
+				"language": "en",
+				"previewLink": "http://books.google.fr/books?id=ooi85kj20vkC&printsec=frontcover&dq=foundation+asimov&hl=&cd=7&source=gbs_api",
+				"infoLink": "https://play.google.com/store/books/details?id=ooi85kj20vkC&source=gbs_api",
+				"canonicalVolumeLink": "https://market.android.com/details?id=book-ooi85kj20vkC"
+			},
+			"saleInfo": {
+				"country": "FR",
+				"saleability": "FOR_SALE",
+				"isEbook": true,
+				"listPrice": {
+					"amount": 6.28,
+					"currencyCode": "EUR"
+				},
+				"retailPrice": {
+					"amount": 5.97,
+					"currencyCode": "EUR"
+				},
+				"buyLink": "https://play.google.com/store/books/details?id=ooi85kj20vkC&rdid=book-ooi85kj20vkC&rdot=1&source=gbs_api",
+				"offers": [
+					{
+						"finskyOfferType": 1,
+						"listPrice": {
+							"amountInMicros": 6280000,
+							"currencyCode": "EUR"
+						},
+						"retailPrice": {
+							"amountInMicros": 5970000,
+							"currencyCode": "EUR"
+						},
+						"giftable": true
+					}
+				]
+			},
+			"accessInfo": {
+				"country": "FR",
+				"viewability": "PARTIAL",
+				"embeddable": true,
+				"publicDomain": false,
+				"textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+				"epub": {
+					"isAvailable": true,
+					"acsTokenLink": "http://books.google.fr/books/download/Foundation_s_Edge-sample-epub.acsm?id=ooi85kj20vkC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+				},
+				"pdf": {
+					"isAvailable": false
+				},
+				"webReaderLink": "http://play.google.com/books/reader?id=ooi85kj20vkC&hl=&printsec=frontcover&source=gbs_api",
+				"accessViewStatus": "SAMPLE",
+				"quoteSharingAllowed": false
+			},
+			"searchInfo": {
+				"textSnippet": "Too perfectly. Now an impossible planet -- with impossible powers -- threatens to upset the Seldon Plan for good unless two men, sworn enemies, can work together to save it! From the Paperback edition."
+			}
+		},
+		{
+			"kind": "books#volume",
+			"id": "nuzCP7fWPHEC",
+			"quantity": 5,
+			"etag": "uQpBOrQkrnI",
+			"selfLink": "https://www.googleapis.com/books/v1/volumes/nuzCP7fWPHEC",
+			"volumeInfo": {
+				"title": "Forward the Foundation",
+				"authors": [
+					"Isaac Asimov"
+				],
+				"publisher": "Spectra",
+				"publishedDate": "2012-02-22",
+				"description": "A stunning testament to his creative genius. Forward The Foundation is a the saga's dramatic climax -- the story Asimov fans have been waiting for. An exciting tale of danger, intrigue, and suspense, Forward The Foundation brings to vivid life Asimov's best loved characters: hero Hari Seldon, who struggles to perfect his revolutionary theory of psychohistory to ensure the survival of humanity; Cleon II, the vain and crafty emperor of the Galactic Empire,",
+				"industryIdentifiers": [
+					{
+						"type": "ISBN_13",
+						"identifier": "9780553900965"
+					},
+					{
+						"type": "ISBN_10",
+						"identifier": "055390096X"
+					}
+				],
+				"readingModes": {
+					"text": true,
+					"image": false
+				},
+				"pageCount": 464,
+				"printType": "BOOK",
+				"categories": [
+					"Fiction"
+				],
+				"averageRating": 4,
+				"ratingsCount": 17,
+				"maturityRating": "NOT_MATURE",
+				"allowAnonLogging": true,
+				"contentVersion": "2.6.5.0.preview.2",
+				"panelizationSummary": {
+					"containsEpubBubbles": false,
+					"containsImageBubbles": false
+				},
+				"imageLinks": {
+					"smallThumbnail": "http://books.google.com/books/content?id=nuzCP7fWPHEC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+					"thumbnail": "http://books.google.com/books/content?id=nuzCP7fWPHEC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+				},
+				"language": "en",
+				"previewLink": "http://books.google.fr/books?id=nuzCP7fWPHEC&dq=foundation+asimov&hl=&cd=8&source=gbs_api",
+				"infoLink": "http://books.google.fr/books?id=nuzCP7fWPHEC&dq=foundation+asimov&hl=&source=gbs_api",
+				"canonicalVolumeLink": "https://books.google.com/books/about/Forward_the_Foundation.html?hl=&id=nuzCP7fWPHEC"
+			},
+			"saleInfo": {
+				"country": "FR",
+				"saleability": "NOT_FOR_SALE",
+				"isEbook": false
+			},
+			"accessInfo": {
+				"country": "FR",
+				"viewability": "NO_PAGES",
+				"embeddable": false,
+				"publicDomain": false,
+				"textToSpeechPermission": "ALLOWED",
+				"epub": {
+					"isAvailable": true
+				},
+				"pdf": {
+					"isAvailable": true
+				},
+				"webReaderLink": "http://play.google.com/books/reader?id=nuzCP7fWPHEC&hl=&printsec=frontcover&source=gbs_api",
+				"accessViewStatus": "NONE",
+				"quoteSharingAllowed": false
+			},
+			"searchInfo": {
+				"textSnippet": "A stunning testament to his creative genius. Forward The Foundation is a the saga&#39;s dramatic climax -- the story Asimov fans have been waiting for."
+			}
+		},
+		{
+			"kind": "books#volume",
+			"id": "V5s14nks9I8C",
+			"quantity": 2,
+			"etag": "bBIm5GUqhVY",
+			"selfLink": "https://www.googleapis.com/books/v1/volumes/V5s14nks9I8C",
+			"volumeInfo": {
+				"title": "Jurassic Park",
+				"subtitle": "A Novel",
+				"authors": [
+					"Michael Crichton"
+				],
+				"publisher": "Ballantine Books",
+				"publishedDate": "2012-05-14",
+				"description": "From the author of Timeline, Sphere, and Congo, this is the classic thriller of science run amok that took the world by storm. #1 NEW YORK TIMES BESTSELLER â€œWonderful . . . powerful.â€�â€”The Washington Post Book World An astonishing technique for recovering and cloning dinosaur DNA has been discovered. Now humankindâ€™s most thrilling fantasies have come true. Creatures extinct for eons roam Jurassic Park with their awesome presence and profound mystery, and all the world can visit themâ€”for a price. Until something goes wrong. . . . In Jurassic Park, Michael Crichton taps all his mesmerizing talent and scientific brilliance to create his most electrifying technothriller. â€œFrighteningly real . . . compelling . . . Itâ€™ll keep you riveted.â€�â€”The Detroit News â€œCrichtonâ€™s dinosaurs are genuinely frightening.â€�â€”Chicago Sun-Times â€œFull of suspense.â€�â€”The New York Times Book Review",
+				"industryIdentifiers": [
+					{
+						"type": "ISBN_13",
+						"identifier": "9780307763051"
+					},
+					{
+						"type": "ISBN_10",
+						"identifier": "0307763056"
+					}
+				],
+				"readingModes": {
+					"text": true,
+					"image": false
+				},
+				"pageCount": 416,
+				"printType": "BOOK",
+				"categories": [
+					"Fiction"
+				],
+				"averageRating": 4,
+				"ratingsCount": 1822,
+				"maturityRating": "NOT_MATURE",
+				"allowAnonLogging": true,
+				"contentVersion": "2.15.11.0.preview.2",
+				"panelizationSummary": {
+					"containsEpubBubbles": false,
+					"containsImageBubbles": false
+				},
+				"imageLinks": {
+					"smallThumbnail": "http://books.google.com/books/content?id=V5s14nks9I8C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+					"thumbnail": "http://books.google.com/books/content?id=V5s14nks9I8C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+				},
+				"language": "en",
+				"previewLink": "http://books.google.fr/books?id=V5s14nks9I8C&printsec=frontcover&dq=jurassic+park&hl=&cd=1&source=gbs_api",
+				"infoLink": "https://play.google.com/store/books/details?id=V5s14nks9I8C&source=gbs_api",
+				"canonicalVolumeLink": "https://market.android.com/details?id=book-V5s14nks9I8C"
+			},
+			"saleInfo": {
+				"country": "FR",
+				"saleability": "FOR_SALE",
+				"isEbook": true,
+				"listPrice": {
+					"amount": 8.08,
+					"currencyCode": "EUR"
+				},
+				"retailPrice": {
+					"amount": 7.68,
+					"currencyCode": "EUR"
+				},
+				"buyLink": "https://play.google.com/store/books/details?id=V5s14nks9I8C&rdid=book-V5s14nks9I8C&rdot=1&source=gbs_api",
+				"offers": [
+					{
+						"finskyOfferType": 1,
+						"listPrice": {
+							"amountInMicros": 8080000,
+							"currencyCode": "EUR"
+						},
+						"retailPrice": {
+							"amountInMicros": 7680000,
+							"currencyCode": "EUR"
+						},
+						"giftable": true
+					}
+				]
+			},
+			"accessInfo": {
+				"country": "FR",
+				"viewability": "PARTIAL",
+				"embeddable": true,
+				"publicDomain": false,
+				"textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+				"epub": {
+					"isAvailable": true,
+					"acsTokenLink": "http://books.google.fr/books/download/Jurassic_Park-sample-epub.acsm?id=V5s14nks9I8C&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+				},
+				"pdf": {
+					"isAvailable": false
+				},
+				"webReaderLink": "http://play.google.com/books/reader?id=V5s14nks9I8C&hl=&printsec=frontcover&source=gbs_api",
+				"accessViewStatus": "SAMPLE",
+				"quoteSharingAllowed": false
+			},
+			"searchInfo": {
+				"textSnippet": "From the author of Timeline, Sphere, and Congo, this is the classic thriller of science run amok that took the world by storm. #1 NEW YORK TIMES BESTSELLER â€œWonderful . . . powerful.â€�â€”The Washington Post Book World An astonishing ..."
+			}
+		},
+		{
+			"kind": "books#volume",
+			"id": "fyzkCgAAQBAJ",
+			"quantity": 1,
+			"etag": "ZJce+hKjh7g",
+			"selfLink": "https://www.googleapis.com/books/v1/volumes/fyzkCgAAQBAJ",
+			"volumeInfo": {
+				"title": "Germinal",
+				"authors": [
+					"Ã‰mile Zola"
+				],
+				"publisher": "Ã‰mile Zola",
+				"publishedDate": "2015-11-09",
+				"description": "Dans la plaine rase, sous la nuit sans Ã©toiles, d'une obscuritÃ© et d'une Ã©paisseur d'encre, un homme suivait seul la grande route de Marchiennes Ã  Montsou, dix kilomÃ¨tres de pavÃ© coupant tout droit, Ã  travers les champs de betteraves. Devant lui, il ne voyait mÃªme pas le sol noir, et il n'avait la sensation de l'immense horizon plat que par les souffles du vent de mars, des rafales larges comme sur une mer, glacÃ©es d'avoir balayÃ© des lieues de marais et de terres nues. Aucune ombre d'arbre ne tachait le ciel, le pavÃ© se dÃ©roulait avec la rectitude d'une jetÃ©e, au milieu de l'embrun aveuglant des tÃ©nÃ¨bres.",
+				"industryIdentifiers": [
+					{
+						"type": "ISBN_13",
+						"identifier": "9788892515895"
+					},
+					{
+						"type": "ISBN_10",
+						"identifier": "8892515896"
+					}
+				],
+				"readingModes": {
+					"text": true,
+					"image": true
+				},
+				"printType": "BOOK",
+				"categories": [
+					"Fiction"
+				],
+				"maturityRating": "NOT_MATURE",
+				"allowAnonLogging": false,
+				"contentVersion": "1.1.1.0.preview.3",
+				"panelizationSummary": {
+					"containsEpubBubbles": false,
+					"containsImageBubbles": false
+				},
+				"imageLinks": {
+					"smallThumbnail": "http://books.google.com/books/content?id=fyzkCgAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+					"thumbnail": "http://books.google.com/books/content?id=fyzkCgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+				},
+				"language": "fr",
+				"previewLink": "http://books.google.fr/books?id=fyzkCgAAQBAJ&printsec=frontcover&dq=germinal&hl=&cd=1&source=gbs_api",
+				"infoLink": "https://play.google.com/store/books/details?id=fyzkCgAAQBAJ&source=gbs_api",
+				"canonicalVolumeLink": "https://market.android.com/details?id=book-fyzkCgAAQBAJ"
+			},
+			"saleInfo": {
+				"country": "FR",
+				"saleability": "FOR_SALE",
+				"isEbook": true,
+				"listPrice": {
+					"amount": 2.99,
+					"currencyCode": "EUR"
+				},
+				"retailPrice": {
+					"amount": 2.99,
+					"currencyCode": "EUR"
+				},
+				"buyLink": "https://play.google.com/store/books/details?id=fyzkCgAAQBAJ&rdid=book-fyzkCgAAQBAJ&rdot=1&source=gbs_api",
+				"offers": [
+					{
+						"finskyOfferType": 1,
+						"listPrice": {
+							"amountInMicros": 2990000,
+							"currencyCode": "EUR"
+						},
+						"retailPrice": {
+							"amountInMicros": 2990000,
+							"currencyCode": "EUR"
+						},
+						"giftable": true
+					}
+				]
+			},
+			"accessInfo": {
+				"country": "FR",
+				"viewability": "PARTIAL",
+				"embeddable": true,
+				"publicDomain": false,
+				"textToSpeechPermission": "ALLOWED",
+				"epub": {
+					"isAvailable": true,
+					"acsTokenLink": "http://books.google.fr/books/download/Germinal-sample-epub.acsm?id=fyzkCgAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+				},
+				"pdf": {
+					"isAvailable": true,
+					"acsTokenLink": "http://books.google.fr/books/download/Germinal-sample-pdf.acsm?id=fyzkCgAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+				},
+				"webReaderLink": "http://play.google.com/books/reader?id=fyzkCgAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+				"accessViewStatus": "SAMPLE",
+				"quoteSharingAllowed": false
+			},
+			"searchInfo": {
+				"textSnippet": "Dans la plaine rase, sous la nuit sans Ã©toiles, d&#39;une obscuritÃ© et d&#39;une Ã©paisseur d&#39;encre, un homme suivait seul la grande route de Marchiennes Ã  Montsou, dix kilomÃ¨tres de pavÃ© coupant tout droit, Ã  travers les champs de betteraves ..."
+			}
+		},
+		{
+			"kind": "books#volume",
+			"id": "xhKwrN97UYgC",
+			"etag": "Tz8kHJ5EJSE",
+			"quantity": 0,
+			"selfLink": "https://www.googleapis.com/books/v1/volumes/xhKwrN97UYgC",
+			"volumeInfo": {
+				"title": "The Edge Chronicles 3: Clash of the Sky Galleons",
+				"subtitle": "Third Book of Quint",
+				"authors": [
+					"Paul Stewart",
+					"Chris Riddell"
+				],
+				"publisher": "Random House",
+				"publishedDate": "2012-01-31",
+				"description": "Young sky-pirate Quint Verginixâ€™s family was devastated when his mother and brothers were killed in a vicious arson attack. Now the treacherous quartermaster responsible, Turbot Smeal, has returned, and Quint and his father are determined to take revenge. From the deserted quarries of the Edge Cliff to the lethal glades of bloodoak trees, their deadly pursuit can only end in a clash of the sky galleons. Clash of the Sky Galleons is the third book of the Quint Saga â€“ first trilogy in The Edge Chronicles, the internationally best-selling fantasy series, which has featured on the UK and the New York Times best-seller lists and sold more than 3 million copies. There are now 13 titles and four trilogies in the series, but each book is a stand-alone adventure, so you can read The Edge Chronicles in any order you choose.",
+				"industryIdentifiers": [
+					{
+						"type": "ISBN_13",
+						"identifier": "9781446498286"
+					},
+					{
+						"type": "ISBN_10",
+						"identifier": "144649828X"
+					}
+				],
+				"readingModes": {
+					"text": true,
+					"image": false
+				},
+				"pageCount": 432,
+				"printType": "BOOK",
+				"categories": [
+					"Juvenile Fiction"
+				],
+				"maturityRating": "NOT_MATURE",
+				"allowAnonLogging": true,
+				"contentVersion": "0.8.4.0.preview.2",
+				"panelizationSummary": {
+					"containsEpubBubbles": false,
+					"containsImageBubbles": false
+				},
+				"imageLinks": {
+					"smallThumbnail": "http://books.google.com/books/content?id=xhKwrN97UYgC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+					"thumbnail": "http://books.google.com/books/content?id=xhKwrN97UYgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+				},
+				"language": "en",
+				"previewLink": "http://books.google.fr/books?id=xhKwrN97UYgC&printsec=frontcover&dq=edge+chronicle&hl=&cd=1&source=gbs_api",
+				"infoLink": "https://play.google.com/store/books/details?id=xhKwrN97UYgC&source=gbs_api",
+				"canonicalVolumeLink": "https://market.android.com/details?id=book-xhKwrN97UYgC"
+			},
+			"saleInfo": {
+				"country": "FR",
+				"saleability": "FOR_SALE",
+				"isEbook": true,
+				"listPrice": {
+					"amount": 6.49,
+					"currencyCode": "EUR"
+				},
+				"retailPrice": {
+					"amount": 6.49,
+					"currencyCode": "EUR"
+				},
+				"buyLink": "https://play.google.com/store/books/details?id=xhKwrN97UYgC&rdid=book-xhKwrN97UYgC&rdot=1&source=gbs_api",
+				"offers": [
+					{
+						"finskyOfferType": 1,
+						"listPrice": {
+							"amountInMicros": 6490000,
+							"currencyCode": "EUR"
+						},
+						"retailPrice": {
+							"amountInMicros": 6490000,
+							"currencyCode": "EUR"
+						},
+						"giftable": true
+					}
+				]
+			},
+			"accessInfo": {
+				"country": "FR",
+				"viewability": "PARTIAL",
+				"embeddable": true,
+				"publicDomain": false,
+				"textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+				"epub": {
+					"isAvailable": true,
+					"acsTokenLink": "http://books.google.fr/books/download/The_Edge_Chronicles_3_Clash_of_the_Sky_G-sample-epub.acsm?id=xhKwrN97UYgC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+				},
+				"pdf": {
+					"isAvailable": false
+				},
+				"webReaderLink": "http://play.google.com/books/reader?id=xhKwrN97UYgC&hl=&printsec=frontcover&source=gbs_api",
+				"accessViewStatus": "SAMPLE",
+				"quoteSharingAllowed": false
+			},
+			"searchInfo": {
+				"textSnippet": "From the deserted quarries of the Edge Cliff to the deadly glades of bloodoak trees, their deadly pursuit can only end in a clash of the sky galleons. The third book of the Quint Saga, part of the Edge Chronicles."
+			}
+		},
+		{
+			"kind": "books#volume",
+			"id": "_-L43M9aozAC",
+			"quantity": 1,
+			"etag": "Bnny2aLGKSc",
+			"selfLink": "https://www.googleapis.com/books/v1/volumes/_-L43M9aozAC",
+			"volumeInfo": {
+				"title": "The Edge Chronicles 9: Freeglader",
+				"subtitle": "Third Book of Rook",
+				"authors": [
+					"Paul Stewart",
+					"Chris Riddell"
+				],
+				"publisher": "Random House",
+				"publishedDate": "2011-09-30",
+				"description": "Fleeing from the ruins of New Undertown, young librarian knight Rook Barkwater and his colleagues â€“ Felix Lodd and his banderbear friends â€“ must lead the escaping population to a new life in the Free Glades. But perils aplenty are ahead for the crowd, and Rook knows the journey will be full of danger. Meanwhile, in the Goblin Nations, the tribes are amassing for war. Will Rook be able to keep his friends, himself and their new lives safe? Freeglader is the third book of the Rook Saga â€“ third trilogy in The Edge Chronicles, the internationally best-selling fantasy series, which has featured on the UK and the New York Times best-seller lists and sold more than 3 million copies. There are now 13 titles and four trilogies in the series, but each book is a stand-alone adventure, so you can read The Edge Chronicles in any order you choose.",
+				"industryIdentifiers": [
+					{
+						"type": "ISBN_13",
+						"identifier": "9781446498262"
+					},
+					{
+						"type": "ISBN_10",
+						"identifier": "1446498263"
+					}
+				],
+				"readingModes": {
+					"text": true,
+					"image": false
+				},
+				"pageCount": 560,
+				"printType": "BOOK",
+				"categories": [
+					"Juvenile Fiction"
+				],
+				"averageRating": 4.5,
+				"ratingsCount": 4,
+				"maturityRating": "NOT_MATURE",
+				"allowAnonLogging": true,
+				"contentVersion": "0.13.8.0.preview.2",
+				"panelizationSummary": {
+					"containsEpubBubbles": false,
+					"containsImageBubbles": false
+				},
+				"imageLinks": {
+					"smallThumbnail": "http://books.google.com/books/content?id=_-L43M9aozAC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+					"thumbnail": "http://books.google.com/books/content?id=_-L43M9aozAC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+				},
+				"language": "en",
+				"previewLink": "http://books.google.fr/books?id=_-L43M9aozAC&pg=PA416&dq=edge+chronicle&hl=&cd=2&source=gbs_api",
+				"infoLink": "https://play.google.com/store/books/details?id=_-L43M9aozAC&source=gbs_api",
+				"canonicalVolumeLink": "https://market.android.com/details?id=book-_-L43M9aozAC"
+			},
+			"saleInfo": {
+				"country": "FR",
+				"saleability": "FOR_SALE",
+				"isEbook": true,
+				"listPrice": {
+					"amount": 6.99,
+					"currencyCode": "EUR"
+				},
+				"retailPrice": {
+					"amount": 6.99,
+					"currencyCode": "EUR"
+				},
+				"buyLink": "https://play.google.com/store/books/details?id=_-L43M9aozAC&rdid=book-_-L43M9aozAC&rdot=1&source=gbs_api",
+				"offers": [
+					{
+						"finskyOfferType": 1,
+						"listPrice": {
+							"amountInMicros": 6990000,
+							"currencyCode": "EUR"
+						},
+						"retailPrice": {
+							"amountInMicros": 6990000,
+							"currencyCode": "EUR"
+						},
+						"giftable": true
+					}
+				]
+			},
+			"accessInfo": {
+				"country": "FR",
+				"viewability": "PARTIAL",
+				"embeddable": true,
+				"publicDomain": false,
+				"textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+				"epub": {
+					"isAvailable": true,
+					"acsTokenLink": "http://books.google.fr/books/download/The_Edge_Chronicles_9_Freeglader-sample-epub.acsm?id=_-L43M9aozAC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+				},
+				"pdf": {
+					"isAvailable": false
+				},
+				"webReaderLink": "http://play.google.com/books/reader?id=_-L43M9aozAC&hl=&printsec=frontcover&source=gbs_api",
+				"accessViewStatus": "SAMPLE",
+				"quoteSharingAllowed": false
+			},
+			"searchInfo": {
+				"textSnippet": "They are of course also co-creators of the bestselling <b>Edge Chronicles</b> series <br>\nwhich has sold over a million books and is now available in over languages. <br>\nCHRIS RIDDELL is an accomplished graphic artist who has illustrated many <br>\nacclaimed&nbsp;..."
+			}
+		},
+		{
+			"kind": "books#volume",
+			"id": "AjOTYkwNpIEC",
+			"quantity": 1,
+			"etag": "jPAfOxGyW48",
+			"selfLink": "https://www.googleapis.com/books/v1/volumes/AjOTYkwNpIEC",
+			"volumeInfo": {
+				"title": "The Edge Chronicles 4: Beyond the Deepwoods",
+				"subtitle": "First Book of Twig",
+				"authors": [
+					"Paul Stewart",
+					"Chris Riddell"
+				],
+				"publisher": "Random House",
+				"publishedDate": "2012-01-31",
+				"description": "Abandoned at birth in the perilous Deepwoods, Twig Verginix is brought up by a family of woodtrolls. One cold night, Twig does what no woodtroll has ever done before â€“ he strays from the path. So begins a heart-stopping adventure that will take Twig through a nightmare world of fearsome goblins, bloodthirsty beasts and flesh-eating trees. Can he discover the truth about his past? Beyond the Deepwoods is the first book of the Twig Saga â€“ second trilogy in The Edge Chronicles, the internationally best-selling fantasy series, which has featured on the UK and the New York Times best-seller lists and sold more than 3 million copies. There are now 13 titles and four trilogies in the series, but each book is a stand-alone adventure, so you can read The Edge Chronicles in any order you choose.",
+				"industryIdentifiers": [
+					{
+						"type": "ISBN_13",
+						"identifier": "9781446452677"
+					},
+					{
+						"type": "ISBN_10",
+						"identifier": "1446452670"
+					}
+				],
+				"readingModes": {
+					"text": true,
+					"image": false
+				},
+				"pageCount": 288,
+				"printType": "BOOK",
+				"categories": [
+					"Juvenile Fiction"
+				],
+				"averageRating": 5,
+				"ratingsCount": 1,
+				"maturityRating": "NOT_MATURE",
+				"allowAnonLogging": true,
+				"contentVersion": "1.6.3.0.preview.2",
+				"panelizationSummary": {
+					"containsEpubBubbles": false,
+					"containsImageBubbles": false
+				},
+				"imageLinks": {
+					"smallThumbnail": "http://books.google.com/books/content?id=AjOTYkwNpIEC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+					"thumbnail": "http://books.google.com/books/content?id=AjOTYkwNpIEC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+				},
+				"language": "en",
+				"previewLink": "http://books.google.fr/books?id=AjOTYkwNpIEC&printsec=frontcover&dq=edge+chronicle&hl=&cd=3&source=gbs_api",
+				"infoLink": "https://play.google.com/store/books/details?id=AjOTYkwNpIEC&source=gbs_api",
+				"canonicalVolumeLink": "https://market.android.com/details?id=book-AjOTYkwNpIEC"
+			},
+			"saleInfo": {
+				"country": "FR",
+				"saleability": "FOR_SALE",
+				"isEbook": true,
+				"listPrice": {
+					"amount": 6.99,
+					"currencyCode": "EUR"
+				},
+				"retailPrice": {
+					"amount": 6.99,
+					"currencyCode": "EUR"
+				},
+				"buyLink": "https://play.google.com/store/books/details?id=AjOTYkwNpIEC&rdid=book-AjOTYkwNpIEC&rdot=1&source=gbs_api",
+				"offers": [
+					{
+						"finskyOfferType": 1,
+						"listPrice": {
+							"amountInMicros": 6990000,
+							"currencyCode": "EUR"
+						},
+						"retailPrice": {
+							"amountInMicros": 6990000,
+							"currencyCode": "EUR"
+						},
+						"giftable": true
+					}
+				]
+			},
+			"accessInfo": {
+				"country": "FR",
+				"viewability": "PARTIAL",
+				"embeddable": true,
+				"publicDomain": false,
+				"textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+				"epub": {
+					"isAvailable": true,
+					"acsTokenLink": "http://books.google.fr/books/download/The_Edge_Chronicles_4_Beyond_the_Deepwoo-sample-epub.acsm?id=AjOTYkwNpIEC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+				},
+				"pdf": {
+					"isAvailable": false
+				},
+				"webReaderLink": "http://play.google.com/books/reader?id=AjOTYkwNpIEC&hl=&printsec=frontcover&source=gbs_api",
+				"accessViewStatus": "SAMPLE",
+				"quoteSharingAllowed": false
+			},
+			"searchInfo": {
+				"textSnippet": "Beyond the Deepwoods is the first book of the Twig Saga â€“ second trilogy in The Edge Chronicles, the internationally best-selling fantasy series, which has featured on the UK and the New York Times best-seller lists and sold more than 3 ..."
+			}
+		},
+		{
+			"kind": "books#volume",
+			"id": "HZaGJHcFaB0C",
+			"etag": "1V9pYJalwqA",
+			"quantity": 1,
+			"selfLink": "https://www.googleapis.com/books/v1/volumes/HZaGJHcFaB0C",
+			"volumeInfo": {
+				"title": "The Edge Chronicles 2: The Winter Knights",
+				"subtitle": "Second Book of Quint",
+				"authors": [
+					"Paul Stewart",
+					"Chris Riddell"
+				],
+				"publisher": "Random House",
+				"publishedDate": "2012-01-31",
+				"description": "Quint Verginix has enrolled as a squire in the Knightâ€™s Academy. After his training, he will be able to pilot stormchaser sky-ships into the heart of Great Storms, and retrieve the solidified lightning â€“ stormphrax â€“ to weigh down the floating rock on which Sanctaphrax is built. But as a freezing winter takes hold, and the city strains to break free of its tether, ancient feuds threaten to tear its people apart. On his own, Quint can do nothing to help avert the impending doom. But with the help of a band of loyal friends he might just be able to avert disaster. The Winter Knights is the second book of the Quint Saga â€“ first trilogy in The Edge Chronicles, the internationally best-selling fantasy series, which has featured on the UK and the New York Times best-seller lists and sold more than 3 million copies. There are now 13 titles and four trilogies in the series, but each book is a stand-alone adventure, so you can read The Edge Chronicles in any order you choose.",
+				"industryIdentifiers": [
+					{
+						"type": "ISBN_13",
+						"identifier": "9781446498279"
+					},
+					{
+						"type": "ISBN_10",
+						"identifier": "1446498271"
+					}
+				],
+				"readingModes": {
+					"text": true,
+					"image": false
+				},
+				"pageCount": 400,
+				"printType": "BOOK",
+				"categories": [
+					"Juvenile Fiction"
+				],
+				"maturityRating": "NOT_MATURE",
+				"allowAnonLogging": true,
+				"contentVersion": "1.8.4.0.preview.2",
+				"panelizationSummary": {
+					"containsEpubBubbles": false,
+					"containsImageBubbles": false
+				},
+				"imageLinks": {
+					"smallThumbnail": "http://books.google.com/books/content?id=HZaGJHcFaB0C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+					"thumbnail": "http://books.google.com/books/content?id=HZaGJHcFaB0C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+				},
+				"language": "en",
+				"previewLink": "http://books.google.fr/books?id=HZaGJHcFaB0C&printsec=frontcover&dq=edge+chronicle&hl=&cd=4&source=gbs_api",
+				"infoLink": "https://play.google.com/store/books/details?id=HZaGJHcFaB0C&source=gbs_api",
+				"canonicalVolumeLink": "https://market.android.com/details?id=book-HZaGJHcFaB0C"
+			},
+			"saleInfo": {
+				"country": "FR",
+				"saleability": "FOR_SALE",
+				"isEbook": true,
+				"listPrice": {
+					"amount": 6.49,
+					"currencyCode": "EUR"
+				},
+				"retailPrice": {
+					"amount": 6.49,
+					"currencyCode": "EUR"
+				},
+				"buyLink": "https://play.google.com/store/books/details?id=HZaGJHcFaB0C&rdid=book-HZaGJHcFaB0C&rdot=1&source=gbs_api",
+				"offers": [
+					{
+						"finskyOfferType": 1,
+						"listPrice": {
+							"amountInMicros": 6490000,
+							"currencyCode": "EUR"
+						},
+						"retailPrice": {
+							"amountInMicros": 6490000,
+							"currencyCode": "EUR"
+						},
+						"giftable": true
+					}
+				]
+			},
+			"accessInfo": {
+				"country": "FR",
+				"viewability": "PARTIAL",
+				"embeddable": true,
+				"publicDomain": false,
+				"textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+				"epub": {
+					"isAvailable": true,
+					"acsTokenLink": "http://books.google.fr/books/download/The_Edge_Chronicles_2_The_Winter_Knights-sample-epub.acsm?id=HZaGJHcFaB0C&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+				},
+				"pdf": {
+					"isAvailable": false
+				},
+				"webReaderLink": "http://play.google.com/books/reader?id=HZaGJHcFaB0C&hl=&printsec=frontcover&source=gbs_api",
+				"accessViewStatus": "SAMPLE",
+				"quoteSharingAllowed": false
+			},
+			"searchInfo": {
+				"textSnippet": "On his own, nothing. But with the help of a band of loyal friends he might just be able to loosen the grip of the cityâ€™s never-ending winter . . . The second book of the Quint Saga, part of the Edge Chronicles."
+			}
+		},
+		{
+			"kind": "books#volume",
+			"id": "EmTlDabbTVYC",
+			"quantity": 1,
+			"etag": "M8B5yUltWjY",
+			"selfLink": "https://www.googleapis.com/books/v1/volumes/EmTlDabbTVYC",
+			"volumeInfo": {
+				"title": "The Edge Chronicles 7: The Last of the Sky Pirates",
+				"subtitle": "First Book of Rook",
+				"authors": [
+					"Paul Stewart",
+					"Chris Riddell"
+				],
+				"publisher": "Random House",
+				"publishedDate": "2010-12-23",
+				"description": "Rook Barkwater lives in the network of sewer-chambers beneath Undertown, the bustling main city of the Edgeworld. He dreams of becoming a librarian knight â€“ one of those sent out to explore the mysteries of their world. Somewhere out there lie the secrets of the past â€“ including the lost floating city of Sanctaphrax â€“ and hope for a future free from the fear of tyranny. When his chance comes, Rook breaks all the rules and sets out on a journey to the Free Glades. His luck and determination lead him from one peril to another until he encounters a mysterious character â€“ the last sky pirate â€“ and is thrust into an extraordinary adventure. The Last of the Sky Pirates is the first book of the Rook Saga â€“ third trilogy in The Edge Chronicles, the internationally best-selling fantasy series, which has featured on the UK and the New York Times best-seller lists and sold more than 3 million copies. There are now 13 titles and four trilogies in the series, but each book is a stand-alone adventure, so you can read The Edge Chronicles in any order you choose.",
+				"industryIdentifiers": [
+					{
+						"type": "ISBN_13",
+						"identifier": "9781407076607"
+					},
+					{
+						"type": "ISBN_10",
+						"identifier": "1407076604"
+					}
+				],
+				"readingModes": {
+					"text": true,
+					"image": false
+				},
+				"pageCount": 512,
+				"printType": "BOOK",
+				"categories": [
+					"Juvenile Fiction"
+				],
+				"maturityRating": "NOT_MATURE",
+				"allowAnonLogging": true,
+				"contentVersion": "2.7.5.0.preview.2",
+				"panelizationSummary": {
+					"containsEpubBubbles": false,
+					"containsImageBubbles": false
+				},
+				"imageLinks": {
+					"smallThumbnail": "http://books.google.com/books/content?id=EmTlDabbTVYC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+					"thumbnail": "http://books.google.com/books/content?id=EmTlDabbTVYC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+				},
+				"language": "en",
+				"previewLink": "http://books.google.fr/books?id=EmTlDabbTVYC&printsec=frontcover&dq=edge+chronicle&hl=&cd=5&source=gbs_api",
+				"infoLink": "https://play.google.com/store/books/details?id=EmTlDabbTVYC&source=gbs_api",
+				"canonicalVolumeLink": "https://market.android.com/details?id=book-EmTlDabbTVYC"
+			},
+			"saleInfo": {
+				"country": "FR",
+				"saleability": "FOR_SALE",
+				"isEbook": true,
+				"listPrice": {
+					"amount": 6.99,
+					"currencyCode": "EUR"
+				},
+				"retailPrice": {
+					"amount": 6.99,
+					"currencyCode": "EUR"
+				},
+				"buyLink": "https://play.google.com/store/books/details?id=EmTlDabbTVYC&rdid=book-EmTlDabbTVYC&rdot=1&source=gbs_api",
+				"offers": [
+					{
+						"finskyOfferType": 1,
+						"listPrice": {
+							"amountInMicros": 6990000,
+							"currencyCode": "EUR"
+						},
+						"retailPrice": {
+							"amountInMicros": 6990000,
+							"currencyCode": "EUR"
+						},
+						"giftable": true
+					}
+				]
+			},
+			"accessInfo": {
+				"country": "FR",
+				"viewability": "PARTIAL",
+				"embeddable": true,
+				"publicDomain": false,
+				"textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+				"epub": {
+					"isAvailable": true,
+					"acsTokenLink": "http://books.google.fr/books/download/The_Edge_Chronicles_7_The_Last_of_the_Sk-sample-epub.acsm?id=EmTlDabbTVYC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+				},
+				"pdf": {
+					"isAvailable": false
+				},
+				"webReaderLink": "http://play.google.com/books/reader?id=EmTlDabbTVYC&hl=&printsec=frontcover&source=gbs_api",
+				"accessViewStatus": "SAMPLE",
+				"quoteSharingAllowed": false
+			},
+			"searchInfo": {
+				"textSnippet": "There are now 13 titles and four trilogies in the series, but each book is a stand-alone adventure, so you can read The Edge Chronicles in any order you choose."
+			}
+		},
+		{
+			"kind": "books#volume",
+			"id": "kEzQAAAACAAJ",
+			"quantity": 1,
+			"etag": "dQkiorlQU7U",
+			"selfLink": "https://www.googleapis.com/books/v1/volumes/kEzQAAAACAAJ",
+			"volumeInfo": {
+				"title": "The Edge Chronicles Maps",
+				"authors": [
+					"Paul Stewart",
+					"Chris Riddell"
+				],
+				"publisher": "Corgi Childrens",
+				"publishedDate": "2004",
+				"description": "Two beautifully illustrated maps, plus a book of characters, places and extra facts to enhance reading the Edge Chronicles adventures. The Deepwoods, the Stone Gardens, the Edgewater River, Undertown and Screetown, New Sanctaphrax, and the Free Glades. Behind each name lies a thousand tales â€” tales that have been recorded on ancient scrolls, and related in this wonderful fantasy series. Now, for the first time, complete with descriptions of some of the best-known places in this magnificently inventive world, two glorious full-colour fold-out maps are available, illustrating the Edgeworld over the generations â€” from the time of the sky pirate Cloud Wolf and his son, Twig, through to the post-stone-sickness world of young Rook Barkwater.",
+				"industryIdentifiers": [
+					{
+						"type": "ISBN_10",
+						"identifier": "0552551252"
+					},
+					{
+						"type": "ISBN_13",
+						"identifier": "9780552551250"
+					}
+				],
+				"readingModes": {
+					"text": false,
+					"image": false
+				},
+				"pageCount": 32,
+				"printType": "BOOK",
+				"categories": [
+					"Children's stories"
+				],
+				"maturityRating": "NOT_MATURE",
+				"allowAnonLogging": false,
+				"contentVersion": "preview-1.0.0",
+				"imageLinks": {
+					"smallThumbnail": "http://books.google.com/books/content?id=kEzQAAAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+					"thumbnail": "http://books.google.com/books/content?id=kEzQAAAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+				},
+				"language": "en",
+				"previewLink": "http://books.google.fr/books?id=kEzQAAAACAAJ&dq=edge+chronicle&hl=&cd=6&source=gbs_api",
+				"infoLink": "http://books.google.fr/books?id=kEzQAAAACAAJ&dq=edge+chronicle&hl=&source=gbs_api",
+				"canonicalVolumeLink": "https://books.google.com/books/about/The_Edge_Chronicles_Maps.html?hl=&id=kEzQAAAACAAJ"
+			},
+			"saleInfo": {
+				"country": "FR",
+				"saleability": "NOT_FOR_SALE",
+				"isEbook": false
+			},
+			"accessInfo": {
+				"country": "FR",
+				"viewability": "NO_PAGES",
+				"embeddable": false,
+				"publicDomain": false,
+				"textToSpeechPermission": "ALLOWED",
+				"epub": {
+					"isAvailable": false
+				},
+				"pdf": {
+					"isAvailable": false
+				},
+				"webReaderLink": "http://play.google.com/books/reader?id=kEzQAAAACAAJ&hl=&printsec=frontcover&source=gbs_api",
+				"accessViewStatus": "NONE",
+				"quoteSharingAllowed": false
+			},
+			"searchInfo": {
+				"textSnippet": "Behind each name lies a thousand tales â€” tales that have been recorded on ancient scrolls, and related in this wonderful fantasy series."
+			}
+		},
+		{
+			"kind": "books#volume",
+			"id": "9YqIgmD7ZVkC",
+			"etag": "7jJ3zdMhHEs",
+			"quantity": 1,
+			"selfLink": "https://www.googleapis.com/books/v1/volumes/9YqIgmD7ZVkC",
+			"volumeInfo": {
+				"title": "The Edge Chronicles 8: Vox",
+				"subtitle": "Second Book of Rook",
+				"authors": [
+					"Paul Stewart",
+					"Chris Riddell"
+				],
+				"publisher": "Random House",
+				"publishedDate": "2012-01-31",
+				"description": "When young librarian knight Rook Barkwater is taken captive and forced to work for Vox Verlix â€“ nominally the Most High Academe, but no more than a prisoner in reality â€“ he stumbles across a terrible truth. Vox is brewing a plot to destroy the goblins and the shrykes at a stroke, so that he can seize control of the Edgeworld for himself. Can Rook foil Vox's plan and save the lives of his librarian friends and colleagues? Vox is the second book of the Rook Saga â€“ third trilogy in The Edge Chronicles, the internationally best-selling fantasy series, which has featured on the UK and the New York Times best-seller lists and sold more than 3 million copies. There are now 13 titles and four trilogies in the series, but each book is a stand-alone adventure, so you can read The Edge Chronicles in any order you choose.",
+				"industryIdentifiers": [
+					{
+						"type": "ISBN_13",
+						"identifier": "9781446498255"
+					},
+					{
+						"type": "ISBN_10",
+						"identifier": "1446498255"
+					}
+				],
+				"readingModes": {
+					"text": true,
+					"image": false
+				},
+				"pageCount": 400,
+				"printType": "BOOK",
+				"categories": [
+					"Juvenile Fiction"
+				],
+				"maturityRating": "NOT_MATURE",
+				"allowAnonLogging": true,
+				"contentVersion": "0.7.5.0.preview.2",
+				"panelizationSummary": {
+					"containsEpubBubbles": false,
+					"containsImageBubbles": false
+				},
+				"imageLinks": {
+					"smallThumbnail": "http://books.google.com/books/content?id=9YqIgmD7ZVkC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+					"thumbnail": "http://books.google.com/books/content?id=9YqIgmD7ZVkC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+				},
+				"language": "en",
+				"previewLink": "http://books.google.fr/books?id=9YqIgmD7ZVkC&printsec=frontcover&dq=edge+chronicle&hl=&cd=7&source=gbs_api",
+				"infoLink": "https://play.google.com/store/books/details?id=9YqIgmD7ZVkC&source=gbs_api",
+				"canonicalVolumeLink": "https://market.android.com/details?id=book-9YqIgmD7ZVkC"
+			},
+			"saleInfo": {
+				"country": "FR",
+				"saleability": "FOR_SALE",
+				"isEbook": true,
+				"listPrice": {
+					"amount": 6.99,
+					"currencyCode": "EUR"
+				},
+				"retailPrice": {
+					"amount": 6.99,
+					"currencyCode": "EUR"
+				},
+				"buyLink": "https://play.google.com/store/books/details?id=9YqIgmD7ZVkC&rdid=book-9YqIgmD7ZVkC&rdot=1&source=gbs_api",
+				"offers": [
+					{
+						"finskyOfferType": 1,
+						"listPrice": {
+							"amountInMicros": 6990000,
+							"currencyCode": "EUR"
+						},
+						"retailPrice": {
+							"amountInMicros": 6990000,
+							"currencyCode": "EUR"
+						},
+						"giftable": true
+					}
+				]
+			},
+			"accessInfo": {
+				"country": "FR",
+				"viewability": "PARTIAL",
+				"embeddable": true,
+				"publicDomain": false,
+				"textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+				"epub": {
+					"isAvailable": true,
+					"acsTokenLink": "http://books.google.fr/books/download/The_Edge_Chronicles_8_Vox-sample-epub.acsm?id=9YqIgmD7ZVkC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+				},
+				"pdf": {
+					"isAvailable": false
+				},
+				"webReaderLink": "http://play.google.com/books/reader?id=9YqIgmD7ZVkC&hl=&printsec=frontcover&source=gbs_api",
+				"accessViewStatus": "SAMPLE",
+				"quoteSharingAllowed": false
+			},
+			"searchInfo": {
+				"textSnippet": "There are now 13 titles and four trilogies in the series, but each book is a stand-alone adventure, so you can read The Edge Chronicles in any order you choose."
+			}
+		},
+		{
+			"kind": "books#volume",
+			"id": "QTbBeU3eJ50C",
+			"etag": "ydGxPiU2iF0",
+			"quantity": 1,
+			"selfLink": "https://www.googleapis.com/books/v1/volumes/QTbBeU3eJ50C",
+			"volumeInfo": {
+				"title": "The Edge Chronicles 5: Stormchaser",
+				"subtitle": "Second Book of Twig",
+				"authors": [
+					"Paul Stewart",
+					"Chris Riddell"
+				],
+				"publisher": "Random House",
+				"publishedDate": "2012-01-31",
+				"description": "Twig Verginix has now realised his dream of becoming a sky pirate, exploring the skies of the Edge as a crew-member of The Stormchaser. That is until Cloud Wolf forbids him from coming on the dangerous quest to collect stormphrax â€“ a valuable substance created inside the heart of a Great Storm. Twig refuses to leave his beloved skyship and smuggles himself on board The Stormchaser â€“ but can the ship, and its crew â€“ survive the destructive force of the Great Storm itself? Stormchaser is the second book of the Twig Saga â€“ second trilogy in The Edge Chronicles, the internationally best-selling fantasy series, which has featured on the UK and the New York Times best-seller lists and sold more than 3 million copies. There are now 13 titles and four trilogies in the series, but each book is a stand-alone adventure, so you can read The Edge Chronicles in any order you choose.",
+				"industryIdentifiers": [
+					{
+						"type": "ISBN_13",
+						"identifier": "9781446498231"
+					},
+					{
+						"type": "ISBN_10",
+						"identifier": "1446498239"
+					}
+				],
+				"readingModes": {
+					"text": true,
+					"image": false
+				},
+				"pageCount": 400,
+				"printType": "BOOK",
+				"categories": [
+					"Juvenile Fiction"
+				],
+				"maturityRating": "NOT_MATURE",
+				"allowAnonLogging": true,
+				"contentVersion": "1.7.3.0.preview.2",
+				"panelizationSummary": {
+					"containsEpubBubbles": false,
+					"containsImageBubbles": false
+				},
+				"imageLinks": {
+					"smallThumbnail": "http://books.google.com/books/content?id=QTbBeU3eJ50C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+					"thumbnail": "http://books.google.com/books/content?id=QTbBeU3eJ50C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+				},
+				"language": "en",
+				"previewLink": "http://books.google.fr/books?id=QTbBeU3eJ50C&printsec=frontcover&dq=edge+chronicle&hl=&cd=8&source=gbs_api",
+				"infoLink": "https://play.google.com/store/books/details?id=QTbBeU3eJ50C&source=gbs_api",
+				"canonicalVolumeLink": "https://market.android.com/details?id=book-QTbBeU3eJ50C"
+			},
+			"saleInfo": {
+				"country": "FR",
+				"saleability": "FOR_SALE",
+				"isEbook": true,
+				"listPrice": {
+					"amount": 6.99,
+					"currencyCode": "EUR"
+				},
+				"retailPrice": {
+					"amount": 6.99,
+					"currencyCode": "EUR"
+				},
+				"buyLink": "https://play.google.com/store/books/details?id=QTbBeU3eJ50C&rdid=book-QTbBeU3eJ50C&rdot=1&source=gbs_api",
+				"offers": [
+					{
+						"finskyOfferType": 1,
+						"listPrice": {
+							"amountInMicros": 6990000,
+							"currencyCode": "EUR"
+						},
+						"retailPrice": {
+							"amountInMicros": 6990000,
+							"currencyCode": "EUR"
+						},
+						"giftable": true
+					}
+				]
+			},
+			"accessInfo": {
+				"country": "FR",
+				"viewability": "PARTIAL",
+				"embeddable": true,
+				"publicDomain": false,
+				"textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+				"epub": {
+					"isAvailable": true,
+					"acsTokenLink": "http://books.google.fr/books/download/The_Edge_Chronicles_5_Stormchaser-sample-epub.acsm?id=QTbBeU3eJ50C&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+				},
+				"pdf": {
+					"isAvailable": false
+				},
+				"webReaderLink": "http://play.google.com/books/reader?id=QTbBeU3eJ50C&hl=&printsec=frontcover&source=gbs_api",
+				"accessViewStatus": "SAMPLE",
+				"quoteSharingAllowed": false
+			},
+			"searchInfo": {
+				"textSnippet": "Stormchaser is the second book of the Twig Saga â€“ second trilogy in The Edge Chronicles, the internationally best-selling fantasy series, which has featured on the UK and the New York Times best-seller lists and sold more than 3 million ..."
+			}
+		},
+		{
+			"kind": "books#volume",
+			"id": "LivNOwAACAAJ",
+			"quantity": 1,
+			"etag": "Z2ur6Z5geEQ",
+			"selfLink": "https://www.googleapis.com/books/v1/volumes/LivNOwAACAAJ",
+			"volumeInfo": {
+				"title": "Le Chasseur de tempÃªte",
+				"authors": [
+					"Paul Stewart",
+					"Chris Riddell"
+				],
+				"publishedDate": "2008-05-07",
+				"description": "Ville de mystÃ¨res et de dangers, Sanctaphrax peut tout offrir : argent, bonheur, pouvoir, mort.... Spic, nouvellement enrÃ´lÃ© dans l'Ã©quipage du Chasseur de TempÃªte, est envoÃ»tÃ© par la citÃ© flottante. Mais Sanctaphrax est en danger. Sa survie dÃ©pend du phrax de tempÃªte, une substance qui maintient son Ã©quilibre. Sans lui, la ville se briserait ses amarres, et s'envolerait Ã  tout jamais... Or le phrax ne peut Ãªtre rÃ©coltÃ© qu'au cÅ“ur mÃªme de la Grande TempÃªte, Ã  l'instant oÃ¹ elle est la plus violente. Un seul navire est capable d'affronter une telle violence : Le Chasseur de tempÃªte...",
+				"industryIdentifiers": [
+					{
+						"type": "ISBN_10",
+						"identifier": "2745931180"
+					},
+					{
+						"type": "ISBN_13",
+						"identifier": "9782745931184"
+					}
+				],
+				"readingModes": {
+					"text": false,
+					"image": false
+				},
+				"pageCount": 402,
+				"printType": "BOOK",
+				"categories": [
+					"Roman d'aventure"
+				],
+				"maturityRating": "NOT_MATURE",
+				"allowAnonLogging": false,
+				"contentVersion": "preview-1.0.0",
+				"language": "fr",
+				"previewLink": "http://books.google.fr/books?id=LivNOwAACAAJ&dq=edge+chronicle&hl=&cd=9&source=gbs_api",
+				"infoLink": "http://books.google.fr/books?id=LivNOwAACAAJ&dq=edge+chronicle&hl=&source=gbs_api",
+				"canonicalVolumeLink": "https://books.google.com/books/about/Le_Chasseur_de_temp%C3%AAte.html?hl=&id=LivNOwAACAAJ"
+			},
+			"saleInfo": {
+				"country": "FR",
+				"saleability": "NOT_FOR_SALE",
+				"isEbook": false
+			},
+			"accessInfo": {
+				"country": "FR",
+				"viewability": "NO_PAGES",
+				"embeddable": false,
+				"publicDomain": false,
+				"textToSpeechPermission": "ALLOWED",
+				"epub": {
+					"isAvailable": false
+				},
+				"pdf": {
+					"isAvailable": false
+				},
+				"webReaderLink": "http://play.google.com/books/reader?id=LivNOwAACAAJ&hl=&printsec=frontcover&source=gbs_api",
+				"accessViewStatus": "NONE",
+				"quoteSharingAllowed": false
+			},
+			"searchInfo": {
+				"textSnippet": "Or le phrax ne peut Ãªtre rÃ©coltÃ© qu&#39;au cÅ“ur mÃªme de la Grande TempÃªte, Ã  l&#39;instant oÃ¹ elle est la plus violente. Un seul navire est capable d&#39;affronter une telle violence : Le Chasseur de tempÃªte."
+			}
+		},
+		{
+			"kind": "books#volume",
+			"id": "swEGqVGKUx4C",
+			"quantity": 1,
+			"etag": "7D/bhohz3kk",
+			"selfLink": "https://www.googleapis.com/books/v1/volumes/swEGqVGKUx4C",
+			"volumeInfo": {
+				"title": "The Edge Chronicles 10: The Immortals",
+				"subtitle": "The Book of Nate",
+				"authors": [
+					"Paul Stewart",
+					"Chris Riddell"
+				],
+				"publisher": "Random House",
+				"publishedDate": "2012-02-29",
+				"description": "Itâ€™s five hundred years into the third age of flight and mighty phraxships steam across the immensity of the Deepwoods, plying their lucrative trade between the three great cities. But all across the Edge, trouble is brewing. The goblin clans are preparing for war. And a storm is gathering, unlike any that has been seen before. When the life of Nate Quarter, a young lamplighter, is threatened, he is forced to flee from the phraxmines of the Eastern Woods to the mighty city of Great Glade. He is propelled on an epic journey of self-discovery that encompasses tournaments, battles, revolutions. And a final encounter with the Immortals themselves. Can he and the friends he makes along the way discover the truth about the past - and ensure the future of the Edge? The Immortals concludes the Quint, Twig and Rook sagas. But is also a great way to begin reading The Edge Chronicles â€“ the internationally best-selling fantasy series â€“ and discover the Quint, Twig and Rook trilogies for the first time. Then new and old readers can join a whole new adventure with the Cade saga â€“ the fourth and latest trilogy in The Edge Chronicles.",
+				"industryIdentifiers": [
+					{
+						"type": "ISBN_13",
+						"identifier": "9781446498293"
+					},
+					{
+						"type": "ISBN_10",
+						"identifier": "1446498298"
+					}
+				],
+				"readingModes": {
+					"text": true,
+					"image": false
+				},
+				"pageCount": 688,
+				"printType": "BOOK",
+				"categories": [
+					"Juvenile Fiction"
+				],
+				"maturityRating": "NOT_MATURE",
+				"allowAnonLogging": true,
+				"contentVersion": "0.14.12.0.preview.2",
+				"panelizationSummary": {
+					"containsEpubBubbles": false,
+					"containsImageBubbles": false
+				},
+				"imageLinks": {
+					"smallThumbnail": "http://books.google.com/books/content?id=swEGqVGKUx4C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+					"thumbnail": "http://books.google.com/books/content?id=swEGqVGKUx4C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+				},
+				"language": "en",
+				"previewLink": "http://books.google.fr/books?id=swEGqVGKUx4C&printsec=frontcover&dq=edge+chronicle&hl=&cd=10&source=gbs_api",
+				"infoLink": "https://play.google.com/store/books/details?id=swEGqVGKUx4C&source=gbs_api",
+				"canonicalVolumeLink": "https://market.android.com/details?id=book-swEGqVGKUx4C"
+			},
+			"saleInfo": {
+				"country": "FR",
+				"saleability": "FOR_SALE",
+				"isEbook": true,
+				"listPrice": {
+					"amount": 6.99,
+					"currencyCode": "EUR"
+				},
+				"retailPrice": {
+					"amount": 6.99,
+					"currencyCode": "EUR"
+				},
+				"buyLink": "https://play.google.com/store/books/details?id=swEGqVGKUx4C&rdid=book-swEGqVGKUx4C&rdot=1&source=gbs_api",
+				"offers": [
+					{
+						"finskyOfferType": 1,
+						"listPrice": {
+							"amountInMicros": 6990000,
+							"currencyCode": "EUR"
+						},
+						"retailPrice": {
+							"amountInMicros": 6990000,
+							"currencyCode": "EUR"
+						},
+						"giftable": true
+					}
+				]
+			},
+			"accessInfo": {
+				"country": "FR",
+				"viewability": "PARTIAL",
+				"embeddable": true,
+				"publicDomain": false,
+				"textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+				"epub": {
+					"isAvailable": true,
+					"acsTokenLink": "http://books.google.fr/books/download/The_Edge_Chronicles_10_The_Immortals-sample-epub.acsm?id=swEGqVGKUx4C&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+				},
+				"pdf": {
+					"isAvailable": false
+				},
+				"webReaderLink": "http://play.google.com/books/reader?id=swEGqVGKUx4C&hl=&printsec=frontcover&source=gbs_api",
+				"accessViewStatus": "SAMPLE",
+				"quoteSharingAllowed": false
+			},
+			"searchInfo": {
+				"textSnippet": "Itâ€™s five hundred years into the third age of flight and mighty phraxships steam across the immensity of the Deepwoods, plying their lucrative trade between the three great cities."
+			}
+		}
+	]
+}
