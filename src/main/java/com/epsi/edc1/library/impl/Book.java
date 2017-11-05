@@ -27,17 +27,20 @@ public class Book {
 	 * Allow you to build a book object.
 	 * 
 	 * @param theISBN
-	 *            The ISBN value of the book. This is a string.
+	 *            The ISBN value of the book. You can put a ISBN13 or a ISBN10.
+	 *            This is a string.
 	 * @param author
-	 *            The author of that book. This is a string.
+	 *            The author of that book.
+	 *            This is a string.
 	 * @param title
-	 *            The title of that book. This is a string.
+	 *            The title of that book.
+	 *            This is a string.
 	 * @param isPresent
 	 *            True if this book is present in the library, false in other case.
 	 *            This is a boolean.
 	 * @param id
-	 *            The ID of the book. The ID must be unique, it will be used to
-	 *            identify the book
+	 *            The ID of the book.
+	 *            The ID must be unique, it will be used to identify the book.
 	 */
 	public Book(final String theISBN, final String author, final String title, final boolean isPresent,
 			final String id) {
@@ -55,7 +58,8 @@ public class Book {
 	/**
 	 * Allow you to recover the author of that book.
 	 * 
-	 * @return The author of that book. This is a string.
+	 * @return The author of that book.
+	 * 			This is a string.
 	 */
 	public String getAuthor() {
 		return this.author;
@@ -64,7 +68,8 @@ public class Book {
 	/**
 	 * Allow you to recover the ISBN value of that book.
 	 * 
-	 * @return The ISBN value of the book. This is a string.
+	 * @return The ISBN value of the book.
+	 * 			This is a string.
 	 */
 	public String getISBN() {
 		if (this.ISBN_10 != null && this.ISBN_13 != null) {
@@ -72,8 +77,7 @@ public class Book {
 		}
 		if (this.ISBN_10 != null) {
 			return this.ISBN_10;
-		}
-		if (this.ISBN_13 != null) {
+		} else if (this.ISBN_13 != null) {
 			return this.ISBN_13;
 		}
 		return null;
@@ -82,39 +86,43 @@ public class Book {
 	/**
 	 * Allow you to recover the ISBN_10 value of that book.
 	 * 
-	 * @return The ISBN value of the book. This is a string.
+	 * @return The ISBN value of the book.
+	 * 			This is a string.
 	 */
 	public String getISBN_10() {
-		return ISBN_10;
+		return this.ISBN_10;
 	}
 
 	/**
 	 * Allow you to recover the ISBN_13 value of that book.
 	 * 
-	 * @return The ISBN value of the book. This is a string.
+	 * @return The ISBN value of the book.
+	 * 			This is a string.
 	 */
 	public String getISBN_13() {
-		return ISBN_13;
+		return this.ISBN_13;
 	}
 
 	/**
 	 * Allow you set the ISBN_13 value of that book.
 	 * 
-	 * @param String
-	 *            the ISBN_10
+	 * @param ISBN_13
+	 *            The ISBN13 value of the book.
+	 *            This is a string.
 	 */
-	public void setISBN_13(final String iSBN_13) {
-		ISBN_13 = iSBN_13;
+	public void setISBN_13(final String ISBN_13) {
+		this.ISBN_13 = ISBN_13;
 	}
 
 	/**
 	 * Allow you set the ISBN_10 value of that book.
 	 * 
-	 * @param String
-	 *            the ISBN_10
+	 * @param ISBN_10
+	 *            The ISBN10 value of the book.
+	 *            This is a string.
 	 */
-	public void setISBN_10(final String iSBN_10) {
-		ISBN_10 = iSBN_10;
+	public void setISBN_10(final String ISBN_10) {
+		this.ISBN_10 = ISBN_10;
 	}
 
 	/**
@@ -139,9 +147,9 @@ public class Book {
 	/**
 	 * Allow to set the isPresent status of the book.
 	 * 
-	 * @param True
-	 *            if this book is present in the library, false in other case. This
-	 *            is a boolean.
+	 * @param present
+	 *            Set as true if this book is present in the library, false in other case.
+	 *            This is a boolean.
 	 */
 	public void setIsPresent(final boolean present) {
 		this.isPresent = present;

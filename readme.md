@@ -7,7 +7,7 @@ This project is divided in three major parts :
     - the library interface
     - the implementation of the library and the other elements (User and Book)
     - the library exceptions
-  - src/test/java : the tests, divided in 15 tests functions
+  - src/test/java : the tests, divided in 17 tests functions
   - src/doc : the documentation (in html) 
 
 In order to run this project, you need to have Java installed on your computer.

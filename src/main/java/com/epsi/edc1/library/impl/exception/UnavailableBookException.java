@@ -7,18 +7,17 @@ package com.epsi.edc1.library.impl.exception;
  * @author Alexis Dubus
  */
 public class UnavailableBookException extends Exception {
-	private String message  = "Book actually not available.";
-	
+	private String message = "Book actually not available.";
+
 	/**
-	 * The default constructor of that class. It allow us to use the method oh that class.
+	 * The default constructor of that class.
+	 * It allow us to use the method oh that class.
 	 */
-	public UnavailableBookException()
-	{
+	public UnavailableBookException() {
 	}
-	
+
 	@Override
-	public String toString()
-	{
+	public String toString() {
 		return message;
 	}
 }

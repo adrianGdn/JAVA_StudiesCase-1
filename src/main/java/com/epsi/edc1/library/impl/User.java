@@ -17,7 +17,7 @@ public class User {
 	private String surname;
 	private String username; // Is used like an id.
 	private int age;
-	private List<Book> booksBorrow  = new ArrayList<Book>(); // A user can borrow only one bookBorrow once a time.
+	private List<Book> booksBorrow = new ArrayList<Book>(); // A user can borrow only one bookBorrow once a time.
 
 	/**
 	 * Allow to create a user class object with all attributes set as null.
@@ -30,13 +30,17 @@ public class User {
 	 * Allow you to build a User object with the parameters sent in argument.
 	 * 
 	 * @param name
-	 *            The name of that user. This is a string.
+	 *            The name of that user.
+	 *            This is a string.
 	 * @param surname
-	 *            The surname of that user. This is a string.
+	 *            The surname of that user.
+	 *            This is a string.
 	 * @param age
-	 *            The age of that user. This is an integer.
+	 *            The age of that user.
+	 *            This is an integer.
 	 * @param username
-	 *            The username (like a pseudo) of that user. This is a string.
+	 *            The username (like a pseudo) of that user.
+	 *            This is a string.
 	 */
 	public User(final String name, final String surname, final int age, final String username) {
 		this.name = name;
@@ -48,7 +52,8 @@ public class User {
 	/**
 	 * Allow you to recover the name of that user.
 	 * 
-	 * @return The name of that user. This is a string.
+	 * @return The name of that user.
+	 * 			This is a string.
 	 */
 	public String getName() {
 		return this.name;
@@ -57,7 +62,8 @@ public class User {
 	/**
 	 * Allow you to recover the surname of that user.
 	 * 
-	 * @return The surname of that user. This is a string.
+	 * @return The surname of that user.
+	 * 			This is a string.
 	 */
 	public String getSurname() {
 		return this.surname;
@@ -66,7 +72,8 @@ public class User {
 	/**
 	 * Allow you to recover the age of that user.
 	 * 
-	 * @return The age of that user. This is an integer.
+	 * @return The age of that user.
+	 * 			This is an integer.
 	 */
 	public int getAge() {
 		return this.age;
@@ -75,7 +82,8 @@ public class User {
 	/**
 	 * Allow you to recover the username of that user.
 	 * 
-	 * @return The username (like a pseudo) of that user. This is a string.
+	 * @return The username (like a pseudo) of that user.
+	 * 			This is a string.
 	 */
 	public String getUsername() {
 		return username;
@@ -84,8 +92,8 @@ public class User {
 	/**
 	 * Allow to recover the bookBorrow borrow per that user.
 	 * 
-	 * @return The bookBorrow that has been borrow per that user. This is a
-	 * List<Book> Object
+	 * @return The bookBorrow that has been borrow per that user.
+	 * 				This is a List<Book> Object
 	 */
 	public List<Book> getBooks() {
 		return booksBorrow;
@@ -95,16 +103,16 @@ public class User {
 	 * Allow you to change the actual bookBorrow for that user.
 	 * 
 	 * @param aBook
-	 *            The bookBorrow that has been borrow per that user. This is a
-	 *            bookBorrow object class.
+	 *            The bookBorrow that has been borrow per that user.
+	 *            This is a bookBorrow object class.
 	 */
 	public void addBook(final Book aBook) {
 		this.booksBorrow.add(aBook);
 	}
 
 	/**
-	 * Allow you to reset the bookBorrow value. Can be useful if the user return a
-	 * borrow book but didn't take another one.
+	 * Allow you to reset the bookBorrow value. 
+	 * Can be useful if the user return a borrow book but didn't take another one.
 	 */
 	public void returnBorrowBook(final Book aBook) {
 		this.booksBorrow.remove(aBook);

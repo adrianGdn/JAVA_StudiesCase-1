@@ -7,18 +7,17 @@ package com.epsi.edc1.library.impl.exception;
  * @author Alexis Dubus
  */
 public class BookNotFoundException extends Exception {
-	private String message  = "Book not found.";
-	
+	private String message = "Book not found.";
+
 	/**
-	 * The default constructor of that class. It allow us to use the method oh that class.
+	 * The default constructor of that class.
+	 * It allow us to use the method oh that class.
 	 */
-	public BookNotFoundException()
-	{
+	public BookNotFoundException() {
 	}
-	
+
 	@Override
-	public String toString()
-	{
+	public String toString() {
 		return message;
 	}
 }
