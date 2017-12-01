@@ -1,12 +1,11 @@
 package com.epsi.edc1.library.impl;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
 import com.epsi.edc1.library.Library;
-import com.epsi.edc1.library.impl.Book;
-import com.epsi.edc1.library.impl.User;
 import com.epsi.edc1.library.impl.exception.AllBooksAlreadyReturnedException;
 import com.epsi.edc1.library.impl.exception.BookNotFoundException;
 import com.epsi.edc1.library.impl.exception.UnavailableBookException;
@@ -20,23 +19,26 @@ import com.epsi.edc1.library.impl.exception.UnavailableBookException;
 public class LibraryImplements implements Library {
 
 	/**
-	 * The library list of book. Some book can have the same title or ISBN,
-	 * but the ID must differ.
+	 * The library list of book. Some book can have the same title or ISBN, but the
+	 * ID must differ.
 	 */
-	private List<Book> books = new ArrayList<Book>();
+	private final List<Book> books = new ArrayList<>();
 
 	/**
 	 * The global list of book. The book in this list can be add to the books.
 	 */
-	private List<Book> globalBooks = new ArrayList<Book>();
+	private List<Book> globalBooks = Arrays.asList(
+			new Book("9780671870362", "Ray Bradbury", "Fahrenheit 451", true, "4"),
+			new Book("9780671870362", "Benoît Cavrois", "Life is potatoes", true, "43"));
 
 	/**
 	 * The user list of the library. They have access to the library book.
 	 */
-	private List<User> users = new ArrayList<User>();
+	private List<User> users = new ArrayList<>();
 
 	/**
-	 * The constructor of that class, this is here that the initialization methods are used.
+	 * The constructor of that class, this is here that the initialization methods
+	 * are used.
 	 */
 	public LibraryImplements() {
 		initBooks();
@@ -45,7 +47,8 @@ public class LibraryImplements implements Library {
 	}
 
 	/**
-	 * Methods that allow us to give some "Book" to our library by an initialization of a list.
+	 * Methods that allow us to give some "Book" to our library by an initialization
+	 * of a list.
 	 */
 	private void initBooks() {
 		books.add(new Book("9780671870362", "Ray Bradbury", "Fahrenheit 451", true, "978"));// first book of Ray
@@ -58,12 +61,11 @@ public class LibraryImplements implements Library {
 	}
 
 	/**
-	 * Methods that allow us to give some "Book" to the book which "exist in the world" by an initialization of a list.
-	 * We can add book to this list by using the "addBook" method.
+	 * Methods that allow us to give some "Book" to the book which "exist in the
+	 * world" by an initialization of a list. We can add book to this list by using
+	 * the "addBook" method.
 	 */
 	private void initGlobalBooks() {
-		globalBooks.add(new Book("9780671870362", "Ray Bradbury", "Fahrenheit 451", true, "4"));
-		globalBooks.add(new Book("9780671870362", "Benoît Cavrois", "Life is potatoes", true, "43"));
 		globalBooks.add(new Book("0307763055", "Julien Petit", "Le Havre : Le port du monde ?", true, "6"));
 		globalBooks.add(new Book("0307763056", "Julien Petit", "La VR de demain", true, "10"));
 		globalBooks.add(new Book("0070070070", "James Bond", "Agent 007", true, "7"));
@@ -71,7 +73,8 @@ public class LibraryImplements implements Library {
 	}
 
 	/**
-	 * Methods that allow us to give some "User" to our library by an initialization of a list.
+	 * Methods that allow us to give some "User" to our library by an initialization
+	 * of a list.
 	 */
 	private void initUsers() {
 		users.add(new User("Benoît", "Cavrois", 9, "bCavrois"));
@@ -87,7 +90,7 @@ public class LibraryImplements implements Library {
 				return Optional.of(book);
 			}
 		}
-		return Optional.of(new Book()); // By default, send an empty Optional<Book>
+		return Optional.empty(); // By default, send an empty Optional<Book>
 	}
 
 	public Optional<String> addBook(final String isbn) {
@@ -113,7 +116,8 @@ public class LibraryImplements implements Library {
 				if (id.equals(book.getId()))// If the id is equals, it's the good book
 				{
 					countNumberOkIsbnBook++;
-					if (book.isPresent())// Check if the book is present in the library in case someone already borrow it
+					if (book.isPresent())// Check if the book is present in the library in case someone already borrow
+											// it
 					{
 						User theUser = getUserInList(username);
 						if (!theUser.getBooks().contains(book)) { // In case the user have already another book
@@ -142,37 +146,32 @@ public class LibraryImplements implements Library {
 	 * This method allow us to check if a user exist in the list of user.
 	 * 
 	 * @param username
-	 *            The username (like a pseudo) of that user.
-	 *            This is a string.
-	 * @return boolean Return true if the user pass in parameter (by it's username) exist in our user list.
+	 *            The username (like a pseudo) of that user. This is a string.
+	 * @return boolean Return true if the user pass in parameter (by it's username)
+	 *         exist in our user list.
 	 */
 	private boolean userExistInList(final String username) {
-		boolean exist = false;// The user doesn't exist in the list by default
 		for (final User user : users) {
 			if (username.equals(user.getUsername()))// Identification is done with the username
 			{
 				return true;
 			}
 		}
-		return exist;
+		return false;
 	}
 
 	/**
 	 * This method allow us to get a user who exist in the list of our user.
 	 * 
 	 * @param username
-	 *            The username (like a pseudo) of that user.
-	 *            This is a string.
+	 *            The username (like a pseudo) of that user. This is a string.
 	 * @return User If the user exist in our list, we return it.
 	 */
 	public User getUserInList(final String username) {
 		User userStd = new User();
-		if (userExistInList(username)) {
-			for (final User user : users) {
-				if (username.equals(user.getUsername())) // Identification is done with the username
-				{
-					return user;
-				}
+		for (final User user : users) {
+			if (username.equals(user.getUsername())) {// Identification is done with the username
+				return user;
 			}
 		}
 		return userStd; // By default, an empty user is returned
@@ -194,7 +193,7 @@ public class LibraryImplements implements Library {
 			counterBook++;
 		}
 		// If we haven't find the book, we throw an exception
-		if (counterBook <= books.size() && bookFind == false) {
+		if (counterBook <= books.size() && !bookFind) {
 			throw new BookNotFoundException();
 		}
 
@@ -216,7 +215,8 @@ public class LibraryImplements implements Library {
 		}
 
 		///////////// Part return the book /////////////
-		// Because our counter variable is equals to the longer of the list and the list begin at 0, we need to subtract 1 to the counter variable
+		// Because our counter variable is equals to the longer of the list and the list
+		///////////// begin at 0, we need to subtract 1 to the counter variable
 		users.get(counterUser - 1).returnBorrowBook(returnedBook);
 		books.get(counterBook - 1).isPresent();
 	}
