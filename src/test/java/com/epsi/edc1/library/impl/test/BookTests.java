@@ -15,10 +15,11 @@ public class BookTests {
 	@Test
 	public void bookSimpleGettersTest() {
 		// Preparation
-		Book aTestBook = new Book("1234544444", "TestAuthor", "TestTitle", false, "1");
+		Book aTestBook = new Book("1234544444", "1234544444000", "TestAuthor", "TestTitle", false, "1");
 		// Begin
 			// Gets tests
-		assertThat(aTestBook.getISBN(), equalTo("1234544444"));
+		assertThat(aTestBook.getISBN_10(), equalTo("1234544444"));
+		assertThat(aTestBook.getISBN_13(), equalTo("1234544444000"));
 		assertThat(aTestBook.getAuthor(), equalTo("TestAuthor"));
 		assertThat(aTestBook.getTitle(), equalTo("TestTitle"));
 		assertThat(aTestBook.isPresent(), equalTo(false));
@@ -36,11 +37,12 @@ public class BookTests {
 	@Test
 	public void bookSpecialsCharactersGettersTest() {
 		// Preparation
-		Book aTestBook = new Book("1234500000", "T€st-@uth0r",
+		Book aTestBook = new Book("1234500000", "1234500000000", "T€st-@uth0r",
 				"Test_²&é/*-+.0123456789<>,;:!§/.?ù*$^¨£µ%¤~#{}[]|`^@°'(-è_çà)=Title", true, "2");
 		// Begin
 			// Gets tests
-		assertThat(aTestBook.getISBN(), equalTo("1234500000"));
+		assertThat(aTestBook.getISBN_10(), equalTo("1234500000"));
+		assertThat(aTestBook.getISBN_13(), equalTo("1234500000000"));
 		assertThat(aTestBook.getAuthor(), equalTo("T€st-@uth0r"));
 		assertThat(aTestBook.getTitle(),
 				equalTo("Test_²&é/*-+.0123456789<>,;:!§/.?ù*$^¨£µ%¤~#{}[]|`^@°'(-è_çà)=Title"));
@@ -58,13 +60,14 @@ public class BookTests {
 	@Test
 	public void bookLongParametersGettersTest() {
 		// Preparation
-		Book aTestBook = new Book("1234567898765",
+		Book aTestBook = new Book("1234567898765","1234567898765000",
 				"TestAuthoreeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
 				"TestTitleeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee", false,
 				"1234567891011121314151617181920212223242526272829303132");
 		// Begin
 			// Gets tests
-		assertThat(aTestBook.getISBN(), equalTo("1234567898765"));
+		assertThat(aTestBook.getISBN_10(), equalTo("1234567898765"));
+		assertThat(aTestBook.getISBN_13(), equalTo("1234567898765000"));
 		assertThat(aTestBook.getAuthor(),
 				equalTo("TestAuthoreeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"));
 		assertThat(aTestBook.getTitle(),
@@ -86,7 +89,8 @@ public class BookTests {
 		Book aTestBook = new Book();
 		// Begin
 			// Gets tests
-		assertThat(aTestBook.getISBN(), equalTo(null));
+		assertThat(aTestBook.getISBN_10(), equalTo(null));
+		assertThat(aTestBook.getISBN_13(), equalTo(null));
 		assertThat(aTestBook.getAuthor(), equalTo(null));
 		assertThat(aTestBook.getTitle(), equalTo(null));
 		assertThat(aTestBook.isPresent(), equalTo(false));

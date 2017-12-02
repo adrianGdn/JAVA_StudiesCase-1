@@ -1,0 +1,28 @@
+les // représente des actions terminé
+
+//javadoc sur attribut
+//constructeur pour isbn10 ou isbn13
+
+//getisbn10 getisbn13
+
+//mettre final ++++
+
+initialise sans fonction
+
+//optional.empty();
+
+//addBook renvoi un vrai id
+
+throw exception t�t
+
+pas de sous-sous-sous bloc de code 
+
+//pas d'objet vide 
+
+d�coupage+++
+
+formulation boucle while 
+
+//ne pas tester méthode non présente dans Library.java
+
+gitbucket 

@@ -27,14 +27,16 @@ public class LibraryImplements implements Library {
 	/**
 	 * The global list of book. The book in this list can be add to the books.
 	 */
-	private List<Book> globalBooks = Arrays.asList(
+	private final List<Book> globalBooks = new ArrayList<>();
+	/* private List<Book> globalBooks = Arrays.asList(
 			new Book("9780671870362", "Ray Bradbury", "Fahrenheit 451", true, "4"),
-			new Book("9780671870362", "Benoît Cavrois", "Life is potatoes", true, "43"));
+			new Book("9780671870362", "Benoît Cavrois", "Life is potatoes", true, "43")); */
+	
 
 	/**
 	 * The user list of the library. They have access to the library book.
 	 */
-	private List<User> users = new ArrayList<>();
+	private final List<User> users = new ArrayList<>();
 
 	/**
 	 * The constructor of that class, this is here that the initialization methods
@@ -51,13 +53,13 @@ public class LibraryImplements implements Library {
 	 * of a list.
 	 */
 	private void initBooks() {
-		books.add(new Book("9780671870362", "Ray Bradbury", "Fahrenheit 451", true, "978"));// first book of Ray
+		books.add(new Book("9780671870", "9780671870000", "Ray Bradbury", "Fahrenheit 451", true, "978"));// first book of Ray
 																							// Bradbury in the library
-		books.add(new Book("9780671870362", "Ray Bradbury", "Fahrenheit 451", true, "1"));// second book of Ray Bradbury
+		books.add(new Book("9780671870", "9780671870000", "Ray Bradbury", "Fahrenheit 451", true, "1"));// second book of Ray Bradbury
 																							// in the library
-		books.add(new Book("0307763057", "Benoît Cavrois", "Life is potatoes", true, "42"));
-		books.add(new Book("0070070070", "James Bond", "Agent 007", true, "7"));
-		books.add(new Book("2323232323233", "I am an author", "I am a title", true, "2323001"));
+		books.add(new Book("0307763057", "0307763057000", "Benoît Cavrois", "Life is potatoes", true, "42"));
+		books.add(new Book("0070070070", "0070070070000", "James Bond", "Agent 007", true, "7"));
+		books.add(new Book("2323232323", "2323232323000", "I am an author", "I am a title", true, "2323001"));
 	}
 
 	/**
@@ -66,10 +68,10 @@ public class LibraryImplements implements Library {
 	 * the "addBook" method.
 	 */
 	private void initGlobalBooks() {
-		globalBooks.add(new Book("0307763055", "Julien Petit", "Le Havre : Le port du monde ?", true, "6"));
-		globalBooks.add(new Book("0307763056", "Julien Petit", "La VR de demain", true, "10"));
-		globalBooks.add(new Book("0070070070", "James Bond", "Agent 007", true, "7"));
-		globalBooks.add(new Book("2323232323233", "I am an author", "I am a title", true, "2323001"));
+		globalBooks.add(new Book("0307763055", "0307763055000", "Julien Petit", "Le Havre : Le port du monde ?", true, "6"));
+		globalBooks.add(new Book("0307763056", "0307763056000", "Julien Petit", "La VR de demain", true, "10"));
+		globalBooks.add(new Book("0070070070", "0070070070000", "James Bond", "Agent 007", true, "7"));
+		globalBooks.add(new Book("2323232323233", "2323232323233000", "I am an author", "I am a title", true, "2323001"));
 	}
 
 	/**
@@ -90,17 +92,17 @@ public class LibraryImplements implements Library {
 				return Optional.of(book);
 			}
 		}
-		return Optional.empty(); // By default, send an empty Optional<Book>
+		return Optional.empty(); // By default, return an empty Optional
 	}
 
 	public Optional<String> addBook(final String isbn) {
 		for (final Book book : globalBooks) {// Search trough globalBooks
-			if (isbn.equals(book.getISBN())) {
+			if (isbn.equals(book.getISBN_10()) || isbn.equals(book.getISBN_13())) {
 				books.add(book);
-				return Optional.of(book.getISBN());
+				return Optional.of(book.getId());
 			}
 		}
-		return Optional.of(""); // By default, return a Optional of an empty string
+		return Optional.empty(); // By default, return an empty Optional
 	}
 
 	public void borrowBook(final String id, final String username)
@@ -116,8 +118,8 @@ public class LibraryImplements implements Library {
 				if (id.equals(book.getId()))// If the id is equals, it's the good book
 				{
 					countNumberOkIsbnBook++;
-					if (book.isPresent())// Check if the book is present in the library in case someone already borrow
-											// it
+					// Check if the book is present in the library in case someone already borrowed it
+					if (book.isPresent())
 					{
 						User theUser = getUserInList(username);
 						if (!theUser.getBooks().contains(book)) { // In case the user have already another book
@@ -167,14 +169,13 @@ public class LibraryImplements implements Library {
 	 *            The username (like a pseudo) of that user. This is a string.
 	 * @return User If the user exist in our list, we return it.
 	 */
-	public User getUserInList(final String username) {
-		User userStd = new User();
+	private User getUserInList(final String username) {
 		for (final User user : users) {
 			if (username.equals(user.getUsername())) {// Identification is done with the username
 				return user;
 			}
 		}
-		return userStd; // By default, an empty user is returned
+		return null; // By default, return null
 	}
 
 	public void returnBook(final String id, final String username)
@@ -229,9 +230,10 @@ public class LibraryImplements implements Library {
 		List<Book> list = new ArrayList<Book>(); // Init the list<Book>
 		for (final Book book : books) {
 			// All test are done here
-			String isbn = book.getISBN();
+			String isbn_13 = book.getISBN_10();
+			String isbn_10 = book.getISBN_13();
 			if (book.getAuthor().contains(searchTerm) || book.getTitle().contains(searchTerm)
-					|| isbn.contains(searchTerm)) {
+					|| isbn_13.contains(searchTerm) || isbn_10.contains(searchTerm)) {
 				list.add(book);
 			}
 		}

@@ -9,11 +9,34 @@ package com.epsi.edc1.library.impl;
  */
 public class Book {
 
+	/**
+	 * the book author
+	 */
 	private String author;
+	
+	/**
+	 * the book ISBN_10
+	 */
 	private String ISBN_10;
+	
+	/**
+	 * the book ISBN_13
+	 */
 	private String ISBN_13;
+	
+	/**
+	 * the book title
+	 */
 	private String title;
+	
+	/**
+	 * statut of the book presence
+	 */
 	private boolean isPresent;
+	
+	/**
+	 * the book id
+	 */
 	private String id;
 
 	/**
@@ -49,6 +72,38 @@ public class Book {
 		} else if (theISBN.length() == 13) {
 			this.ISBN_13 = theISBN;
 		}
+		this.author = author;
+		this.title = title;
+		this.isPresent = isPresent;
+		this.id = id;
+	}
+	
+	/**
+	 * Allow you to build a book object.
+	 *
+	 * @param isbn10
+	 *            The ISBN_10 value of the book.
+	 *            This is a string.
+	 * @param isbn13
+	 *            The ISBN_13 value of the book.
+	 *            This is a string.
+	 * @param author
+	 *            The author of that book.
+	 *            This is a string.
+	 * @param title
+	 *            The title of that book.
+	 *            This is a string.
+	 * @param isPresent
+	 *            True if this book is present in the library, false in other case.
+	 *            This is a boolean.
+	 * @param id
+	 *            The ID of the book.
+	 *            The ID must be unique, it will be used to identify the book.
+	 */
+	public Book(final String isbn10, final String isbn13, final String author, final String title, final boolean isPresent,
+			final String id) {
+		this.ISBN_10 = isbn10;
+		this.ISBN_13 = isbn13;
 		this.author = author;
 		this.title = title;
 		this.isPresent = isPresent;
