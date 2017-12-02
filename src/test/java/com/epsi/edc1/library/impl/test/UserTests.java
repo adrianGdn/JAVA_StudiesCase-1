@@ -2,10 +2,8 @@ package com.epsi.edc1.library.impl.test;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.junit.Assert.*;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import org.junit.Test;
 import com.epsi.edc1.library.impl.Book;
 import com.epsi.edc1.library.impl.User;

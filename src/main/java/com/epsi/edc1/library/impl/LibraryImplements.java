@@ -1,10 +1,8 @@
 package com.epsi.edc1.library.impl;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
-
 import com.epsi.edc1.library.Library;
 import com.epsi.edc1.library.impl.exception.AllBooksAlreadyReturnedException;
 import com.epsi.edc1.library.impl.exception.BookNotFoundException;
@@ -22,7 +20,7 @@ public class LibraryImplements implements Library {
 	 * The library list of book. Some book can have the same title or ISBN, but the
 	 * ID must differ.
 	 */
-private final List<Book> books = new ArrayList<>();
+	private final List<Book> books = new ArrayList<>();
 
 	/**
 	 * The global list of book. The book in this list can be add to the books list.

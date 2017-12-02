@@ -6,6 +6,7 @@ package com.epsi.edc1.library.impl.exception;
  * @author Adrian Gandon
  * @author Alexis Dubus
  */
+@SuppressWarnings("serial")
 public class UnavailableBookException extends Exception {
 	private String message = "Book actually not available.";
 

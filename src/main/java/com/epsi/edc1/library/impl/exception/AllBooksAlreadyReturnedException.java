@@ -6,6 +6,7 @@ package com.epsi.edc1.library.impl.exception;
  * @author Adrian Gandon
  * @author Alexis Dubus
  */
+@SuppressWarnings("serial")
 public class AllBooksAlreadyReturnedException extends Exception {
 	private String message = "All books which have this ID has already been return.";
 

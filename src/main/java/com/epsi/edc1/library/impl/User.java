@@ -2,7 +2,6 @@ package com.epsi.edc1.library.impl;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import com.epsi.edc1.library.impl.Book;
 
 /**
