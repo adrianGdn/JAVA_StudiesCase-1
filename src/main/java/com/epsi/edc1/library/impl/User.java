@@ -15,27 +15,27 @@ import com.epsi.edc1.library.impl.Book;
 public class User {
 	
 	/**
-	 * the user name
+	 * The name of the user.
 	 */
 	private String name;
 	
 	/**
-	 * the user surname
+	 * The surname of the user.
 	 */
 	private String surname;
 	
 	/**
-	 * the user username
+	 * The username of the user.
 	 */
 	private String username; // Is used like an id.
 	
 	/**
-	 * the user age
+	 * The age of the user.
 	 */
 	private int age;
 	
 	/**
-	 * the list of book the user borrowed
+	 * The list of book the user borrowed.
 	 */
 	private List<Book> booksBorrow = new ArrayList<>(); // A user can borrow only a book once a time.
 

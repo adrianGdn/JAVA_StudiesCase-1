@@ -22,15 +22,12 @@ public class LibraryImplements implements Library {
 	 * The library list of book. Some book can have the same title or ISBN, but the
 	 * ID must differ.
 	 */
-	private final List<Book> books = new ArrayList<>();
+private final List<Book> books = new ArrayList<>();
 
 	/**
-	 * The global list of book. The book in this list can be add to the books.
+	 * The global list of book. The book in this list can be add to the books list.
 	 */
 	private final List<Book> globalBooks = new ArrayList<>();
-	/* private List<Book> globalBooks = Arrays.asList(
-			new Book("9780671870362", "Ray Bradbury", "Fahrenheit 451", true, "4"),
-			new Book("9780671870362", "Benoît Cavrois", "Life is potatoes", true, "43")); */
 	
 
 	/**
@@ -39,8 +36,8 @@ public class LibraryImplements implements Library {
 	private final List<User> users = new ArrayList<>();
 
 	/**
-	 * The constructor of that class, this is here that the initialization methods
-	 * are used.
+	 * The constructor of that class.
+	 * Allow after the initialization to do many super things !
 	 */
 	public LibraryImplements() {
 		initBooks();
@@ -53,10 +50,10 @@ public class LibraryImplements implements Library {
 	 * of a list.
 	 */
 	private void initBooks() {
-		books.add(new Book("9780671870", "9780671870000", "Ray Bradbury", "Fahrenheit 451", true, "978"));// first book of Ray
-																							// Bradbury in the library
-		books.add(new Book("9780671870", "9780671870000", "Ray Bradbury", "Fahrenheit 451", true, "1"));// second book of Ray Bradbury
-																							// in the library
+		// First book of Ray Bradbury in the library
+		books.add(new Book("9780671870", "9780671870000", "Ray Bradbury", "Fahrenheit 451", true, "978"));
+		// Second book of Ray Bradbury in the library
+		books.add(new Book("9780671870", "9780671870000", "Ray Bradbury", "Fahrenheit 451", true, "1"));
 		books.add(new Book("0307763057", "0307763057000", "Benoît Cavrois", "Life is potatoes", true, "42"));
 		books.add(new Book("0070070070", "0070070070000", "James Bond", "Agent 007", true, "7"));
 		books.add(new Book("2323232323", "2323232323000", "I am an author", "I am a title", true, "2323001"));
@@ -70,7 +67,6 @@ public class LibraryImplements implements Library {
 	private void initGlobalBooks() {
 		globalBooks.add(new Book("0307763055", "0307763055000", "Julien Petit", "Le Havre : Le port du monde ?", true, "6"));
 		globalBooks.add(new Book("0307763056", "0307763056000", "Julien Petit", "La VR de demain", true, "10"));
-		globalBooks.add(new Book("0070070070", "0070070070000", "James Bond", "Agent 007", true, "7"));
 		globalBooks.add(new Book("2323232323233", "2323232323233000", "I am an author", "I am a title", true, "2323001"));
 	}
 
@@ -87,22 +83,26 @@ public class LibraryImplements implements Library {
 	}
 
 	public Optional<Book> getBook(final String id) {
-		for (final Book book : books) {// Search trough books
+		for (final Book book : books) {
+			// Search trough books
 			if (id.equals(book.getId())) {
 				return Optional.of(book);
 			}
 		}
-		return Optional.empty(); // By default, return an empty Optional
+		// By default, return an empty Optional
+		return Optional.empty();
 	}
 
 	public Optional<String> addBook(final String isbn) {
-		for (final Book book : globalBooks) {// Search trough globalBooks
+		for (final Book book : globalBooks) {
+			// Search trough globalBooks
 			if (isbn.equals(book.getISBN_10()) || isbn.equals(book.getISBN_13())) {
 				books.add(book);
 				return Optional.of(book.getId());
 			}
 		}
-		return Optional.empty(); // By default, return an empty Optional
+		// By default, return an empty Optional
+		return Optional.empty();
 	}
 
 	public void borrowBook(final String id, final String username)
@@ -111,21 +111,26 @@ public class LibraryImplements implements Library {
 		int countNumberUnavalaibleBook = 0;
 		int countNumberOkIsbnBook = 0;
 		if (!userExistInList(username)) {
-			return; // If the user isn't in the library user list, he hasn't the right access
+			// If the user isn't in the library user list, he hasn't the right access
+			return;
 		} else {
 			for (int i = 0; i < books.size(); i++) {
 				Book book = books.get(i);
-				if (id.equals(book.getId()))// If the id is equals, it's the good book
+				// If the id is equals, it's the good book
+				if (id.equals(book.getId()))
 				{
 					countNumberOkIsbnBook++;
 					// Check if the book is present in the library in case someone already borrowed it
 					if (book.isPresent())
 					{
 						User theUser = getUserInList(username);
-						if (!theUser.getBooks().contains(book)) { // In case the user have already another book
+						if (!theUser.getBooks().contains(book)) {
+							// In case the user have already another book
 							book.setIsPresent(false);
-							books.get(i).setIsPresent(false);// The book is now unavailable in the library
-							theUser.addBook(book); // The user now get his book
+							// The book is now unavailable in the library
+							books.get(i).setIsPresent(false);
+							// The user now get his book
+							theUser.addBook(book);
 							return;
 						}
 					} else {
@@ -134,13 +139,16 @@ public class LibraryImplements implements Library {
 				}
 			}
 		}
-		// part with the Exception
-		if (countNumberOkIsbnBook == countNumberUnavalaibleBook) // If all book with the given id aren't present
+		// Part with the Exception
+		// If all book with the given ID aren't present
+		if (countNumberOkIsbnBook == countNumberUnavalaibleBook)
 		{
-			throw new UnavailableBookException();// The book is unavailable in the library
+			// The book is unavailable in the library
+			throw new UnavailableBookException();
 		}
 		if (bookNotFound) {
-			throw new BookNotFoundException();// The book wasn't found
+			// The book wasn't found
+			throw new BookNotFoundException();
 		}
 	}
 
@@ -154,7 +162,8 @@ public class LibraryImplements implements Library {
 	 */
 	private boolean userExistInList(final String username) {
 		for (final User user : users) {
-			if (username.equals(user.getUsername()))// Identification is done with the username
+			// Identification is done with the username
+			if (username.equals(user.getUsername()))
 			{
 				return true;
 			}
@@ -171,11 +180,13 @@ public class LibraryImplements implements Library {
 	 */
 	private User getUserInList(final String username) {
 		for (final User user : users) {
-			if (username.equals(user.getUsername())) {// Identification is done with the username
+			// Identification is done with the username
+			if (username.equals(user.getUsername())) {
 				return user;
 			}
 		}
-		return null; // By default, return null
+		// By default, return null
+		return null;
 	}
 
 	public void returnBook(final String id, final String username)
@@ -227,7 +238,8 @@ public class LibraryImplements implements Library {
 	}
 
 	public List<Book> searchBooks(final String searchTerm) {
-		List<Book> list = new ArrayList<Book>(); // Init the list<Book>
+		// Init the list<Book>
+		List<Book> list = new ArrayList<Book>();
 		for (final Book book : books) {
 			// All test are done here
 			String isbn_13 = book.getISBN_10();

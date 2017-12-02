@@ -10,32 +10,32 @@ package com.epsi.edc1.library.impl;
 public class Book {
 
 	/**
-	 * the book author
+	 * The author of the book.
 	 */
 	private String author;
 	
 	/**
-	 * the book ISBN_10
+	 * The ISBN10 of the book.
 	 */
 	private String ISBN_10;
 	
 	/**
-	 * the book ISBN_13
+	 * The ISBN13 of the book.
 	 */
 	private String ISBN_13;
 	
 	/**
-	 * the book title
+	 * The title of the book.
 	 */
 	private String title;
 	
 	/**
-	 * statut of the book presence
+	 * Status of the book presence.
 	 */
 	private boolean isPresent;
 	
 	/**
-	 * the book id
+	 * The ID of the book.
 	 */
 	private String id;
 
@@ -110,6 +110,16 @@ public class Book {
 		this.id = id;
 	}
 
+
+	/**
+	 * Allow you to recover the id of that book.
+	 * 
+	 * @return The id of that book. This is a string.
+	 */
+	public String getId() {
+		return this.id;
+	}
+	
 	/**
 	 * Allow you to recover the author of that book.
 	 * 
@@ -118,24 +128,6 @@ public class Book {
 	 */
 	public String getAuthor() {
 		return this.author;
-	}
-
-	/**
-	 * Allow you to recover the ISBN value of that book.
-	 * 
-	 * @return The ISBN value of the book.
-	 * 			This is a string.
-	 */
-	public String getISBN() {
-		if (this.ISBN_10 != null && this.ISBN_13 != null) {
-			return this.ISBN_10 + ";" + this.ISBN_13;
-		}
-		if (this.ISBN_10 != null) {
-			return this.ISBN_10;
-		} else if (this.ISBN_13 != null) {
-			return this.ISBN_13;
-		}
-		return null;
 	}
 
 	/**
@@ -208,14 +200,5 @@ public class Book {
 	 */
 	public void setIsPresent(final boolean present) {
 		this.isPresent = present;
-	}
-
-	/**
-	 * Allow you to recover the id of that book.
-	 * 
-	 * @return The id of that book. This is a string.
-	 */
-	public String getId() {
-		return this.id;
 	}
 }

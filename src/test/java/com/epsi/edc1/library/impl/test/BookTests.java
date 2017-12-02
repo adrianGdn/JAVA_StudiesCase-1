@@ -113,15 +113,12 @@ public class BookTests {
 		// Begin
 			// Gets tests
 				// For an ISBN 10
-		assertThat(bookISBN10.getISBN(), equalTo("1234567810"));
 		assertThat(bookISBN10.getISBN_10(), equalTo("1234567810"));
 		assertThat(bookISBN10.getISBN_13(), equalTo(null));
 				// For an ISBN 13
-		assertThat(bookISBN13.getISBN(), equalTo("1234567891013"));
 		assertThat(bookISBN13.getISBN_10(), equalTo(null));
 		assertThat(bookISBN13.getISBN_13(), equalTo("1234567891013"));
 				// For a bad ISBN
-		assertThat(bookWithBadISBN.getISBN(), equalTo(null));
 		assertThat(bookWithBadISBN.getISBN_10(), equalTo(null));
 		assertThat(bookWithBadISBN.getISBN_13(), equalTo(null));
 		// End		
@@ -146,15 +143,12 @@ public class BookTests {
 		// Begin
 			// Gets tests
 				// For an ISBN 10
-		assertThat(bookISBN10.getISBN(), equalTo("1234567810;1234567891013"));
 		assertThat(bookISBN10.getISBN_10(), equalTo("1234567810"));
 		assertThat(bookISBN10.getISBN_13(), equalTo("1234567891013"));
 				// For an ISBN 13
-		assertThat(bookISBN13.getISBN(), equalTo("1234567810;1234567891013"));
 		assertThat(bookISBN13.getISBN_10(), equalTo("1234567810"));
 		assertThat(bookISBN13.getISBN_13(), equalTo("1234567891013"));
 				// For a bad ISBN at the beginning
-		assertThat(bookWithBadISBN.getISBN(), equalTo("1234567810;1234567891013"));
 		assertThat(bookWithBadISBN.getISBN_10(), equalTo("1234567810"));
 		assertThat(bookWithBadISBN.getISBN_13(), equalTo("1234567891013"));
 		// End		
