@@ -8,7 +8,7 @@ package com.epsi.edc1.library.impl.exception;
  */
 @SuppressWarnings("serial")
 public class UnavailableBookException extends Exception {
-	private String message = "Book actually not available.";
+	private final String message = "Book actually not available.";
 
 	/**
 	 * The default constructor of that class.
@@ -16,9 +16,12 @@ public class UnavailableBookException extends Exception {
 	 */
 	public UnavailableBookException() {
 	}
-
+	
+	/**
+	 * return the message of the exception. It's a String
+	 */
 	@Override
-	public String toString() {
+	public final String toString() {
 		return message;
 	}
 }

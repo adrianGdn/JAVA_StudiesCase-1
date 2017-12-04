@@ -3,7 +3,8 @@ package com.epsi.edc1.library.impl.test;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.junit.Assert.assertThat;
 import org.junit.Test;
-import com.epsi.edc1.library.impl.Book;
+
+import com.epsi.edc1.library.other.Book;
 
 /**
  * @author Adrian Gandon

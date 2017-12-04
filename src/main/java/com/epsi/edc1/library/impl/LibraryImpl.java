@@ -7,6 +7,8 @@ import com.epsi.edc1.library.Library;
 import com.epsi.edc1.library.impl.exception.AllBooksAlreadyReturnedException;
 import com.epsi.edc1.library.impl.exception.BookNotFoundException;
 import com.epsi.edc1.library.impl.exception.UnavailableBookException;
+import com.epsi.edc1.library.other.Book;
+import com.epsi.edc1.library.other.User;
 
 /**
  * This class allow us to use the implemented methods of the Library interface.
@@ -14,7 +16,7 @@ import com.epsi.edc1.library.impl.exception.UnavailableBookException;
  * @author Alexis Dubus
  * @author Adrian Gandon
  */
-public class LibraryImplements implements Library {
+public class LibraryImpl implements Library {
 
 	/**
 	 * The library list of book. Some book can have the same title or ISBN, but the
@@ -37,7 +39,7 @@ public class LibraryImplements implements Library {
 	 * The constructor of that class.
 	 * Allow after the initialization to do many super things !
 	 */
-	public LibraryImplements() {
+	public LibraryImpl() {
 		initBooks();
 		initUsers();
 		initGlobalBooks();

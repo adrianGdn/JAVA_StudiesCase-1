@@ -4,12 +4,13 @@ import static org.junit.Assert.*;
 import java.util.ArrayList;
 import java.util.List;
 import org.junit.Test;
-import com.epsi.edc1.library.impl.Book;
-import com.epsi.edc1.library.impl.LibraryImplements;
-import com.epsi.edc1.library.impl.User;
+
+import com.epsi.edc1.library.impl.LibraryImpl;
 import com.epsi.edc1.library.impl.exception.AllBooksAlreadyReturnedException;
 import com.epsi.edc1.library.impl.exception.BookNotFoundException;
 import com.epsi.edc1.library.impl.exception.UnavailableBookException;
+import com.epsi.edc1.library.other.Book;
+import com.epsi.edc1.library.other.User;
 
 /**
  * @author Adrian Gandon
@@ -40,7 +41,7 @@ public class LibraryTests {
 		assertEquals(errorMessage, false, aNewListOfBooks.get(0).isPresent());
 		assertEquals(errorMessage, aNewBook, aNewListOfUsers.get(0).getBooks().get(0));
 			// Real test
-		LibraryImplements aBooks = new LibraryImplements();
+		LibraryImpl aBooks = new LibraryImpl();
 				// Check for "borrowBook" function
 		aBooks.borrowBook(aNewBook.getId(), aNewUser.getUsername());
 		assertEquals(errorMessage2, false, aBooks.getBook(aNewBook.getId()).get().isPresent());
@@ -59,7 +60,7 @@ public class LibraryTests {
 	@Test
 	public void testAddGetBook() {
 		// Preparation
-		LibraryImplements aBooksPacket = new LibraryImplements();
+		LibraryImpl aBooksPacket = new LibraryImpl();
 		Book aTestBook = new Book("0070070070", "0070070070000", "James Bond", "Agent 007", true, "7");
 		Book aSecondTestBook = new Book("0307763056", "0307763056000", "Julien Petit", "La VR de demain", true, "10");
 		String errorMessage = "An error has occur when trying to get the book.";
@@ -89,7 +90,7 @@ public class LibraryTests {
 	@Test
 	public void testGetBooks() {
 		// Preparation
-		LibraryImplements aBooksPacket = new LibraryImplements();
+		LibraryImpl aBooksPacket = new LibraryImpl();
 		List<Book> aTestListBook;
 		// These following book are book which's in the library.
 		Book aFirstTestBook = new Book("9780671870", "9780671870000", "Ray Bradbury", "Fahrenheit 451", true, "978");
@@ -145,7 +146,7 @@ public class LibraryTests {
 	@Test
 	public void testSearchBooks() {
 		// Preparation
-		LibraryImplements aBooksList = new LibraryImplements(); 
+		LibraryImpl aBooksList = new LibraryImpl(); 
 		Book aTestBook = new Book("0070070070", "0070070070000", "James Bond", "Agent 007", true, "7");
 		String errorMessage = "An error has occured when trying to search a book from the library.";
 		List<Book> aSearchResultList;

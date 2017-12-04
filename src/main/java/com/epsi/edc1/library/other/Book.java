@@ -1,4 +1,4 @@
-package com.epsi.edc1.library.impl;
+package com.epsi.edc1.library.other;
 
 /**
  * Book class object. For book management and creation.

@@ -2,4 +2,5 @@ com.epsi.edc1.library
 com.epsi.edc1.library.impl
 com.epsi.edc1.library.impl.exception
 com.epsi.edc1.library.impl.test
+com.epsi.edc1.library.other
 com.epsi.edc1.library.test

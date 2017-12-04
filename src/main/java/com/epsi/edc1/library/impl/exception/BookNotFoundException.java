@@ -8,7 +8,7 @@ package com.epsi.edc1.library.impl.exception;
  */
 @SuppressWarnings("serial")
 public class BookNotFoundException extends Exception {
-	private String message = "Book not found.";
+	private final String message = "Book not found.";
 
 	/**
 	 * The default constructor of that class.
@@ -17,8 +17,11 @@ public class BookNotFoundException extends Exception {
 	public BookNotFoundException() {
 	}
 
+	/**
+	 * return the message of the exception. It's a String
+	 */
 	@Override
-	public String toString() {
+	final public String toString() {
 		return message;
 	}
 }

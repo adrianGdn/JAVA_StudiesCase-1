@@ -7,8 +7,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import org.junit.Test;
-import com.epsi.edc1.library.impl.Book;
-import com.epsi.edc1.library.impl.LibraryImplements;
+
+import com.epsi.edc1.library.impl.LibraryImpl;
+import com.epsi.edc1.library.other.Book;
 
 /**
  * @author Alexis Dubus
@@ -30,7 +31,7 @@ public class BasicTests {
 
 	@Test
 	public void testGetFromListeBiblio() {
-		LibraryImplements listeGBooks = new LibraryImplements();
+		LibraryImpl listeGBooks = new LibraryImpl();
 		Book book = new Book("0070070070", "0070070070000", "James Bond", "Agent 007", true, "7");
 		Book benoitBook = new Book("0307763057", "0307763057000", "Benoît Cavrois", "Life is potatoes", true, "42");
 		Optional<Book> optionnalB = Optional.of(book);
@@ -44,7 +45,7 @@ public class BasicTests {
 
 	@Test
 	public void testSearch() {
-		LibraryImplements listeGBooks = new LibraryImplements();
+		LibraryImpl listeGBooks = new LibraryImpl();
 		Book benoitBook = new Book("0307763057", "0307763057000", "Benoît Cavrois", "Life is potatoes", true, "42");
 		String messageErreur = "An error has occured when trying to search a book from the library.";
 		List<Book> listBenoit = new ArrayList<Book>();

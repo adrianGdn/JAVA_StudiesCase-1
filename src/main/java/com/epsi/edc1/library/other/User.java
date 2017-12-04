@@ -1,8 +1,7 @@
-package com.epsi.edc1.library.impl;
+package com.epsi.edc1.library.other;
 
 import java.util.ArrayList;
 import java.util.List;
-import com.epsi.edc1.library.impl.Book;
 
 /**
  * User object class. For Users management and creation.
@@ -132,6 +131,7 @@ public class User {
 	/**
 	 * Allow you to reset the bookBorrow value. 
 	 * Can be useful if the user return a borrow book but didn't take another one.
+	 * @param aBook Book the book you want to return
 	 */
 	public void returnBorrowBook(final Book aBook) {
 		this.booksBorrow.remove(aBook);
